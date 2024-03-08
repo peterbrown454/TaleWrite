@@ -30,7 +30,7 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com', 'postgres://iwagkhok:ZgbakhUeh1g3fNHUL7N8_MpgQyv-bLDO@flora.db.elephantsql.com/iwagkhok']
+ALLOWED_HOSTS = ['journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com', 'postgres://iwagkhok:ZgbakhUeh1g3fNHUL7N8_MpgQyv-bLDO@flora.db.elephantsql.com/iwagkhok']
 
 
 # Application definition
