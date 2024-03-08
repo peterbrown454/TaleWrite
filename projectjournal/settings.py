@@ -29,9 +29,8 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com', ]
+DEBUG = False
+ALLOWED_HOSTS = ['8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com', 'postgres://iwagkhok:ZgbakhUeh1g3fNHUL7N8_MpgQyv-bLDO@flora.db.elephantsql.com/iwagkhok']
 
 
 # Application definition
@@ -94,6 +93,12 @@ DATABASES = {
 'default':
 dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com",
+    "https://*.gitpod.io",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
