@@ -11,6 +11,3 @@ def home (request):
     #return HttpResponse ("this is the home page")
     return render (request, 'homepage.html')
 
-def entry_list(request):
-    #return HttpResponse ("this is the home page")
-    return render (request, 'entries.html')
