@@ -18,7 +18,7 @@ if os.path.isfile("env.py"):
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +30,7 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com', 'postgres://iwagkhok:ZgbakhUeh1g3fNHUL7N8_MpgQyv-bLDO@flora.db.elephantsql.com/iwagkhok']
+ALLOWED_HOSTS = ['journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com',]
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'journapp',
     'projectjournal',
+    'entries',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'projectjournal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -143,6 +144,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE ='cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
