@@ -29,7 +29,7 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu108.gitpod.io', 'herokuapp.com',]
 
 
@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     'journapp',
     'projectjournal',
@@ -138,9 +138,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = 'static'
-
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
