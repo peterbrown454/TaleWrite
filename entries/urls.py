@@ -18,5 +18,6 @@ from django.urls import path, include
 from . import views
 urlpatterns = [
     path('', views.entry_list),
+    path('<slug:slug>/', views.entry_detail, name='entry_detail'),
     
 ]
