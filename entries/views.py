@@ -10,5 +10,8 @@ def entry_list(request):
     return render(request, 'entry_list_template.html', {'entries': entries})
 
 def entry_detail(request, slug):
-    return HttpResponse(slug)
+    #return HttpResponse(slug)
+
+    entry = Entry.objects.get(slug=slug)
+    return render(request, 'entry_detail.html', {'entry': entry})
 
