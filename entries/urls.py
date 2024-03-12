@@ -16,8 +16,11 @@ Including another URLconf
 
 from django.urls import path, include
 from . import views
+
+app_name = 'entries_app'
+
 urlpatterns = [
     path('', views.entry_list, name = "list"),
-    path('<slug:slug>/', views.entry_detail, name='detail',),
+    path('<slug:slug>/', views.entry_detail, name='detail'),
     
 ]
