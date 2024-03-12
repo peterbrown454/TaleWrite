@@ -5,7 +5,7 @@
 <div class="entries"></div>
 {% for entry in entries %}
 <div class="entry">
-    <h2><a href="#">{{entry.title}}</a> </h2>
+    <h2><a href="{% url 'detail' entry.slug %}">{{entry.title}}</a> </h2>
     <p>{{ entry.excerpt_with_ellipsis}}</p>
     <p>{{entry.created_on}}</p>
 
