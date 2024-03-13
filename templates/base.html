@@ -12,13 +12,15 @@
 <body>
     <div class="wrapper">
         <h1><a href="{% url 'entries_app:list' %}">Stories</a></h1>
-        <ul>
-            <li>
-                <form action="{% url 'accounts:logout' %}" class="logout-link" method="post"></form>
-                {% csrf_token %}
-                <button type="submit">Logout</button>
-            </li>
-        </ul>
+        <nav>
+            <ul>
+                <li>
+                    <form action="{% url 'accounts:logout' %}" class="logout-link" method="post"></form>
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </li>
+            </ul>
+        </nav>
         {% block content %}
         {% endblock content %}
     </div>
