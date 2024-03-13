@@ -7,6 +7,7 @@ class Entry (models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     excerpt = models.TextField(blank=True)
+    thumb = models.ImageField(default="default.png", blank = True)
     
     def excerpt_with_ellipsis(self):
         excerpt_with_ellipsis = self.excerpt
