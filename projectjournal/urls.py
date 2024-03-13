@@ -27,7 +27,7 @@ urlpatterns = [
     path('accounts/', include ('accounts.urls')),
     path('', views.home , name='home'),
     path('about', views.about, name = 'about'),
-    path('entries/', include('entries.urls'), name='entry_list'),
+    path('entries/', include('entries.urls', namespace = "entries") , name='entry_list', ),
     path('post/', views.post , name='post'),
 ]
 
