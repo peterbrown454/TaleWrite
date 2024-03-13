@@ -15,3 +15,5 @@ def entry_detail(request, slug):
     entry = Entry.objects.get(slug=slug)
     return render(request, 'entry_detail.html', {'entry': entry})
 
+def entry_write (request):
+    return render(request, "entry_write.html")

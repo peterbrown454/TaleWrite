@@ -21,6 +21,7 @@ app_name = 'entries_app'
 
 urlpatterns = [
     path('', views.entry_list, name = "list"),
+    path('write', views.entry_write, name = "write"),
     path('<slug:slug>/', views.entry_detail, name='detail'),
     
 ]
