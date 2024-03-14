@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Entry
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from . import forms
 # Create your views here.
 
 
@@ -17,4 +18,11 @@ def entry_detail(request, slug):
 
 @login_required(login_url="/accounts/login")
 def entry_write (request):
-    return render(request, "entry_write.html")
+    if request.method == 'POST':
+        form = forms.WriteEntry(request.POST, request.FILES)
+        if form.is_valid():
+            #save article to db
+            return redirect('entries:list')
+    else:
+        form = forms.WriteEntry()
+    return render(request, "entry_write.html", {'form': form})
