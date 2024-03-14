@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Entry (models.Model):
@@ -8,6 +9,8 @@ class Entry (models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     excerpt = models.TextField(blank=True)
     thumb = models.ImageField(default="default.png", blank = True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,default=None) 
+
     
     def excerpt_with_ellipsis(self):
         excerpt_with_ellipsis = self.excerpt
