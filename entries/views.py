@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Entry
 from django.http import HttpResponse
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -15,5 +15,6 @@ def entry_detail(request, slug):
     entry = Entry.objects.get(slug=slug)
     return render(request, 'entry_detail.html', {'entry': entry})
 
+@login_required(login_url="/accounts/login")
 def entry_write (request):
     return render(request, "entry_write.html")
