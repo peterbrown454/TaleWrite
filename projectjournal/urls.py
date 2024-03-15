@@ -20,12 +20,13 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
+from entries import views as entry_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include ('accounts.urls')),
-    path('', views.home , name='home'),
+    path('', entry_views.entry_list, name='home'),
     path('about', views.about, name = 'about'),
     path('entries/', include('entries.urls', namespace = "entries") , name='entry_list', ),
     path('post/', views.post , name='post'),

@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <h1><a href="{% url 'entries_app:list' %}">Stories</a></h1>
+        <h1><a href="{% url 'entries_app:list' %}">TaleWrite</a></h1>
         <nav>
             <ul>
                 {% if user.is_authenticated %}
@@ -21,8 +21,9 @@
                         <button type="submit">Logout</button>
                     </form>
                 </li>
+                <li><a href="{% url 'entries:write' %}">New story</a></li>
                 {% else %}
-                <li><a href="{% url 'accounts:login' %}">Login</a></li>
+                <li><a href=" {% url 'accounts:login' %}">Login</a></li>
                 <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
                 {% endif %}
             </ul>

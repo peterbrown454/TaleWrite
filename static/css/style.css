@@ -1,3 +1,13 @@
 body {
-    background: rgb(238, 238, 240);
+    background-color: white;
+    color: navy
+}
+
+h2 {
+
+    color: navy
+}
+
+a:hover {
+    color: gold;
 }
