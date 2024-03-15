@@ -13,6 +13,7 @@ def entry_list(request):
 
 def entry_detail(request, slug):
     #return HttpResponse(slug)
+    return render(request, 'entry_detail.html', {'entry':entry}),
 
     entry = Entry.objects.get(slug=slug)
     return render(request, 'entry_detail.html', {'entry': entry})
@@ -32,8 +33,8 @@ def entry_write (request):
     return render(request, "entry_write.html", {'form': form})
 
     
-def like_entry (request, entry_id):
+def like_entry(request, entry_id):
     entry = get_object_or_404(Entry, pk=entry_id)
     entry.likes += 1
     entry.save()
-    return redirect('entry_detail', pk=entry_id)
+    return redirect('entry_detail', slug=entry.slug)

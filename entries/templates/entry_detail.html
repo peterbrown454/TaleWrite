@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
 <div class="entry_detail">
@@ -11,8 +13,8 @@
     </div>
 </div>
 
-<form action="{% url 'entries_app:like_entry' entry.id %}" method="POST">
+<form action="{% url 'entries_app:like_entry' entry_id=entry.id %}" method="POST">
     {%csrf_token %}
-    <button type="submit" class "btn btn-primary btn-sm">Like</button>
+    <button type="submit" class="btn btn-primary btn-sm">Like</button>
 </form>
 {% endblock %}
