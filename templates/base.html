@@ -23,41 +23,65 @@
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
-    <div class="wrapper mt-auto">
-        <h1><a href="{% url 'entries_app:list' %}">TaleWrite</a></h1>
-        <nav>
-            <ul>
-                {% if user.is_authenticated %}
-                <li>
-                    <form action="{% url 'accounts:logout' %}" class="logout-link" method="post">
-                        {% csrf_token %}
-                        <button type="submit">Logout</button>
-                    </form>
-                </li>
-                <li><a href="{% url 'entries:write' %}">New story</a></li>
-                {% else %}
-                <li><a href=" {% url 'accounts:login' %}">Login</a></li>
-                <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
-                {% endif %}
-            </ul>
-        </nav>
-        {% block content %}
-        {% endblock content %}
-    </div>
-    <footer class="footer mt-auto py-3 dark-bg mb-0">
-        <p class="m-0 text-center text-white">{% block copyright %}TaleWrite{% endblock copyright %}</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
-        </p>
-    </footer>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
+                        class="thin">|star</span></span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'home'%}">Home</a>
+                    </li>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
+                </ul>
+                <span class="navbar-text text-muted">
+                    adventures of a software developer
+                </span>
+            </div>
+        </div>
+    </nav>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <main class="flex-shrink-0 main-bg">
+        <div class="wrapper mt-auto">
+            <h1><a href="{% url 'entries_app:list' %}">TaleWrite</a></h1>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <form action="{% url 'accounts:logout' %}" class="logout-link" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                    <li><a href="{% url 'entries:write' %}">New story</a></li>
+                    {% else %}
+                    <li><a href=" {% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <footer class="footer mt-auto py-3 dark-bg mb-0">
+            <p class="m-0 text-center text-white">{% block copyright %}TaleWrite{% endblock copyright %}</p>
+            <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
+                <i class="fab fa-twitter-square ms-3"></i>
+                <i class="fab fa-instagram-square ms-3"></i>
+                <i class="fab fa-youtube-square ms-3"></i>
+            </p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+        </script>
+
+        <script src="{% static 'js/script.js' %}"></script>
 
 </body>
 
