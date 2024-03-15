@@ -3,14 +3,16 @@
 {% block content %}
 <div class="entry_detail">
     <div class="Entry">
-        <h2>{{ entry.title }}</h2>
-        <p>{{ entry.content }}</p>
-        <p> {{ entry.date }} </p>
-        <p> {{ entry.created_on }} </p>
+        <h2>{{entry.title}}</h2>
+        <p>{{entry.content}}</p>
+        <p>{{entry.date}} </p>
+        <p>{{entry.created_on}} </p>
+        <p>Likes: {{entry.likes}}</p>
     </div>
 </div>
 
-
-
-
+<form action="{% url 'entries_app:like_entry' entry.id %}" method="POST">
+    {%csrf_token %}
+    <button type="submit" class "btn btn-primary btn-sm">Like</button>
+</form>
 {% endblock %}

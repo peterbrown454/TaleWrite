@@ -10,6 +10,7 @@ class Entry (models.Model):
     excerpt = models.TextField(blank=True)
     thumb = models.ImageField(default="default.png", blank = True)
     author = models.ForeignKey(User,on_delete=models.CASCADE,default=None) 
+    likes = models.IntegerField(default=0) 
 
     
     def excerpt_with_ellipsis(self):

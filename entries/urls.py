@@ -20,6 +20,7 @@ from . import views
 app_name = 'entries_app'
 
 urlpatterns = [
+    path('like/<int:entry_id>/', views.like_entry, name='like_entry'),
     path('', views.entry_list, name = "list"),
     path('write', views.entry_write, name = "write"),
     path('<slug:slug>/', views.entry_detail, name='detail'),

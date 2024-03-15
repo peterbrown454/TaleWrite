@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404, redirect
 from django.shortcuts import render, redirect
 from .models import Entry
 from django.http import HttpResponse
@@ -29,3 +30,10 @@ def entry_write (request):
     else:
         form = forms.WriteEntry()
     return render(request, "entry_write.html", {'form': form})
+
+    
+def like_entry (request, entry_id):
+    entry = get_object_or_404(Entry, pk=entry_id)
+    entry.likes += 1
+    entry.save()
+    return redirect('entry_detail', pk=entry_id)

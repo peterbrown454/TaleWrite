@@ -7,6 +7,7 @@
 <div class="entry">
     <h2><a href="{% url 'entries_app:detail' entry.slug %}">{{entry.title}}</a> </h2>
     <p>{{ entry.excerpt_with_ellipsis}}</p>
+    <p>Written by:{{entry.author}}</p>
     <p>{{entry.created_on}}</p>
 
 </div>
