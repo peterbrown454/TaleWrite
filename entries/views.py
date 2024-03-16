@@ -12,8 +12,8 @@ def entry_list(request):
     return render(request, 'entry_list_template.html', {'entries': entries})
 
 def entry_detail(request, slug):
-    #return HttpResponse(slug)
-    return render(request, 'entry_detail.html', {'entry':entry}),
+    entry = get_object_or_404(Entry, slug=slug)
+    return render(request, 'entry_detail.html', {'entry': entry})
 
     entry = Entry.objects.get(slug=slug)
     return render(request, 'entry_detail.html', {'entry': entry})
@@ -33,8 +33,15 @@ def entry_write (request):
     return render(request, "entry_write.html", {'form': form})
 
     
+
+from django.shortcuts import redirect, get_object_or_404
+from django.urls import reverse
+from .models import Entry
+
 def like_entry(request, entry_id):
     entry = get_object_or_404(Entry, pk=entry_id)
     entry.likes += 1
     entry.save()
-    return redirect('entry_detail', slug=entry.slug)
+    # Redirect to the entry detail page after liking
+    return redirect('entries_app:detail', slug=entry.slug)
+    
