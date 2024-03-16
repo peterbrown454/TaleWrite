@@ -118,7 +118,7 @@ footer {
     color: rgb(245, 114, 27);
     min-height: 30px;
     margin: 0;
-    /*vertical-align: bottom;*/
+    vertical-align: bottom;
 }
 
 .contact-details {
