@@ -30,6 +30,7 @@ urlpatterns = [
     path('about', views.about, name = 'about'),
     path('entries/', include('entries.urls', namespace = "entries") , name='entry_list', ),
     path('post/', views.post , name='post'),
+    path('lunabase/', views.lunabase , name='lunabase'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

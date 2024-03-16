@@ -17,11 +17,13 @@
         rel="stylesheet">
 
 </head>
+<!---->
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary no-gutters fixed-top">
         <div class="container-fluid bg-color-navbar">
-            <a class="navbar-brand" href="index.html">
-                <img src="/static/images/logo.png" width="30" height="30" class="d-inline-block align-top logo" alt="#">
+            <a class="navbar-brand" href="{% url 'entries_app:list' %}">
+                <img src="projectjournal/logo.png" width="30" height="30"
+                    class="navbar-brand d-inline-block align-top logo" alt="">
                 <span class="d-none d-sm-inline-block">TaleWrite</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -31,16 +33,29 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'entries_app:list' %}">Entries</a>
+                        <a class="nav-link active garamond" aria-current="page"
+                            href="{% url 'entries_app:list' %}">Entries</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'entries:write' %}" class="garamond">Write</a>
+                        <a class="nav-link garamond" href="{% url 'entries:write' %}">Write</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html" class="garamond">About</a>
+                        <a class="nav-link garamond" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html" class="garamond">Contact</a>
+                        <a class="nav-link garamond" href="{% url 'lunabase' %}">Lunabase</a>
+                        {% if user.is_authenticated %}
+                    <li>
+                        <form action="{% url 'accounts:logout' %}" class="logout-link" method="post">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+                    <!--<li><a href="{% url 'entries:write' %}">New story</a></li>-->
+                    {% else %}
+                    <li><a href=" {% url 'accounts:login' %}">Login</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+                    {% endif %}
                     </li>
                 </ul>
             </div>
@@ -48,26 +63,26 @@
     </nav>
 </header>
 
+
 <body>
 
-    <h1><a href="{% url 'entries_app:list' %}"><img src="/static/images/logo.png" alt="TaleWrite logo of quill and book"
-                class="logo"></a></h1>
-    <nav>
-        <ul>
-            {% if user.is_authenticated %}
-            <li>
-                <form action="{% url 'accounts:logout' %}" class="logout-link" method="post">
-                    {% csrf_token %}
-                    <button type="submit">Logout</button>
-                </form>
-            </li>
-            <li><a href="{% url 'entries:write' %}">New story</a></li>
-            {% else %}
-            <li><a href=" {% url 'accounts:login' %}">Login</a></li>
-            <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
-            {% endif %}
-        </ul>
-    </nav>
+
+
+    <ul>
+        {% if user.is_authenticated %}
+        <li>
+            <form action="{% url 'accounts:logout' %}" class="logout-link" method="post">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </li>
+        <!--<li><a href="{% url 'entries:write' %}">New story</a></li>-->
+        {% else %}
+        <li><a href=" {% url 'accounts:login' %}">Login</a></li>
+        <li><a href="{% url 'accounts:signup' %}">Signup</a></li>
+        {% endif %}
+    </ul>
+
 
     {% block content %}
     {% endblock content %}
@@ -77,8 +92,8 @@
             <div class="row">
                 <div class="col-sm-5 text-left footer-contact d-none d-sm-inline-block">
                     <div class="contact-details">
-                        <div>Phone: +44 1234 567890</div>
-                        <div>Email: ppurrfection@x.com</div>
+                        <div>Phone: +44 123 4567 890</div>
+                        <div>Email: TaleWrite@TaleWrite.com</div>
                     </div>
                 </div>
                 <div class="row container-flex col-sm-7">

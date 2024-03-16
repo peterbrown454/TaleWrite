@@ -1,48 +1,12 @@
 {% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
+
 
 {%block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
+This is the about page
 
-<body>
-    <h1>Short Story</h1>
-    <textarea id="story" rows="10" cols="50">Enter your short story here...</textarea>
-    <button onclick="speak()">Listen to Story</button>
-
-    <script>
-        function speak() {
-            var text = document.getElementById("story").value;
-
-            // Check if the browser supports the SpeechSynthesis API
-            if ('speechSynthesis' in window) {
-                var synth = window.speechSynthesis;
-
-                // Cancel any ongoing speech
-                synth.cancel();
-
-                // Create a new speech synthesis utterance
-                var utterance = new SpeechSynthesisUtterance(text);
-
-                // Set voice properties if needed (optional)
-                // utterance.voice = synth.getVoices()[0]; // Example of setting a specific voice
-
-                // Speak the text
-                synth.speak(utterance);
-            } else {
-                // If SpeechSynthesis API is not supported, provide a fallback message
-                alert("Text-to-speech is not supported in this browser.");
-            }
-        }
-    </script>
-
-    {% endblock %}
+{% endblock %}
 </body>
 
 </html>
