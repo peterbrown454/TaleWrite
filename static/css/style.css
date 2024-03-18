@@ -8,6 +8,17 @@ main {
     padding-top: 15px;
 }
 
+.readable-title {
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration: underline;
+}
+
+.readable-content {
+    font-weight: 500;
+    font-size: 120%;
+}
+
 .garamond {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
@@ -327,6 +338,15 @@ footer {
 }
 
 @media only screen and (min-width: 1024px) {
+
+    .readable-content {
+        column-count: 2;
+        column-gap: 40px;
+        font-weight: 500;
+        font-size: 120%;
+
+    }
+
 
     .form {
         width: 40%;

@@ -5,12 +5,9 @@
 {% block content %}
 <div class="entry_detail">
     <div class="Entry">
-        <h2>{{entry.title}}</h2>
-        <p class="strong-font">{{entry.content}}</p>
-        <p>{{entry.date}} </p>
-        <p>{{entry.created_on}} </p>
-        <p>Likes: {{entry.likes}}</p>
-        <p>Written by {{entry.author}}</p>
+        <h2 class=readable-title>{{entry.title}}</h2>
+        <p class="readable-content">{{entry.content}}</p>
+        <p>Written by {{entry.author}}, {{entry.created_on}}</p>
     </div>
 </div>
 

@@ -8,11 +8,17 @@ main {
     padding-top: 15px;
 }
 
+.readable-title {
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 20px;
+}
 
-.strong-font {
+.readable-content {
     font-weight: 500;
     font-size: 120%;
 }
+
 
 .garamond {
     font-family: "EB Garamond", serif;
@@ -358,6 +364,14 @@ footer {
 
     .about-me-text h2 {
         padding-top: 0;
+    }
+
+    .readable-content {
+        column-count: 2;
+        column-gap: 40px;
+        font-weight: 500;
+        font-size: 120%;
+
     }
 
 }
