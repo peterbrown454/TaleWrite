@@ -9,6 +9,11 @@ main {
 }
 
 
+.strong-font {
+    font-weight: 500;
+    font-size: 120%;
+}
+
 .garamond {
     font-family: "EB Garamond", serif;
     font-optical-sizing: auto;
