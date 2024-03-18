@@ -11,12 +11,25 @@ def entry_list(request):
     entries = Entry.objects.all().order_by('created_on')
     return render(request, 'entry_list_template.html', {'entries': entries})
 
+@login_required(login_url="/accounts/login")
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     return render(request, 'entry_detail.html', {'entry': entry})
 
     entry = Entry.objects.get(slug=slug)
-    return render(request, 'entry_detail.html', {'entry': entry})
+
+    if request.method == 'POST':
+        form = forms.WriteComment(request.POST, request.FILES)
+        if form.is_valid():
+            # TO DO!!!! stole this from the write entry stuff. need to make it work for comments!
+            instance = form.save(commit = False)
+            instance.author = request.user
+            instance.save()
+            return redirect('entries:list') # need to change to just refresh
+    else:
+        form = forms.WriteComment()
+
+    return render(request, 'entry_detail.html', {'entry': entry, 'form': form})
 
 @login_required(login_url="/accounts/login")
 def entry_write (request):

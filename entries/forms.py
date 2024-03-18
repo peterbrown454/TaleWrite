@@ -1,11 +1,14 @@
 from django import forms
 from . import models
 
+
 class WriteEntry (forms.ModelForm):
     class Meta:
         model = models.Entry
-        fields = ['title', 'content', 'excerpt','slug', 'thumb']
+        fields = ['title', 'content', 'excerpt','slug', 'genre',]
 
-    widgets = {
-        'content': forms.Textarea(attrs={'rows': 40, 'cols': 2}),  # Adjust rows and cols as needed
-    }
+class WriteComment (forms.ModelForm):
+    class Meta:
+        model = models.Comment
+        fields = ['content']
+

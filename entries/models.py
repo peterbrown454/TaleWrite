@@ -12,6 +12,7 @@ class Entry (models.Model):
     author = models.ForeignKey(User,on_delete=models.CASCADE,default=None) 
     likes = models.IntegerField(default=0) 
     genre = models.CharField(max_length=20, null=True)
+    Comment = models.TextField(blank=True)
 
     
     def excerpt_with_ellipsis(self):
@@ -28,6 +29,7 @@ class Entry (models.Model):
 
 
 
+
  
 
 
@@ -35,3 +37,19 @@ class Entry (models.Model):
 
     #add in thumbnail
     #add in author
+
+class Comment (models.Model):
+    entry = models.ForeignKey(Entry, on_delete=models.CASCADE, related_name ="comments")
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name = "commenter")
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add = True)
+    active = models.BooleanField()
+
+    class Meta:
+        ordering = ["-created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.author}"
+
+
+

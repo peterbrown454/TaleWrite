@@ -4,6 +4,7 @@
 
 {% block content %}
 <div class="entry_detail">
+    <!-- <img src="{{entry.thumb}}"/> -->
     <div class="Entry">
         <h2 class=readable-title>{{entry.title}}</h2>
         <p class="readable-content">{{entry.content}}</p>
@@ -17,5 +18,17 @@
         <span>{{entry.likes}}</span></button>
 </form>
 
+<br>
+<div class="comments-section">
+    <div>Comments</div>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+
+    <div>Comments List</div>
+</div>
 
 {% endblock %}
