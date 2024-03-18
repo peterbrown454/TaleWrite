@@ -1,6 +1,6 @@
 body {
     min-height: 100vh;
-    background-color: rgb 252, 245, 229;
+    background-color: RGB(255, 255, 240)
 }
 
 .garamond {
@@ -44,12 +44,22 @@ header {
 
 .navbar {
     margin-bottom: 0px;
+    padding: 0px;
+    color: RGB(255, 255, 240);
 }
 
+.nav-link {
+    background-color: RGB(128, 0, 32);
+    color: RGB(255, 255, 240);
+}
+
+
+
+
 .logo {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+    height: 40px;
+    width: 60px;
+
 }
 
 .navbar-toggler {
@@ -61,11 +71,13 @@ header li {
 }
 
 .bg-color-navbar {
-    background-color: #970161;
+    background-color: RGB(128, 0, 32);
+    color: RGB(255, 255, 240);
 }
 
 .nav-link {
-    background-color: #970161;
+    background-color: RGB(128, 0, 32);
+    color: RGB(255, 255, 240);
 }
 
 /*-------------------------------------------------- Hero Section */
@@ -112,16 +124,16 @@ header li {
 /*---------------------------------------Main--------*/
 
 main {
-    background: #680142;
+    background: RGB(255, 255, 240);
     margin: 0;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 /* ----------------------------------------Footer */
 
 footer {
-    background-color: #970161;
-    color: black;
+    background-color: RGB(128, 0, 32);
+    color: RGB(255, 255, 240);
     min-height: 30px;
     margin: 0;
     position: fixed;
