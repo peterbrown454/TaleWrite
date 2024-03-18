@@ -1,7 +1,13 @@
 body {
     min-height: 100vh;
-    background-color: RGB(255, 255, 240)
+    background-color: RGB(252, 245, 229)
 }
+
+main {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
 
 .garamond {
     font-family: "EB Garamond", serif;
@@ -9,6 +15,7 @@ body {
     font-weight: 600;
     /*from 400-800*/
     font-style: normal;
+    font-size: larger;
 }
 
 /*--------------------------------------General Styles-------*/
@@ -57,8 +64,10 @@ header {
 
 
 .logo {
-    height: 40px;
-    width: 60px;
+    height: 50px;
+    width: 65px;
+    padding-left: 5px;
+
 
 }
 
@@ -78,6 +87,7 @@ header li {
 .nav-link {
     background-color: RGB(128, 0, 32);
     color: RGB(255, 255, 240);
+    font-size: larger;
 }
 
 /*-------------------------------------------------- Hero Section */
@@ -124,7 +134,7 @@ header li {
 /*---------------------------------------Main--------*/
 
 main {
-    background: RGB(255, 255, 240);
+    background: RGB(252, 245, 229);
     margin: 0;
     margin-top: 60px;
 }
