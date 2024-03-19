@@ -1,15 +1,34 @@
 from django.shortcuts import get_object_or_404, redirect
-from django.shortcuts import render, redirect
-from .models import Entry
+from django.shortcuts import render, redirect, reverse
+from .models import Entry, Comment
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from . import forms
+from .forms import CommentForm
+
 # Create your views here.
 
 
 def entry_list(request):
     entries = Entry.objects.all().order_by('created_on')
     return render(request, 'entry_list_template.html', {'entries': entries})
+
+
+def post_detail(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    comments = post.comment_set.all() # assuming Comment has a ForeignKey to Post
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+    else:
+        form = CommentForm()
+    return render(request, 'post_detail.html', {'post': post, 'comments': comments, 'form': form})
+
+
+
 
 @login_required(login_url="/accounts/login")
 def entry_detail(request, slug):
@@ -47,9 +66,6 @@ def entry_write (request):
 
     
 
-from django.shortcuts import redirect, get_object_or_404
-from django.urls import reverse
-from .models import Entry
 
 def like_entry(request, entry_id):
     entry = get_object_or_404(Entry, pk=entry_id)
