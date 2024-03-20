@@ -5,6 +5,10 @@ body {
     flex-direction: column;
 }
 
+.comments-section {
+    background: RGB(255, 255, 240);
+}
+
 main {
     padding-left: 15px;
     padding-top: 15px;
@@ -78,6 +82,14 @@ header {
 
 header li {
     color: #f5721b;
+}
+
+.comment_submit_button {
+    color: RGB(255, 255, 240);
+}
+
+.btn-signup {
+    color: RGB(255, 255, 240);
 }
 
 .bg-color-navbar {
