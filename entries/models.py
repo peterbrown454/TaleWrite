@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+
 class Entry (models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField()
@@ -12,7 +13,7 @@ class Entry (models.Model):
     author = models.ForeignKey(User,on_delete=models.CASCADE,default=None) 
     likes = models.IntegerField(default=0) 
     genre = models.CharField(max_length=20, null=True)
-    Comment = models.TextField(blank=True)
+    STATUS = ((0, "Draft"), (1, "Published"))
 
     
     def excerpt_with_ellipsis(self):
