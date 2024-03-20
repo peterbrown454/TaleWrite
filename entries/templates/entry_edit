@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="write-entry">
+    <!-- Your write entry form or content goes here -->
+    <h2>Edit your tale</h2>
+    <form action="{% url 'entries:entry_edit' %}" class="site-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Edit">
+
+
+    </form>
+</div>
+
+<script src="/static/js/slugify.js"></script>
+{% endblock %}
