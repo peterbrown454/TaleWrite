@@ -28,13 +28,6 @@ class Entry (models.Model):
         return self.title
 
 
-
-
- 
-
-
- 
-
     #add in thumbnail
     #add in author
 
@@ -45,12 +38,8 @@ class Comment (models.Model):
     created_on = models.DateTimeField(auto_now_add = True)
     active = models.BooleanField(default=True)
     approved = models.BooleanField(default=False)  
-
-
-
     class Meta:
         ordering = ["-created_on"]
-
     def __str__(self):
         return f"Comment {self.content} by {self.author}"
 

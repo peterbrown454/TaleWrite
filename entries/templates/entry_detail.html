@@ -19,33 +19,26 @@
 </form>
 
 <br>
-<div class="comments-section">
-    <div>Comments</div>
 
-    <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Submit">
-    </form>
 
-    <div>Comments List</div>
+
 </div>
 
 
 <!-- Displaying count of comments -->
-<div class="row">
+<div class="row comments-section">
     <div class="col-12">
         <strong class="text-secondary">
             <i class="far fa-comments"></i> {{ comment_count }}
         </strong>
     </div>
     <div class="col-12">
-        <hr>
+
     </div>
 </div>
 <!-- Displaying Comments -->
 <div class="row">
-    <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="comments-section col-md-8 card mb-4  mt-3 ">
         <h3>Comments:</h3>
         <div class="card-body">
             <!-- We want a for loop inside the empty control tags
@@ -61,7 +54,7 @@
                     </span> wrote:
                 </p>
                 <div id="comment{{ comment.id }}">
-                    {{ comment.body | linebreaks }}
+                    {{ comment.content | linebreaks }}
                 </div>
                 {% if not comment.approved and comment.author == user %}
                 <p class="approval">
@@ -74,7 +67,7 @@
         </div>
     </div>
     <!-- Creating New Comments -->
-    <div class="col-md-4 card mb-4 mt-3">
+    <div class="comments-section col-md-4 card mb-4 mt-3">
         <div class="card-body">
             {% if user.is_authenticated %}
             <h3>Leave a comment:</h3>

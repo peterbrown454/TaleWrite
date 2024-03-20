@@ -37,7 +37,7 @@ def entry_list(request):
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
-    comment_count = entry.comments.filter(approved=True).count() #removed "approved=True" from between ".filter" ".count()" as was throwing error but needed to approve messages
+    comment_count = entry.comments.filter(approved=True).count() 
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
