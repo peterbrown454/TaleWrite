@@ -5,6 +5,9 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from . import forms
 from .forms import CommentForm
+from django.views import generic
+from django.contrib import messages
+
 
 # Create your views here.
 
@@ -34,13 +37,28 @@ def entry_list(request):
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
-    comment_count = entry.comments.filter().count()
+    comment_count = entry.comments.filter(approved=True).count() #removed "approved=True" from between ".filter" ".count()" as was throwing error but needed to approve messages
+
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.entry = entry
+            comment.save()
+            messages.add_message(
+        request, messages.SUCCESS,
+        'Comment submitted and awaiting approval'
+    )
+
+    comment_form = CommentForm()
 
     return render(request, 'entry_detail.html', 
 {
     "entry": entry,
         "comments": comments,
         "comment_count": comment_count,
+        "comment_form": comment_form,
     },
 )
 
