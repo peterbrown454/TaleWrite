@@ -20,10 +20,9 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.entry_list, name = "list"),
     path('like/<int:entry_id>/', views.like_entry, name='like_entry'),
     path('', views.entry_list, name = "list"),
     path('write', views.entry_write, name = "write"),
-    path('entry/<slug:slug>/', views.entry_detail, name='entry_detail'),
+    path('entries/<slug:slug>/', views.entry_detail, name='entry_detail'),
     
 ]

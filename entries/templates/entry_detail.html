@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<form action="{% url 'entries_app:like_entry' entry_id=entry.id %}" method="POST">
+<form action="{% url 'entries:like_entry' entry_id=entry.id %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-thumbs-up"></i>
         <span>{{entry.likes}}</span></button>

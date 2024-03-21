@@ -17,18 +17,20 @@ def entry_list(request):
     return render(request, 'entry_list_template.html', {'entries': entries})
 
 
-def entry_detail(request, slug):
-    entry = get_object_or_404(Entry, slug=slug)
-    comments = post.comment_set.all() # assuming Comment has a ForeignKey to Post
-    if request.method == 'POST':
-       form = CommentForm(request.POST)
-       if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post
-            comment.save()
-    else:
-        form = CommentForm()
-    return render(request, 'post_detail.html', {'post': post, 'comments': comments, 'form': form})
+
+
+#def entry_detail(request, slug):
+   # entry = get_object_or_404(Entry, slug=slug)
+   # comments = post.comment_set.all() # assuming Comment has a ForeignKey to Post
+   # if request.method == 'POST':
+     #  form = CommentForm(request.POST)
+      # if form.is_valid():
+       #     comment = form.save(commit=False)
+       #     comment.post = post
+       #     comment.save()
+   # else:
+   #     form = CommentForm()
+   # return render(request, 'entry_detail.html', {'entry': entry, 'comments': comments, 'form': form})
 
 
 
@@ -97,4 +99,4 @@ def like_entry(request, entry_id):
     entry.save()
     # Redirect to the entry detail page after liking
     return redirect('entries_app:detail', slug=entry.slug)
-    
+

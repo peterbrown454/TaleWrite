@@ -29,7 +29,9 @@ urlpatterns = [
     path('', entry_views.entry_list, name='home'),
     path('about', views.about, name = 'about'),
     path('entries/', include('entries.urls', namespace="entries")),
-    path('post/', views.post , name='post'),
+    
+
+    
    
 ]
 
