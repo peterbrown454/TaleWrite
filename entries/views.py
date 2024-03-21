@@ -18,29 +18,12 @@ def entry_list(request):
 
 
 
-
-#def entry_detail(request, slug):
-   # entry = get_object_or_404(Entry, slug=slug)
-   # comments = post.comment_set.all() # assuming Comment has a ForeignKey to Post
-   # if request.method == 'POST':
-     #  form = CommentForm(request.POST)
-      # if form.is_valid():
-       #     comment = form.save(commit=False)
-       #     comment.post = post
-       #     comment.save()
-   # else:
-   #     form = CommentForm()
-   # return render(request, 'entry_detail.html', {'entry': entry, 'comments': comments, 'form': form})
-
-
-
-
 @login_required(login_url="/accounts/login")
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
     comment_count = entry.comments.filter(approved=True).count() 
-
+###
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -64,17 +47,17 @@ def entry_detail(request, slug):
     },
 )
 
-    if request.method == 'POST':
-        form = forms.WriteComment(request.POST, request.FILES)
-        if form.is_valid():
-            instance = form.save(commit = False)
-            instance.author = request.user
-            instance.save()
-            return redirect('entries:list') 
-    else:
-        form = forms.WriteComment()
+   # if request.method == 'POST':
+    #    form = forms.WriteComment(request.POST, request.FILES)
+      #  if form.is_valid():
+        #    instance = form.save(commit = False)
+         #   instance.author = request.user
+          #  instance.save()
+          #  return redirect('entries:list') 
+  #  else:
+     #   form = forms.WriteComment()
 
-    return render(request, 'entry_detail.html', {'entry': entry, 'form': form})
+   # return render(request, 'entry_detail.html', {'entry': entry, 'form': form})
 
 @login_required(login_url="/accounts/login")
 def entry_write (request):
@@ -113,13 +96,41 @@ def like_entry(request, entry_id):
    # entry.delete()
     #return redirect ("entries:list")
 
-def delete_entry(request, pk):
-    entry = get_object_or_404(Entry, pk=pk)
-    if request.method == 'POST':
-        entry.delete()
-        return redirect('list')  
+#def delete_entry(request, pk):
+   # entry = get_object_or_404(Entry, pk=pk)
+   # if request.method == 'POST':
+       # entry.delete()
+        #return redirect('list')  
+
+#def destroy (request, entry_id):
+    #entry = Entry.objects.get(Entry_id=Entry_id)
+    #entry.delete()
+    #return redirect('list')
     #return render(request, 'delete_content.html', {'content': content})
 
 
 
+def delete_entry(request, slug):
+    entry = get_object_or_404(Entry, slug=slug)
+    if request.user == entry.author:
+        entry.delete()
+        messages.success(request, "Entry deleted successfully.")
+        return redirect(reverse('entries:list'))
+    else:
+        messages.error(request, "You don't have permission to delete this entry.")
+    return redirect(reverse('entries:list'))
 
+
+def entry_edit(request, slug):
+    entry = get_object_or_404(Entry, slug=slug)
+    if request.method == 'POST':
+        form = forms.WriteEntry(request.POST, request.FILES)
+        if form.is_valid():
+            #save article to db
+            instance = form.save(commit = False)
+            instance.author = request.user
+            instance.save()
+            return redirect('entries:list')
+    else:
+        form = forms.WriteEntry()
+    return render(request, "entry_write.html", {'form': form, 'entry':entry})
