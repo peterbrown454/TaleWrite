@@ -1,13 +1,13 @@
 from django.shortcuts import get_object_or_404, redirect
 from django.shortcuts import render, redirect, reverse
 from .models import Entry, Comment
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from . import forms
-from .forms import CommentForm
+from .forms import CommentForm, UpdateEntry
 from django.views import generic
 from django.contrib import messages
-
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 # Create your views here.
 
@@ -90,13 +90,36 @@ def entry_write (request):
         form = forms.WriteEntry()
     return render(request, "entry_write.html", {'form': form})
 
-    
 
+
+def entry_update(request):
+    return HttpResponse ("update page")
+    #model = Entry
+   # template_name = entry_detail_edit.html
+    #login_url = 
+    #success_url = "/"
+    #success_message = "Your tale has been edited"
 
 def like_entry(request, entry_id):
     entry = get_object_or_404(Entry, pk=entry_id)
     entry.likes += 1
     entry.save()
     # Redirect to the entry detail page after liking
-    return redirect('entries_app:detail', slug=entry.slug)
+    return redirect('entries:entry_detail', slug=entry.slug)
+
+
+#def delete_entry(request, slug):
+    #entry = Entry.objects.get(pk=slug)
+   # entry.delete()
+    #return redirect ("entries:list")
+
+def delete_entry(request, pk):
+    entry = get_object_or_404(Entry, pk=pk)
+    if request.method == 'POST':
+        entry.delete()
+        return redirect('list')  
+    #return render(request, 'delete_content.html', {'content': content})
+
+
+
 

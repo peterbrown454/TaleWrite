@@ -12,11 +12,25 @@
     </div>
 </div>
 
+{% if user.is_authenticated %}
+{% if user == entry.author %}
+
+<a href="url 'entries:delete_entry'"><button type="submit" class="btn btn-primary btn-sm"><i
+            class="fa-solid fa-trash fa-sm" style="color: #080808;"></i></button></a>
+<button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square fa-sm"
+        style="color: #030303;"></i></button>
+{% endif %}
+{% endif %}
+<br>
+<br>
+<br>
 <form action="{% url 'entries:like_entry' entry_id=entry.id %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-thumbs-up"></i>
         <span>{{entry.likes}}</span></button>
 </form>
+
+
 
 <br>
 
@@ -35,6 +49,11 @@
     <div class="col-12">
 
     </div>
+</div>
+
+<!--Edit section-->
+<div class="edit">
+
 </div>
 <!-- Displaying Comments -->
 <div class="row">

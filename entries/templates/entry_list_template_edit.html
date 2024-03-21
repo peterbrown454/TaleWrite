@@ -46,7 +46,9 @@
                     <li class="nav-item">
                         <a class="nav-link garamond" href="{% url 'entries:write' %}">Write</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link garamond" href="{% url 'entries:edit_entry_view' slug=entry.slug %}">Edit</a>
+                    </li>
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -92,6 +94,18 @@
 <main>
 
     {% block content %}
+
+
+    {% for entry in entry_list %}
+    {% if entry.author == request.user %}
+    {% include 'edit_entries_list_template.html' %}
+    {% else %}
+    <!-- Display regular entry details -->
+    {% endif %}
+    {% empty %}
+    <!-- If there are no entries, display a message -->
+    <p>You seem to have no entries to edit. Please write a new entry first.</p>
+    {% endfor %}
     {% endblock content %}
 </main>
 <footer>
