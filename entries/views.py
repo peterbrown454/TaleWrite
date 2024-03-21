@@ -133,4 +133,4 @@ def entry_edit(request, slug):
             return redirect('entries:list')
     else:
         form = forms.WriteEntry()
-    return render(request, "entry_write.html", {'form': form, 'entry':entry})
+    return render(request, "entry_edit.html", {'form': form, 'entry':entry})

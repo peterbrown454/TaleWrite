@@ -1,10 +1,10 @@
 Hello this is edit
-<!---
+
 {% extends "base.html" %}
 
 {% block content %}
 <div class="write-entry">
-    
+
     <h2>Start writing a new story</h2>
     <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -17,4 +17,3 @@ Hello this is edit
 
 <script src="/static/js/slugify.js"></script>
 {% endblock %}
--->
