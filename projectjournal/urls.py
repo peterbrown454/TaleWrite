@@ -21,18 +21,20 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.conf import settings
 from entries import views as entry_views
+from entries.views import EntryListView
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include ('accounts.urls')),
-    path('', entry_views.entry_list, name='home'),
+    #commented out to try our class based path('', entry_views.entry_list, name='home'), 
     path('about', views.about, name = 'about'),
-    path('entries/', include('entries.urls', namespace="entries")),
-    
+   # path('entries/', include('entries.urls', namespace="entries")),
+    path('summernote/', include('django_summernote.urls')),
+   # path('', EntryListView.as_view(), name = "list"),
+    path("", include("entries.urls"), name="entries-urls"),
+    path('', include ('accounts.urls',)),
 
-    
-   
+ 
 ]
 
 urlpatterns += staticfiles_urlpatterns()

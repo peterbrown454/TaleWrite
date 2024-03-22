@@ -7,10 +7,14 @@
     <!-- <img src="{{entry.thumb}}"/> -->
     <div class="Entry">
         <h2 class=readable-title>{{entry.title}}</h2>
-        <p class="readable-content">{{entry.content}}</p>
+        <p class="readable-content">{{entry.content| safe}}</p>
         <p>Written by {{entry.author}}, {{entry.created_on}}</p>
     </div>
 </div>
+
+{% if user.is_authenticated and comment.author == user %}
+<button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+{% endif %}
 
 {% if user.is_authenticated %}
 {% if user == entry.author %}

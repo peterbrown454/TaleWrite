@@ -1,0 +1,81 @@
+[{
+        "model": "entries.genre",
+        "pk": 1,
+        "fields": {
+            "type_genre": "Fiction",
+            "description": "This genre includes stories that are primarily created from the author's imagination, rather than being based strictly on facts. It can further be divided into subgenres such as:\n\nRealistic Fiction: Stories that could happen in real life.\nScience Fiction: Stories that speculate on scientific advancements, futuristic technologies, or alternate realities.\nFantasy: Stories that often involve magic, supernatural elements, or mythical creatures.\nHistorical Fiction: Stories set in the past that may include real historical events, people, or settings."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 2,
+        "fields": {
+            "type_genre": "Non-fiction",
+            "description": "This genre includes works based on facts, real events, and real people. Non-fiction can be further divided into various subgenres such as:\n\nBiography: An account of someone's life written by another person.\nAutobiography: An account of a person's life written by themselves.\nEssay: A short piece of writing that expresses the author's opinion or perspective on a particular topic.\nMemoir: A narrative recounting specific events or experiences from the author's life."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 3,
+        "fields": {
+            "type_genre": "Poetry",
+            "description": "Poetry is a form of literature that uses aesthetic and rhythmic qualities of language to evoke meanings in addition to or in place of the prosaic ostensible meaning. It often utilizes techniques such as meter, rhyme, and symbolism."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 4,
+        "fields": {
+            "type_genre": "Drama",
+            "description": "Drama refers to works intended for performance, typically on stage by actors. It can include plays, scripts, or screenplays. Drama often explores human emotions, conflicts, and relationships."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 5,
+        "fields": {
+            "type_genre": "Mystery",
+            "description": "Mystery literature revolves around the investigation of a crime, usually a murder, and the solving of the puzzle. It often involves a detective, amateur or professional, who uncovers clues and unravels the mystery."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 6,
+        "fields": {
+            "type_genre": "Thriller/Suspense",
+            "description": "Thriller literature is characterized by excitement, tension, and anticipation. It often involves danger, suspense, and high stakes, keeping readers on the edge of their seats."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 7,
+        "fields": {
+            "type_genre": "Horror",
+            "description": "Horror literature is designed to evoke fear, disgust, or terror in readers. It often features supernatural elements, monsters, or psychological terror."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 8,
+        "fields": {
+            "type_genre": "Romance",
+            "description": "Romance literature focuses on romantic love and its development between characters. It typically emphasizes emotional relationships, passion, and intimacy."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 9,
+        "fields": {
+            "type_genre": "Adventure",
+            "description": "Adventure literature features exciting and often perilous journeys or quests undertaken by the protagonist. It can involve exploration, discovery, and overcoming obstacles."
+        }
+    },
+    {
+        "model": "entries.genre",
+        "pk": 10,
+        "fields": {
+            "type_genre": "Children's Literature",
+            "description": "Children's literature is specifically aimed at young readers, ranging from picture books for toddlers to chapter books for older children and young adults. It often explores themes of friendship, family, and growing up."
+        }
+    }
+]

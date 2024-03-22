@@ -11,14 +11,24 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 # Create your views here.
 
-
+"""
+#commented out to try our class based entry list view
 def entry_list(request):
     entries = Entry.objects.all().order_by('created_on')
     return render(request, 'entry_list_template.html', {'entries': entries})
 
+"""
+#from https://www.youtube.com/watch?v=-s7e_Fy6NRU  its class-based alternative to functions
+
+class EntryListView(ListView):
+    model = Entry
+    template_name = "entry_list_template.html"
+    context_object_name = "entries"
 
 
-@login_required(login_url="/accounts/login")
+
+
+@login_required(login_url="/login")
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
@@ -59,7 +69,7 @@ def entry_detail(request, slug):
 
    # return render(request, 'entry_detail.html', {'entry': entry, 'form': form})
 
-@login_required(login_url="/accounts/login")
+@login_required(login_url="/login")
 def entry_write (request):
     if request.method == 'POST':
         form = forms.WriteEntry(request.POST, request.FILES)
@@ -120,7 +130,7 @@ def delete_entry(request, slug):
         messages.error(request, "You don't have permission to delete this entry.")
     return redirect(reverse('entries:list'))
 
-
+"""
 def entry_edit(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     if request.method == 'POST':
@@ -134,3 +144,24 @@ def entry_edit(request, slug):
     else:
         form = forms.WriteEntry()
     return render(request, "entry_edit.html", {'form': form, 'entry':entry})
+"""
+#LMS ONE BELOW
+
+def entry_edit(request, slug):
+    """
+    view to edit comments
+    """
+    if request.method == "POST":
+
+        queryset = Entry.objects.filter()
+        entry = get_object_or_404(queryset, slug=slug)
+
+
+        if entry.author == request.user:
+
+
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('entry_detail', args=[slug]))
