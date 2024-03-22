@@ -4,26 +4,25 @@ from .models import Entry, Comment
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from . import forms
-from .forms import CommentForm, UpdateEntry
+from .forms import CommentForm, UpdateEntry, WriteEntry
 from django.views import generic
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 # Create your views here.
 
-"""
-#commented out to try our class based entry list view
+
+
 def entry_list(request):
     entries = Entry.objects.all().order_by('created_on')
     return render(request, 'entry_list_template.html', {'entries': entries})
 
-"""
 #from https://www.youtube.com/watch?v=-s7e_Fy6NRU  its class-based alternative to functions
 
-class EntryListView(ListView):
-    model = Entry
-    template_name = "entry_list_template.html"
-    context_object_name = "entries"
+# class EntryListView(ListView):
+#     model = Entry
+#     template_name = "entry_list_template.html"
+#     context_object_name = "entries"
 
 
 
@@ -93,12 +92,21 @@ def entry_update(request):
     #success_url = "/"
     #success_message = "Your tale has been edited"
 
-def like_entry(request, entry_id):
-    entry = get_object_or_404(Entry, pk=entry_id)
-    entry.likes += 1
-    entry.save()
-    # Redirect to the entry detail page after liking
-    return redirect('entries:entry_detail', slug=entry.slug)
+# TEST 1 == FAIL
+# def like_entry(request, entry_id):
+#     entry = get_object_or_404(Entry, pk=entry_id)
+#     entry.likes += 1
+#     entry.save()
+#     # Redirect to the entry detail page after liking
+#     return redirect('entries:entry_detail', slug=entry.slug)
+
+ #TEST 2 == FAIL
+def like_entry(request, slug):
+     entry = get_object_or_404(Entry, slug=slug)
+     entry.likes += 1
+     entry.save()
+    #Redirect to the entry detail page after liking
+     return redirect('entries:entry_detail', slug=entry.slug)
 
 
 #def delete_entry(request, slug):
@@ -130,7 +138,7 @@ def delete_entry(request, slug):
         messages.error(request, "You don't have permission to delete this entry.")
     return redirect(reverse('entries:list'))
 
-"""
+
 def entry_edit(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     if request.method == 'POST':
@@ -144,24 +152,33 @@ def entry_edit(request, slug):
     else:
         form = forms.WriteEntry()
     return render(request, "entry_edit.html", {'form': form, 'entry':entry})
-"""
-#LMS ONE BELOW
 
-def entry_edit(request, slug):
-    """
-    view to edit comments
-    """
-    if request.method == "POST":
+# #LMS ONE BELOW
 
-        queryset = Entry.objects.filter()
-        entry = get_object_or_404(queryset, slug=slug)
+# def entry_edit(request, slug):
+    
+#     view to edit comments
+#     """
+#     """
+#     if request.method == "POST":
 
-
-        if entry.author == request.user:
+#         queryset = Entry.objects.filter()
+#         entry = get_object_or_404(queryset, slug=slug)
 
 
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+#         if entry.author == request.user:
 
-    return HttpResponseRedirect(reverse('entry_detail', args=[slug]))
+
+#             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+#         else:
+#             messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+#     return HttpResponseRedirect(reverse('entry_detail', args=[slug]))
+# """
+
+class EditEntry(UpdateView):
+    """ Edit Recipe """
+    model = Entry
+    template_name = 'entry_edit.html'
+    form_class = WriteEntry
+    
