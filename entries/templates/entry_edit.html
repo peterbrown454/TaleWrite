@@ -5,7 +5,8 @@ Hello this is edit
 <div class="write-entry">
 
     <h2>Start writing a new story</h2>
-    <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data">
+    <form action="{% url 'entries:entry_edit' slug=entry.slug %}" class="site-form" method="post"
+        enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
