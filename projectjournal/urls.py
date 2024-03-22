@@ -28,8 +28,10 @@ urlpatterns = [
     path('accounts/', include ('accounts.urls')),
     path('', entry_views.entry_list, name='home'),
     path('about', views.about, name = 'about'),
-    path('entries/', include('entries.urls', namespace = "entries") , name='entry_list', ),
-    path('post/', views.post , name='post'),
+    path('entries/', include('entries.urls', namespace="entries")),
+    
+
+    
    
 ]
 
