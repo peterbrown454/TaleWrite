@@ -27,7 +27,7 @@ def entry_list(request):
 
 
 
-@login_required(login_url="/login")
+@login_required(login_url="/accounts/login")
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
