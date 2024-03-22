@@ -7,10 +7,14 @@
     <!-- <img src="{{entry.thumb}}"/> -->
     <div class="Entry">
         <h2 class=readable-title>{{entry.title}}</h2>
-        <p class="readable-content">{{entry.content}}</p>
+        <p class="readable-content">{{entry.content| safe}}</p>
         <p>Written by {{entry.author}}, {{entry.created_on}}</p>
     </div>
 </div>
+
+{% if user.is_authenticated and comment.author == user %}
+<button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+{% endif %}
 
 {% if user.is_authenticated %}
 {% if user == entry.author %}
@@ -22,10 +26,10 @@
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
             style="color: #080808;"></i></button></form>
 
-<form action="{% url 'entries:entry_edit' slug=entry.slug %}" method="POST">
+<!-- <form action="{% url 'entries:entry_edit' slug=entry.slug %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square fa-sm"
-            style="color: #030303;"></i></button></form>
+            style="color: #030303;"></i></button></form> -->
 
 
 {% endif %}
@@ -33,7 +37,8 @@
 <br>
 <br>
 <br>
-<form action="{% url 'entries:like_entry' entry_id=entry.id %}" method="POST">
+<!-- <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST"> -->
+<form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-thumbs-up"></i>
         <span>{{entry.likes}}</span></button>

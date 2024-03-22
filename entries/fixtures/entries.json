@@ -1,0 +1,161 @@
+[{
+        "model": "entries.entry",
+        "pk": 1,
+        "fields": {
+            "title": "Once upon a moonlit eve",
+            "slug": "once-upon-a-moonlit-eve",
+            "content": "Once upon a moonlit eve, in a land where whispers danced with the breeze and stars winked knowingly above, there lived a solitary bard named Lyra. She wandered the cobblestone streets of a quaint village, her heart aflutter with the rhythm of untold tales and hidden dreams.\n\nIn the heart of the village square, beneath the ancient oak tree, Lyra would often find solace. There, she would pluck the strings of her lute, weaving melodies that echoed through the sleepy town like whispers of forgotten lore.\n\nOne fateful night, as the moon cast its silver gaze upon the earth, a stranger appeared in the village square. His cloak, as dark as midnight, billowed around him like the wings of a raven. With eyes as deep as the ocean, he approached Lyra with a curious smile.\n\n\"Fair maiden of the night,\" he said, his voice a melody in itself, \"I have traveled far and wide in search of a song that speaks to the soul. Will you grace me with your poetry?\"\n\nLyra's heart quickened at the stranger's request, yet she felt a flutter of excitement in her chest. With a nod, she began to play, her fingers dancing across the strings with a grace born of longing and love.\n\nAs the music filled the air, the stranger's eyes glowed with a fierce intensity. He listened with rapt attention, as if each note held the key to unlocking the mysteries of the universe.\n\nAnd so, beneath the watchful gaze of the moon, Lyra and the stranger wove a tapestry of sound and silence, poetry and prose. They spoke of love and loss, of dreams and desires, until the night itself seemed to hold its breath in awe.\n\nWhen the final chord faded into the stillness of the night, the stranger reached out a hand to Lyra, his eyes alight with gratitude.\n\n\"Thank you, dear bard,\" he whispered, his voice a whisper on the wind. \"For tonight, you have given me a glimpse of the divine.\"\n\nWith that, the stranger vanished into the shadows, leaving Lyra alone beneath the oak tree once more. And though she knew not the identity of her mysterious visitor, she carried the memory of their encounter in her heart forevermore.\n\nFor in that fleeting moment of shared poetry, she had touched the very soul of the universe itself, and found her place among the stars.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "Once upon a moonlit eve",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 1
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 2,
+        "fields": {
+            "title": "In the Realm of Veridian",
+            "slug": "in-the-realm-of-veridian",
+            "content": "In a realm where time danced to the tune of forgotten whispers, there existed a land known as Veridian. Here, the sun painted the sky in hues of amber and gold, and the wind sang lullabies to the trees.\n\nAt the heart of Veridian stood the Enchanted Grove, a sanctuary untouched by mortal hands. Within its verdant embrace lay secrets as old as time itself, guarded by the ancient spirits that called it home.\n\nIn this mystical realm lived a young girl named Elara, her eyes the color of sapphires and her spirit as wild as the wind. From the moment she was born, Elara felt the pull of the Grove, its magic calling out to her with a voice that echoed through her dreams.\n\nOne day, as she wandered through the forest, Elara stumbled upon a hidden glade bathed in ethereal light. There, she discovered a fountain of shimmering water, its surface rippling with the reflections of a thousand stars.\n\nIntrigued by the fountain's beauty, Elara reached out a hand to touch its surface. As her fingers brushed against the water, she felt a surge of energy coursing through her veins, filling her with a sense of wonder and awe.\n\nUnbeknownst to Elara, her touch had awakened the Guardian of the Grove, a mystical being tasked with protecting the secrets of Veridian. With a voice like thunder and eyes that blazed like fire, the Guardian emerged from the depths of the forest, its presence commanding the very essence of nature itself.\n\n\"Who dares disturb the peace of the Enchanted Grove?\" the Guardian boomed, its voice echoing through the trees.\n\nTrembling with fear, Elara bowed before the mighty creature, her heart pounding in her chest. Yet despite her fear, she felt a strange sense of familiarity in the Guardian's presence, as if they were bound together by a thread woven from the fabric of destiny.\n\n\"I am but a humble wanderer, seeking solace in the beauty of your realm,\" Elara replied, her voice barely above a whisper.\n\nThe Guardian regarded her with eyes as ancient as the stars, its gaze piercing through the veil of time itself. And in that moment, Elara knew that her fate was intertwined with the fate of Veridian, bound together in a dance of light and shadow, magic and mystery.\n\nTogether, they would journey through the depths of the Enchanted Grove, unraveling the secrets that lay hidden within its ancient heart. And as they walked hand in hand, beneath the canopy of stars, they knew that their bond would endure for all eternity, a testament to the power of love and the magic of the unknown.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In the mystical realm of Veridian, a young girl named Elara discovers a fountain of shimmering water in the Enchanted Grove, awakening the Guardian and beginning a journey of magic and mystery.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 2
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 3,
+        "fields": {
+            "title": "Tranquility in a City Café",
+            "slug": "tranquility-in-a-city-cafe",
+            "content": "In the heart of a bustling city, amidst the cacophony of honking horns and hurried footsteps, there lies a small café tucked away in a quiet corner. It is here that I found myself one rainy afternoon, seeking refuge from the relentless downpour outside.\n\nAs I stepped through the door, the warm aroma of freshly brewed coffee enveloped me like a comforting embrace. The soft murmur of conversation and the gentle hum of jazz music filled the air, creating a sanctuary of peace amidst the chaos of the outside world.\n\nI found a cozy corner table by the window and settled in with a steaming cup of chai latte, watching as the raindrops danced across the glass like tiny dancers in a grand ballet. Outside, the city seemed to come alive with renewed energy, each droplet breathing life into the streets below.\n\nLost in my thoughts, I found myself reminiscing about all the times I had sought solace in this humble café. It had become my refuge, a place where I could escape the demands of everyday life and simply be.\n\nAs I sipped my chai, I couldn't help but marvel at the beauty of the moment. There was something magical about the way the rain transformed the world outside, turning ordinary streets into shimmering rivers of light.\n\nIn that moment, I realized that it's often in the simple moments of life – a warm cup of coffee on a rainy day, the gentle patter of rain against the window – that we find the most joy and meaning.\n\nAs the rain continued to fall outside, I felt a sense of gratitude wash over me. Gratitude for this quiet moment of reflection, for the beauty of the world around me, and for the simple pleasures that bring so much joy to our lives.\n\nAnd so, with a contented sigh, I took one final sip of my chai and allowed myself to be fully present in the moment, cherishing every drop of rain and every fleeting second of tranquility in this bustling city café.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "Amidst the chaos of a bustling city, a small café becomes a sanctuary of peace on a rainy day, offering solace and simple pleasures to its visitors.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 3
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 4,
+        "fields": {
+            "title": "Luna's Dance Under the Stars",
+            "slug": "lunas-dance-under-the-stars",
+            "content": "In a meadow where wildflowers sway,\nBeneath the arch of the Milky Way,\nThere dwelled a soul, pure and free,\nWhose tale I'll share, come listen to me.\n\nHer name was Luna, a child of the night,\nWith eyes that shimmered, starry bright.\nShe danced with the moonbeams, sang with the breeze,\nHer laughter echoing through the trees.\n\nEach night, she'd wander, without a care,\nThrough fields of lavender, in the cool night air.\nWith every step, she'd weave a song,\nOf love and longing, where she belonged.\n\nBut one eve, as darkness fell,\nA whispered tale, a secret spell.\nLuna met a stranger, tall and fair,\nWhose eyes held secrets, beyond compare.\n\nHe spoke of lands, beyond the stars,\nOf galaxies and nebulae, seen from afar.\nAnd Luna, entranced by his words so wise,\nFollowed him under the midnight skies.\n\nTogether they journeyed, hand in hand,\nThrough realms of magic, across the land.\nThey danced with comets, rode on shooting stars,\nExploring the universe, past Saturn's bars.\n\nBut as dawn approached, with its golden light,\nLuna knew she must bid him goodnight.\nFor though their time together was brief,\nIn her heart, she held onto the belief.\n\nThat love knows no bounds, no distance too far,\nIt's written in the language of every star.\nAnd so, with a promise to meet again,\nLuna returned to her meadow, where dreams begin.\n\nAnd as she danced beneath the moon's soft glow,\nHer heart sang with a joy, only lovers know.\nFor though their paths may diverge, they'd never part,\nBound together forever, in the poetry of the heart.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In a meadow beneath the Milky Way, Luna dances with a stranger from beyond the stars, bound together by love and the poetry of the heart.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 4
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 5,
+        "fields": {
+            "title": "Drama Behind The Crimson Curtain",
+            "slug": "drama-behind-the-crimson-curtain",
+            "content": "In the heart of a bustling city, where dreams are born and shattered with equal fervor, there existed a small theater known as The Crimson Curtain. It was a place of magic and mystery, where the spotlight illuminated the stage and the echoes of applause reverberated through the rafters.\n\nAt the helm of The Crimson Curtain stood a visionary director named Gabriel. With eyes that burned with passion and a voice that commanded attention, he breathed life into each production, infusing it with emotion and intensity.\n\nOne fateful evening, as the curtain rose on the latest production, tensions simmered behind the scenes. The leading lady, Isabella, had long harbored ambitions of stardom, yet found herself relegated to the shadows of supporting roles.\n\nAs the play unfolded, Isabella's resentment boiled over, fueling a simmering rivalry with her co-star, Marcus. Their on-stage chemistry crackled with tension, mirroring the animosity that brewed offstage.\n\nBut beneath the surface, hidden from prying eyes, a secret love affair blossomed between Isabella and Gabriel. Theirs was a forbidden romance, fraught with passion and peril, yet they could not deny the magnetic pull that drew them together.\n\nAs the final act approached, tensions reached a boiling point. Isabella's jealousy consumed her, driving a wedge between her and Marcus, and threatening to unravel the delicate balance of the production.\n\nIn a climactic showdown on stage, emotions erupted like a tempest, as Isabella and Marcus clashed in a whirlwind of accusations and recriminations. Their words cut deep, laying bare the raw intensity of their rivalry.\n\nBut it was Isabella's betrayal that struck the deadliest blow, as she revealed her affair with Gabriel to Marcus in a moment of reckless abandon. The revelation shattered the illusion of camaraderie, leaving a trail of broken hearts in its wake.\n\nAs the curtain fell on the final act, the theater fell silent, the echoes of applause replaced by a heavy silence. For behind the scenes of The Crimson Curtain, the drama had played out with a tragic intensity, leaving its players forever changed.\n\nAnd as the lights dimmed and the stage fell silent, the echoes of their tumultuous tale lingered in the air, a haunting reminder of the price of passion and the dangers of desire.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "Behind the scenes of The Crimson Curtain theater, a tale of forbidden romance and bitter rivalry unfolds, leaving its players forever changed.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 5
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 6,
+        "fields": {
+            "title": "The Mystery of the Quaint Village Bakery",
+            "slug": "the-mystery-of-the-quaint-village-bakery",
+            "content": "In the heart of a quaint village nestled among rolling hills, a mystery unfolded that would grip the community in a web of intrigue and suspicion.\n\nIt began on a fog-shrouded morning when the townsfolk awoke to find the local bakery, a cherished institution known for its delectable pastries, ransacked and abandoned. Flour dusted the countertops like a fine layer of snow, while shattered glass littered the floor like shards of broken dreams.\n\nThe baker, a kindly old man named Mr. Johnson, was nowhere to be found. His disappearance sent shockwaves through the village, leaving his neighbors bewildered and fearful.\n\nAs rumors swirled and whispers spread like wildfire, the townsfolk turned to the only person they believed could unravel the mystery: Detective Emily Westwood.\n\nWith her keen intellect and sharp wit, Detective Westwood was renowned for solving the most perplexing of cases. She arrived in the village like a silent storm, her presence commanding attention as she set about piecing together the clues.\n\nAt the bakery, she combed through the wreckage with a meticulous eye, noting every detail with precision. It was there that she discovered a curious clue: a small, silver locket hidden beneath a pile of flour sacks.\n\nIntrigued by the locket's significance, Detective Westwood delved deeper into Mr. Johnson's past, uncovering secrets long buried beneath the surface. She learned of a love lost, a betrayal suffered, and a vow sworn in the shadows of the past.\n\nArmed with this newfound knowledge, Detective Westwood embarked on a journey into the heart of darkness, following a trail of breadcrumbs that led her to the edge of reason.\n\nAlong the way, she encountered a cast of characters, each with their own motives and secrets to hide. From the enigmatic widow with a penchant for poetry to the reclusive artist with a dark past, each held a piece of the puzzle waiting to be solved.\n\nAs the pieces fell into place, Detective Westwood found herself drawn deeper into the mystery, until she stood on the precipice of truth, staring into the abyss of human nature.\n\nAnd in that moment of revelation, she uncovered not only the fate of Mr. Johnson but also the darkest secrets of the village itself, shrouded in a cloak of mystery that would forever haunt its streets.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In a quaint village, Detective Emily Westwood unravels the mystery of the ransacked bakery and discovers the darkest secrets hidden within the community.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 6
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 7,
+        "fields": {
+            "title": "Shadows of Suspense in the City",
+            "slug": "shadows-of-suspense-in-the-city",
+            "content": "In the dimly lit streets of the city, where shadows danced with secrets and whispers lingered in the air like ghosts, a tale of suspense and danger unfolded.\n\nIt began on a moonless night when Sarah, a young journalist with a thirst for truth, received a cryptic message from an anonymous source. The message contained a single word: \"Beware.\"\n\nIntrigued and unnerved in equal measure, Sarah set out to uncover the meaning behind the ominous warning. Little did she know, she was about to embark on a journey that would lead her to the darkest corners of the city and into the clutches of a dangerous adversary.\n\nAs Sarah delved deeper into the mystery, she stumbled upon a web of corruption and deceit that stretched from the highest echelons of power to the depths of the criminal underworld. With each step she took, she found herself drawn deeper into a labyrinth of lies and betrayal.\n\nAlong the way, Sarah crossed paths with Ethan, a brooding detective with a haunted past and a steely resolve. Together, they navigated the treacherous waters of intrigue, their fates intertwined by forces beyond their control.\n\nBut as they uncovered the truth, they realized that they were not alone in their pursuit. A shadowy figure lurked in the shadows, watching their every move with a sinister intent.\n\nWith time running out and danger closing in, Sarah and Ethan raced against the clock to expose the truth before it was too late. But the closer they came to unraveling the mystery, the more perilous their journey became.\n\nIn a heart-stopping climax that would leave them breathless, Sarah and Ethan confronted the dark forces that sought to silence them forever. And as the truth finally came to light, they realized that some secrets were better left buried.\n\nFor in the heart of the city, where danger lurked around every corner, the line between ally and enemy blurred, and the only certainty was the thrill of the unknown.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In the dimly lit streets of the city, Sarah, a young journalist, delves into a web of corruption and danger, accompanied by Ethan, a brooding detective, as they confront dark forces and unravel mysteries.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 7
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 8,
+        "fields": {
+            "title": "The Cursed House in the Heart of the Forest",
+            "slug": "the-cursed-house-in-the-heart-of-the-forest",
+            "content": "In the eerie stillness of the night, where the moon cast sinister shadows and the wind whispered secrets of the dead, a small town nestled in the heart of the forest became the stage for a tale of terror.\n\nIt was a town like any other, its streets lined with quaint cottages and its residents lulled into a false sense of security by the tranquility of their surroundings. But beneath the facade of normalcy lurked a darkness that threatened to consume them all.\n\nIt began with whispers of a cursed house, hidden deep within the woods, its walls stained with the blood of those who dared to enter. The townsfolk spoke of a family that had once lived there, driven mad by unspeakable horrors that lurked in the shadows.\n\nAs curiosity turned to obsession, a group of intrepid teenagers decided to explore the abandoned house, their minds clouded by the thrill of the unknown. Armed with flashlights and bravado, they ventured into the darkness, unaware of the horrors that awaited them.\n\nBut as they crossed the threshold into the house of nightmares, they soon realized that they were not alone. The walls seemed to pulse with a malevolent energy, and the air was thick with the stench of decay.\n\nOne by one, the teenagers fell victim to the horrors that lurked within the house, their screams echoing through the night like a symphony of despair. They were stalked by unseen forces, their minds twisted by visions of unspeakable terror.\n\nAs dawn broke and the last echoes of their screams faded into silence, the townsfolk emerged from their homes to find the cursed house standing empty once more. But the horror had only just begun.\n\nFor in the days that followed, the townsfolk began to disappear one by one, their bodies found mutilated and drained of life. And as fear gripped the town in its icy embrace, they realized that the curse of the house had spread like a plague, consuming everything in its path.\n\nAnd so, the small town in the heart of the forest became a ghost town, its streets haunted by the echoes of the past and the whispers of the dead. And as the darkness closed in, those who remained could only pray for salvation from the horrors that lurked in the shadows.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In the eerie stillness of the night, a small town in the heart of the forest becomes the stage for a tale of terror as the curse of a haunted house spreads like a plague, consuming everything in its path.",
+            "author": 1,
+            "likes": 0,
+            "status": 0,
+            "genre": 8
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 9,
+        "fields": {
+            "title": "Love in Serenity Cove",
+            "slug": "love-in-serenity-cove",
+            "content": "In the quaint seaside town of Serenity Cove, where the salty breeze carried the scent of adventure and the waves whispered tales of love, a chance encounter sparked a romance that would change two lives forever.\n\nIt was a sunny afternoon when Emma, a spirited young woman with a passion for painting, found herself wandering along the sandy shores of the beach. Lost in thought, she stumbled upon a secluded cove, hidden from prying eyes by towering cliffs and lush greenery.\n\nAs she gazed out at the endless expanse of the ocean, her heart heavy with the weight of unspoken dreams, she heard the sound of footsteps approaching from behind. Turning around, she found herself face to face with a stranger whose eyes sparkled like the sea itself.\n\nHis name was Ethan, a mysterious traveler with a troubled past and a heart full of secrets. With a smile that melted her defenses and a voice that stirred her soul, he captivated her from the moment they met.\n\nTogether, they spent endless days exploring the hidden wonders of Serenity Cove, their laughter mingling with the sound of crashing waves and seagulls' cries. With each passing moment, they grew closer, their hearts entwined in a dance of desire and longing.\n\nBut as the days turned into weeks, Emma began to sense that Ethan was hiding something from her, something that threatened to tear them apart. With a heavy heart, she confronted him, her voice trembling with fear and uncertainty.\n\nTo her surprise, Ethan confessed his darkest secret, a secret that he had carried with him for years, burdened by guilt and shame. And in that moment of vulnerability, Emma realized that their love was stronger than any obstacle they might face.\n\nTogether, they vowed to confront the demons of the past, to heal old wounds and forge a future filled with hope and promise. And as they stood hand in hand beneath the starry sky, they knew that their love would guide them through even the darkest of nights.\n\nFor in the heart of Serenity Cove, where the ocean met the sky and dreams were born on the wings of the wind, Emma and Ethan had found a love that was as boundless as the sea and as enduring as the tides.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In the quaint seaside town of Serenity Cove, a chance encounter sparks a romance between Emma and Ethan, leading them on a journey of love, secrets, and healing.",
+            "author": 1,
+            "likes": 0,
+            "status": 1,
+            "genre": 9
+        }
+    },
+
+    {
+        "model": "entries.entry",
+        "pk": 10,
+        "fields": {
+            "title": "The Lost Civilization of the Amazon",
+            "slug": "the-lost-civilization-of-the-amazon",
+            "content": "In the rugged wilderness of the Amazon rainforest, where the ancient trees loomed like towering giants and the air thrummed with the symphony of unseen creatures, an adventure of epic proportions unfolded.\n\nIt began with a daring expedition led by renowned explorer, Dr. Amelia Westwood, whose thirst for discovery knew no bounds. Accompanied by a team of intrepid explorers, she set out to uncover the secrets hidden within the depths of the jungle, guided by ancient maps and whispered legends.\n\nTheir journey took them through dense undergrowth and treacherous terrain, where every step brought them closer to the heart of the unknown. Along the way, they encountered myriad obstacles, from raging rivers to venomous snakes, yet their determination never wavered.\n\nAs they delved deeper into the wilderness, they stumbled upon the ruins of a lost civilization, its crumbling temples and overgrown pathways a testament to a forgotten era. With hearts pounding with excitement, they ventured into the depths of the ruins, eager to uncover the mysteries that lay hidden within.\n\nBut their journey soon took a perilous turn when they found themselves pursued by a rival expedition, led by the ruthless treasure hunter, Javier de la Cruz. Determined to claim the ancient artifacts for himself, de la Cruz would stop at nothing to thwart Dr. Westwood's plans.\n\nCaught in a deadly game of cat and mouse, Dr. Westwood and her team raced against time to unravel the secrets of the ruins before their adversaries could seize control. With danger lurking around every corner and betrayal lurking within their midst, they relied on courage and cunning to outwit their foes.\n\nIn a heart-stopping climax that would test their limits, Dr. Westwood and her team found themselves face to face with the ultimate challenge: a hidden chamber guarded by ancient traps and deadly guardians.\n\nBut with teamwork and determination, they overcame every obstacle in their path, unlocking the secrets of the chamber and discovering treasures beyond their wildest dreams. And as they emerged from the depths of the jungle, victorious and triumphant, they knew that their adventure had only just begun.",
+            "created_on": "2024-03-22T00:00:00Z",
+            "excerpt": "In the rugged wilderness of the Amazon rainforest, an epic adventure unfolds as Dr. Amelia Westwood leads a daring expedition to uncover the secrets of a lost civilization.",
+            "author": 1,
+            "likes": 0,
+            "status": 1,
+            "genre": 10
+        }
+    }
+
+]

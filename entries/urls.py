@@ -19,8 +19,9 @@ from . import views
 
 
 
+
 urlpatterns = [
-    path('like/<int:entry_id>/', views.like_entry, name='like_entry'),
+    path('entries/like/<slug:slug>/', views.like_entry, name='like_entry'),
     path('', views.entry_list, name = "list"),
     path('write', views.entry_write, name = "write"),
     path('entries/<slug:slug>/', views.entry_detail, name='entry_detail'), 
