@@ -8,6 +8,7 @@ from .forms import CommentForm, UpdateEntry, WriteEntry
 from django.views import generic
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -100,7 +101,7 @@ def entry_update(request):
 #     # Redirect to the entry detail page after liking
 #     return redirect('entries:entry_detail', slug=entry.slug)
 
- #TEST 2 == FAIL
+ #TEST 2 == SUCCESS
 def like_entry(request, slug):
      entry = get_object_or_404(Entry, slug=slug)
      entry.likes += 1
@@ -181,4 +182,6 @@ class EditEntry(UpdateView):
     model = Entry
     template_name = 'entry_edit.html'
     form_class = WriteEntry
+    success_url = reverse_lazy('EditEntry')
+    
     

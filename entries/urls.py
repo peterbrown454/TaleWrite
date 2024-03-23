@@ -27,6 +27,6 @@ urlpatterns = [
     path('entries/<slug:slug>/', views.entry_detail, name='entry_detail'), 
     #path ('edit/<slug:slug>/', views.entry_update, name ='entry_update'),
     path('entries/entries/<slug:slug>/',views.delete_entry, name='delete_entry'),
-    #path('<pk>/update', views.EntryEdit, name = "EntryEdit"),
-    path('entries/edit/<slug:slug>/', views.entry_edit, name='entry_edit'),
+    path('entries/<pk>/update', views.EditEntry.as_view(), name = "EditEntry"),
+    #path('entries/edit/<slug:slug>/', views.entry_edit, name='entry_edit'),
 ]
