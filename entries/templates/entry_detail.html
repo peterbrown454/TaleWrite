@@ -26,7 +26,7 @@
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
             style="color: #080808;"></i></button></form>
 
-<form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="POST">
+<form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square fa-sm"
             style="color: #030303;"></i></button></form>
