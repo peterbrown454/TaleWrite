@@ -9,7 +9,7 @@ from django.views import generic
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
-
+from django.contrib.messages.views import SuccessMessageMixin
 # Create your views here.
 
 
@@ -177,11 +177,15 @@ def entry_edit(request, slug):
 #     return HttpResponseRedirect(reverse('entry_detail', args=[slug]))
 # """
 
-class EditEntry(UpdateView):
-    """ Edit Recipe """
-    model = Entry
-    template_name = 'entry_edit.html'
-    form_class = WriteEntry
-    success_url = reverse_lazy('EditEntry')
+class EditEntry(UpdateView, SuccessMessageMixin):
+    # if request.user == entry.author:
+        model = Entry
+        form_class = WriteEntry
+        template_name = 'entry_edit.html'
+        success_url = reverse_lazy('EditEntry')
+        success_message = "You've edited your tale" 
+    # else:
+    #    redirect(reverse('entries:list'))
+    
     
     

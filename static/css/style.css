@@ -111,7 +111,6 @@ header li {
 main {
     background: RGB(255, 255, 240);
     margin: 0;
-    margin-top: 60px;
 }
 
 
@@ -237,6 +236,46 @@ form.site-form input[type="submit"],
 .write-entry form input[type="submit"] {
     margin-top: 10px;
 }
+
+@media only screen and (max-width: 320px) {
+
+    .logo {
+        height: 30px;
+        width: 30px;
+        padding-left: 0px;
+
+    }
+
+    .navbar-brand {
+        font-size: small;
+    }
+
+    .text-end {
+        font-size: small;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+
+    .logo {
+        height: 45px;
+        width: 45px;
+        padding-left: 2px;
+
+    }
+
+    .navbar-brand {
+        font-size: smaller;
+
+    }
+
+    .text-end {
+        font-size: small;
+    }
+}
+
+
 
 @media only screen and (max-width: 768px) {
 

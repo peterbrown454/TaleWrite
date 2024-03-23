@@ -1,110 +1,375 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<h1>TaleWrite README.MD</h1>
 
-Welcome Peter Brown,
+<h2>Introduction</h2>
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+TaleWrite is a short story website. It provides the user the ability to write and publish their short tales on the website, edit them if desired, and read the published tales of other authors. By creating their own account they can then interact with site including liking the tales of other users, and provide a genre and short excerpt to intrigue potential readers on the main page which is a listing of other published tales. Lastly the "published on" attribute allows authors and readers to keep track of tales and return to edit, delete, or read again if desired.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+N.B. In the following ReadME "Tale" is synonymous with "entry" in the code.
 
-## Gitpod Reminders
+## Read page (home and landing page for first time users)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+The landing page of the website allows users to see the TaleWrite logo for brand visibility, and list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. It informs the user if they are logged in or not with a welcome back message if logged in, and a login or sign up message if not. If the user atempts to read a tale without logging in they will be redirected to the login page.
 
-`python3 -m http.server`
+<strong>Landing/read page</strong>
 
-A blue button should appear to click: _Make Public_,
+<img src="static/images/read_not_signed_in1.png" alt="Home page with list of published tales with message requesting they log in or sign up">
 
-Another blue button should appear to click: _Open Browser_.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+## Read page (home and landing page for returning users) 
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+<strong>Read</strong>
 
-To log into the Heroku toolbelt CLI:
+Mobile size resolution of write pageUnfortunately we're unable to show you mutiple devices due to amiresponsive not able to show you authentication required webpages
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+<img src="static/images/read_signed_in1.png" alt="Write page showing write form">
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+<br>
 
-------
+<strong>Write</strong>
+ 
 
-## Release History
+<img src="static/images/write.png" alt="Write page showing write form with title, content, excerpt, slug, genre fields and submit button">
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<br>
 
-**September 20 2023:** Update Python version to 3.9.17.
+<strong>Read: Tale</strong>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<img src="static/images/read_tale_top.png" alt="Read page showing top half of read page displaying content of a tale">
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+<br>
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+<strong>Read: Tale from non-author's POV</strong>
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+<p>This page shows the bottom of a Read:Tale page showing a like button and comments section. It is possible for readers to leave a comment which awaits moderation before being published.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+<img src="staticfiles/images/read_bottom_non_author.png" alt="a Read:Tale page showing a like button and comments section with one approved comment and one awaiting moderation">
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+<strong>Read:Tale from author's POV</strong>
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+<p>This page shows the bottom of a Read: Tale page showing the options available to the author of the tale. This includes a delete button, edit button, and like button. These are only visible to the user who is also the author of the tale. It is also possible to leave a comment, usually it would be in response to another users comment.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+<img src="static/images/read_tale_author.png" alt="Read page showing bottom half of read page displaying Like button, delete button, and edit button">
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<strong>Delete</strong>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+<p>This shows the delete function having been used which then displays a "entry deleted successfully" message, and redirect to the homepage.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+<img src="static/images/entry_delete_successful.png" alt="Banner message saying 'entry deleted successfully'">
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+<br>
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+<p>This shows the edit function having been used which then displays a "entry deleted successfully" message, and redirect to the homepage.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<img src="static/images/entry_delete_successful.png" alt="Banner message saying 'entry deleted successfully'">
 
-------
+<br>
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+## Design Choices
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+We selected a rich and colourful style, using bright high contrast colours. We want the user to feel immersed in the experience of visiting our website. We derived our colours from https://visme.co/blog/website-color-schemes/
+“Bright Accent Colors”
+#242582
+#553D67
+#F64C72
+#99738E
+#2F2FA2
 
-**How will this affect me?**
+We selected the font style Poppins 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'. It works well as a fun, slightly futuristic, slightly unusual font; but not unusual enough to overpower the rest of the page.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## Wire Frames
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+<strong>Landing page for First Time User followed by Options Pages for repeat users<br></strong>
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+<img src="assets/images/readMeImages/wireframes/wflandingpagefinal2.png" alt="Wireframe image of Insert name and Options page">
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+## Quiz page
 
-**Anything more?**
+We ensured that we provided wireframes to cover all the different stages of user experience and features
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+<img src="assets/images/readMeImages/wireframes/wfquizfinal2.png" alt="Wireframe image of In-Quiz page">
 
----
+## User Stories, features and bugs
 
-Happy coding!
+<table>
+  <tr>
+    <th>User Story</th>
+    <th>Features</th>
+    <th>Bugs / Issues - tested across viewports of all devices using Google Dev Tools</th>
+  </tr>
+   <tr>
+    <td>As a user, I want a flowing, integrated user experience. </td>
+    <td>No bugs or issues that make interaction with site feel awkward</td>
+    <td>1. Three second delay between selecting answer and next question <br>
+    2. On large devices the "Enter name" box obscures the brand logo and feels like a pop-up rather than an integrated element of the UX package</td>
+   
+    
+  </tr>
+  <tr>
+    <td>As a user, I want the questions and answers to be clear and unambiguous.</td>
+    <td>Questions clearly phrased. Text clearly delineated against background.</td>
+    <td>Occasional spelling errors e.g. "Introduced" spelt 'introudced'.</td>
+  
+  </tr>
+   <tr>
+    <td>As a site owner, I want the logo clearly visible to increase brand recognition.</td>
+    <td>Logo clearly visible on landing/options page.</td>
+    <td>On first visit then "Enter Name" box covers brand logo on some devices</td>
+  <tr>
+    <td>As a user, I want it to be obvious how to proceed with the game.</td>
+    <td>Questions, and answer list clear, with feedback when answers clicked.</td>
+    <td>None detected</td>
+  </tr>
+  <tr>
+    <td>As a user, I want to be able to restart the game once I’ve finished.</td>
+    <td>Play again button at bottom of page when quiz complete</td>
+    <td>None deteced</td>
+    
+  </tr>
+  <tr>
+    <td>As a user, I want to be able to reset the game when I’ve made an error.</td>
+    <td>Reset / restart quiz button</td>
+    <td>None detected</td>
+    
+  </tr>
+  <tr>
+    <td>As a user, I want the site to be easily navigable.</td>
+    <td>Different features of site are clearly identifiable</td>
+    <td>None detected</td>
+    
+  </tr>
+  <tr>
+    <td>As a user, I want to be able to choose an answer from a pre-populated list.</td>
+    <td>List of answers to be selected</td>
+    <td>None detected</td>
+    
+  </tr>
+  <tr>
+    <td>As a user, I want to receive feedback on the answers.</td>
+    <td>Clear signal of correct / incorrect answer</td>
+    <td>None detected</td>
+    
+  </tr>
+  <tr>
+    <td>As a user, I want the site to be visually appealing.</td>
+    <td> Select complementary colour scheme. <br>
+    Different elements/features delineated.</td>
+    <td>None detected</td>
+    
+  </tr>
+  <tr>
+    <td>As a user, I want to be able to start the quiz.</td>
+    <td>Page loads and includes necessary event listeners</td>
+    <td>None detected</td>
+    
+  </tr>
+   <tr>
+    <td>As a site owner, I want to use an API so that I can source questions from an outside repository.</td>
+    <td>Questions load clearly in each different category and difficulty</td>
+    <td>Sometimes quiz repeats questions, or includes them from higher difficulties.</td>
+    
+  </tr>
+      <td>As a user, I want to sort the questions by categories so I can test myself on specific topics.</td>
+    <td>Drop-down menu specifying topic category</td>
+    <td>None detected</td>
+    <tr>
+      <td>As a user I want to challenge myself against different degrees of difficulty depending on my level of knowledge</td>
+    <td>Drop-down menu specifying difficulty level</td>
+    <td>Sometimes quiz repeats questions, or includes them from higher difficulties.</td>
+    </tr>
+    <tr>
+    <td>As a user, I want to be greeted by name when I enter the website for personalisation and to feel welcome.</td>
+    <td>Input Name field and have name saved when user returns (cookies required)</td>
+    <td>None detected</td>
+  </tr>
+     <tr>
+    <td>As a user I want to see my score</td>
+    <td>Current score display to keep score updating</td>
+    <td>None detected</td>
+  </tr>
+    <tr>
+    <td>As a user I want to be able to share the fun I am having doing the quiz, and challenge my friends.</td>
+    <td>"Share with friends" copy link button. Post to FB / Instagram / X clickable icons.</td>
+    <td>Ran out of time to add Instagram and X icons</td>
+  </tr>
+    <tr>
+     <td>As a site owner I want to increase the visibility and thus usership of our website.</td>
+    <td>"Share with friends" copy link button. Post to FB / Instagram / X clickable icons.</td>
+    <td>Ran out of time to add Instagram and X icons</td>
+  </tr>
+    <tr>
+     <td>As a user, I want to be able to adjust the number of questions I am asked to try shorter or longer games.</td>
+    <td>Dropdown menu providing game length options</td>
+    <td>Sometimes quiz repeats questions, or includes them from higher difficulties.</td>
+  </tr>
+  </table>
+
+<br>
+
+
+### User Stories and Features (to be implelemented next Sprint) 
+
+
+  <table>
+  <tr>
+    <th>User Story</th>
+    <th>Features</th>
+    <th>Bugs / Issues</th>
+  </tr>
+
+
+
+  <tr>
+    <td>As a user I want to be able to store my highest score to see if I can beat it on my future visits.</td>
+    <td>Highest score from previous use visible (cookies required)</td>
+    <td>N/A</td>
+  </tr>
+  
+
+  </table>
+
+### Won't haves
+
+  <table>
+  <tr>
+    <th>User Story</th>
+    <th>Features</th>
+    <th>Bugs / Issues</th>
+  </tr>
+  <tr>
+    <td>As a user, I want to have a countdown timer to challenge myself to answer more quickly.</td>
+    <td>A countdown timer to display either how long I have left to answer the question before it assigns to wrong</td>
+    <td>N/A</td>
+  </tr>
+    
+ 
+  <td>As a site-owner I want to have a questions backup in case the API  stops working.</td>
+    <td>A secondary API or source of questions in case the first API breaks down</td>
+    <td>N/A</td>
+  </table>
+
+## Fixed Bugs / Issues
+<br>
+<table>
+  <tr>
+    <th>Bug/Issue</th>
+    <th>Image</th>
+    <th>Resolution</th>
+  </tr>
+  <td>"Select type" option overflows to below options box on smaller devices</td>
+    <td><img src="assets/images/readMeImages/bugs/fixed/questionsoverflow.png" alt="Image showing box obscuring the logo on larger devices"></td>
+    
+  <td>We added media queries to ensure effective responsiveness</td>
+  </tr>
+      
+  </tr>
+    <td>Quiz-E would display without questions and just show questions marks when user left all questions to default(i.e.Any).</td>
+   <td><img src="assets/images/readMeImages/bugs/fixed/questionsdontshow.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
+   <td>We required the user to enter Questions Length, and API call modified to accommodate this by leaving the “any” option off the API call.</td>
+  </tr>
+      
+  </tr>
+    <td>Sometimes after answering several questions the questions would stop changing</td>
+   <td><img src="assets/images/readMeImages/bugs/delay.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
+    
+  <td>The problem lay was that when too many requests were made from the API in too small a space of time. Therefore to fix this we implemented a required delay of three seconds between committing answers</td>
+  </tr>
+  </table>
+
+## Unfixed Bugs / Issues
+<br>
+<table>
+  <tr>
+    <th>Bug/Issue</th>
+    <th>Image</th>
+    <th>Resolution</th>
+  </tr>
+  <td>On large devices the "Enter name" box obscures the brand logo and feels like a pop-up rather than an integrated element of the UX package</td>
+    <td><img src="assets/images/readMeImages/amiresponsive/loginscreenpng.png" alt="Image showing box obscuring the logo on larger devices"></td>
+    
+  <td>Unfortunately we ran out of time to fix this. We would in future sprints change from an in-browser alert box to a html modal box, that would be styled and centred on the screen etc as part of a user management system.</td>
+  </tr>
+      
+  </tr>
+    <td>Sometimes quiz repeats questions, or includes them from higher difficulties. As an example of both, this question came up twice in a quiz set to easy.</td>
+    <td><img src="assets/images/readMeImages/bugs/repeatdifficultforbugpage.png" alt="Image showing difficult question"></td>
+    
+  <td>Unfortunately none available as source of questions is the API. The only fix would have been to change the API from a paid provider but this would be costly and we would have had to change too much code by the time we realised</td>
+  </tr>
+    
+  </tr>
+  <td>Three second delay between answer and next question</td>
+    <td><img src="assets/images/readMeImages/bugs/delay.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
+    <td>The delay was a fix to a bug of the site crashing when too many requests were made from the API in too small a space of time(see "Fixed Bugs" above). The only fix would have been to change the API from a paid provider but this would be costly and we would have had to change too much code by the time we realised</td>
+      <tr>
+      <td>Only a share to FB button, no instagram or X buttons</td>
+      <br>
+    <td><img src="assets/images/readMeImages/bugs/socialmedia.png" alt="Social media button of Facebook, but not any other social media"></td>
+    <td><br><br<br>Ran out of time to add this sprint, but definitely would be added Instagram and X buttons on a future sprint<br><br></td>
+  </tr>
+  <tr>
+      <td>Spelling errors on website </td>
+    <td><img src="assets/images/readMeImages/bugs/spelling.png" alt="Question with a spelling error on it"></td>
+    <td>Unfortunately none available as source of questions is the API. The only fix would have been to change the API from a paid provider.</td>
+    
+    
+  <table>
+  
+  </tr>
+
+  </table>
+
+
+### Validator Testing 
+
+For HTML validation https://validator.w3.org/
+
+<img src="assets/images/readMeImages/html-validation.png" alt="html validation screenshot">
+
+For CSS validation  https://jigsaw.w3.org/css-validator/
+
+<img src="assets/images/readMeImages/css-validation.png" alt="css validation screenshot">
+  
+
+
+
+## Deployment
+
+Site successfully deployed on https://kjwhitehead.github.io/quizzee_rascals/
+
+## Credits 
+
+Color Scheme: “Bright Accent Colors” https://visme.co/blog/website-color-schemes/
+
+### Content 
+
+Timer used to display delay issue https://www.online-stopwatch.com/
+
+Responsiveness displayed on https://ui.dev/amiresponsive
+
+API Questions taken from https://opentdb.com/
+
+Code initially inspired by and re-written https://opentdb.com/
+
+Logo from Canva https://www.canva.com/
+
+For validation in HTML https://validator.w3.org/
+
+For validation in CSS https://jigsaw.w3.org/css-validator/
+
+For ReadME table https://www.shecodes.io/athena/2362-creating-a-table-with-4-columns-and-4-rows-in-html
+
+Wireframes produced using Balsamiq WireFrames https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAiA44OtBhAOEiwAj4gpOexFh0z3peWS6wolbjlJt_fLq7cZGNu99YeMSIpU89wlL2p6ZluXiRoCOSUQAvD_BwE
+
+Timer used to display delay issue https://www.online-stopwatch.com/
+
+
+## Other General Project Advice
+
+Enjoy the Quiz!
