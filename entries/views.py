@@ -13,7 +13,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 # Create your views here.
 
 
-
 def entry_list(request):
     entries = Entry.objects.all().order_by('created_on')
     return render(request, 'entry_list_template.html', {'entries': entries})
@@ -24,7 +23,6 @@ def entry_list(request):
 #     model = Entry
 #     template_name = "entry_list_template.html"
 #     context_object_name = "entries"
-
 
 
 
@@ -58,7 +56,6 @@ def entry_detail(request, slug):
 )
 
 
-
 @login_required(login_url="/login")
 def entry_write (request):
     if request.method == 'POST':
@@ -75,14 +72,12 @@ def entry_write (request):
 
 
 
-
 def like_entry(request, slug):
      entry = get_object_or_404(Entry, slug=slug)
      entry.likes += 1
      entry.save()
     
      return redirect('entries:entry_detail', slug=entry.slug)
-
 
 
 
@@ -97,7 +92,6 @@ def delete_entry(request, slug):
     else:
         messages.error(request, "You don't have permission to delete this entry.")
     return redirect(reverse('entries:list'))
-
 
 
 
@@ -132,3 +126,5 @@ class EditEntry(SuccessMessageMixin, UpdateView):
     
     
     
+
+

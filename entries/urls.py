@@ -17,9 +17,6 @@ app_name = 'entries'
 from django.urls import path, include
 from . import views
 
-
-
-
 urlpatterns = [
     path('entries/like/<slug:slug>/', views.like_entry, name='like_entry'),
     path('', views.entry_list, name = "list"),
