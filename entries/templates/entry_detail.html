@@ -26,10 +26,10 @@
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
             style="color: #080808;"></i></button></form>
 
-<!-- <form action="{% url 'entries:entry_edit' slug=entry.slug %}" method="POST">
+<form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square fa-sm"
-            style="color: #030303;"></i></button></form> -->
+            style="color: #030303;"></i></button></form>
 
 
 {% endif %}
@@ -37,7 +37,7 @@
 <br>
 <br>
 <br>
-<!-- <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST"> -->
+
 <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-thumbs-up"></i>
