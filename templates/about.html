@@ -3,10 +3,24 @@
 
 
 {%block content %}
+{% if entries %}
+{% for entry in entries %}
 
-This is the about page
 
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title"><a href="{% url 'entries:entry_detail' slug=entry.slug %}">{{ entry.title }}</a>
+                </h5>
+                <p class="card-text">{entry.excerpt_with_ellipsis}</p>
+                <p class="card-text"><small class="text-muted">A {{entry.genre}}, by {{entry.author}}. Published
+                        {{entry.created_on}}</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endif %}
 {% endblock %}
-</body>
-
-</html>

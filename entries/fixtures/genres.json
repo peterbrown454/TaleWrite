@@ -42,7 +42,7 @@
         "model": "entries.genre",
         "pk": 6,
         "fields": {
-            "type_genre": "Thriller/Suspense",
+            "type_genre": "Thriller",
             "description": "Thriller literature is characterized by excitement, tension, and anticipation. It often involves danger, suspense, and high stakes, keeping readers on the edge of their seats."
         }
     },

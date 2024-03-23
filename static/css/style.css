@@ -18,6 +18,20 @@ main {
     flex-grow: 1;
 }
 
+btn {
+    background-color: RGB(128, 0, 32);
+}
+
+.excerpt {
+    font-weight: 500;
+    font-size: 110%;
+}
+
+.card-body {
+    background-color: RGB(255, 255, 240);
+
+}
+
 .readable-title {
     text-align: center;
     padding-bottom: 20px;
@@ -61,10 +75,11 @@ p {
 header {
     font-family: "EB Garamond", serif;
     font-weight: 500;
-    font-size: larger;
+    font-size: x-large;
     margin: 0;
     position: sticky;
     top: 0;
+
 }
 
 .navbar {
@@ -104,7 +119,7 @@ header li {
 .nav-link {
     background-color: RGB(128, 0, 32);
     color: RGB(255, 255, 240);
-    font-size: large;
+    font-size: x-large;
 }
 
 #msg {
@@ -156,11 +171,6 @@ footer {
     padding-top: 8px;
 }
 
-.footer-item {
-    padding: 16px;
-    color: black;
-}
-
 
 header,
 footer {
@@ -201,6 +211,16 @@ footer {
 
 .btn:hover {
     background-color: rgba(151, 1, 97, 1);
+}
+
+.fa-solid:hover {
+    color: RGB(8, 45, 226) !important;
+    transform: scale(1.15);
+
+}
+
+.entry-title {
+    font-weight: 600;
 }
 
 .write-entry {

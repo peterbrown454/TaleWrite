@@ -3,16 +3,29 @@
 {% block content %}
 
 
+
+
 <div class="entries"></div>
 {% if entries %}
 {% for entry in entries %}
 <div class="entry entry-list">
 
-    <h2><a href="{% url 'entries:entry_detail' slug=entry.slug %}">{{ entry.title }}</a></h2>
+    <span style="display: flex;">
+        <h2 class="entry-title" style="margin-right: 15px;">{{ entry.title }}</h2>
+        <a href="{% url 'entries:entry_detail' slug=entry.slug %}">
+            <i class="fa-solid fa-book-open fa-xl"
+                style="color: #2899c8; vertical-align: bottom; width: 50px; height: auto;"
+                alt="picture of open book acting as hyperlink to that story"></i>
+        </a>
+        <br>
+        <br>
 
+    </span>
 
-    <p class="entry-list">{{ entry.excerpt_with_ellipsis}}</p>
+    <p class="entry-list excerpt">{{ entry.excerpt_with_ellipsis}}</p>
     <p class="entry-list">A {{entry.genre}}, by {{entry.author}}. Published {{entry.created_on}}</p>
+
+    <hr>
 
 
 </div>
