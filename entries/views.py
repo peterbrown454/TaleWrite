@@ -9,7 +9,7 @@ from django.views import generic
 from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
-
+from django.contrib.messages.views import SuccessMessageMixin
 # Create your views here.
 
 
@@ -33,7 +33,7 @@ def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
     comment_count = entry.comments.filter(approved=True).count() 
-###
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -57,27 +57,17 @@ def entry_detail(request, slug):
     },
 )
 
-   # if request.method == 'POST':
-    #    form = forms.WriteComment(request.POST, request.FILES)
-      #  if form.is_valid():
-        #    instance = form.save(commit = False)
-         #   instance.author = request.user
-          #  instance.save()
-          #  return redirect('entries:list') 
-  #  else:
-     #   form = forms.WriteComment()
 
-   # return render(request, 'entry_detail.html', {'entry': entry, 'form': form})
 
 @login_required(login_url="/login")
 def entry_write (request):
     if request.method == 'POST':
         form = forms.WriteEntry(request.POST, request.FILES)
         if form.is_valid():
-            #save article to db
             instance = form.save(commit = False)
             instance.author = request.user
             instance.save()
+            messages.success(request, "Tale was published successfully")
             return redirect('entries:list')
     else:
         form = forms.WriteEntry()
@@ -85,47 +75,16 @@ def entry_write (request):
 
 
 
-def entry_update(request):
-    return HttpResponse ("update page")
-    #model = Entry
-   # template_name = entry_detail_edit.html
-    #login_url = 
-    #success_url = "/"
-    #success_message = "Your tale has been edited"
 
-# TEST 1 == FAIL
-# def like_entry(request, entry_id):
-#     entry = get_object_or_404(Entry, pk=entry_id)
-#     entry.likes += 1
-#     entry.save()
-#     # Redirect to the entry detail page after liking
-#     return redirect('entries:entry_detail', slug=entry.slug)
-
- #TEST 2 == SUCCESS
 def like_entry(request, slug):
      entry = get_object_or_404(Entry, slug=slug)
      entry.likes += 1
      entry.save()
-    #Redirect to the entry detail page after liking
+    
      return redirect('entries:entry_detail', slug=entry.slug)
 
 
-#def delete_entry(request, slug):
-    #entry = Entry.objects.get(pk=slug)
-   # entry.delete()
-    #return redirect ("entries:list")
 
-#def delete_entry(request, pk):
-   # entry = get_object_or_404(Entry, pk=pk)
-   # if request.method == 'POST':
-       # entry.delete()
-        #return redirect('list')  
-
-#def destroy (request, entry_id):
-    #entry = Entry.objects.get(Entry_id=Entry_id)
-    #entry.delete()
-    #return redirect('list')
-    #return render(request, 'delete_content.html', {'content': content})
 
 
 
@@ -140,48 +99,36 @@ def delete_entry(request, slug):
     return redirect(reverse('entries:list'))
 
 
-def entry_edit(request, slug):
-    entry = get_object_or_404(Entry, slug=slug)
-    if request.method == 'POST':
-        form = forms.WriteEntry(request.POST, request.FILES)
-        if form.is_valid():
-            #save article to db
-            instance = form.save(commit = False)
-            instance.author = request.user
-            instance.save()
-            return redirect('entries:list')
-    else:
-        form = forms.WriteEntry()
-    return render(request, "entry_edit.html", {'form': form, 'entry':entry})
 
-# #LMS ONE BELOW
 
-# def entry_edit(request, slug):
+#Test = Title saves but content doesnt save when edited. only title. Redirects to entrylist, but no success msg.
+#class EditEntry(UpdateView, SuccessMessageMixin):
+        # model = Entry
+        # form_class = WriteEntry
+        # template_name = 'entry_edit.html'
+        # success_url = reverse_lazy('entries:list')
+        # success_message = "%(name)s was updated successfully"
+
+ 
+#Test = saves title and fails the redirect. no success message.
+# class EditEntry(SuccessMessageMixin, UpdateView):
+#         model = Entry
+#         form_class = WriteEntry
+#         template_name = 'entry_edit.html'
+#         success_url = reverse_lazy('entries:list')
+#         success_message = "%(name)s was updated successfully"     
+
+#Test = success [edit:title. Redirect home page. Success message.  
+#       fail: update content 
+class EditEntry(SuccessMessageMixin, UpdateView):
+        model = Entry
+        form_class = WriteEntry
+        template_name = 'entry_edit.html'
+        success_url = reverse_lazy('entries:list')
+        success_message = "Tale was edited successfully"
+        def editmessagesuccess(self, request):
+            messages.success(request, "Tale was edted successfully")
+   
     
-#     view to edit comments
-#     """
-#     """
-#     if request.method == "POST":
-
-#         queryset = Entry.objects.filter()
-#         entry = get_object_or_404(queryset, slug=slug)
-
-
-#         if entry.author == request.user:
-
-
-#             messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-#         else:
-#             messages.add_message(request, messages.ERROR, 'Error updating comment!')
-
-#     return HttpResponseRedirect(reverse('entry_detail', args=[slug]))
-# """
-
-class EditEntry(UpdateView):
-    """ Edit Recipe """
-    model = Entry
-    template_name = 'entry_edit.html'
-    form_class = WriteEntry
-    success_url = reverse_lazy('EditEntry')
     
     
