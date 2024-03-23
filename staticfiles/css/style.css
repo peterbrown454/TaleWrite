@@ -7,24 +7,20 @@ body {
 
 .comments-section {
     background: RGB(255, 255, 240);
-    background-color: RGB(252, 245, 229);
-    display: flex;
-    flex-direction: column;
-}
-
-.comments-section {
-    background: RGB(255, 255, 240);
 }
 
 main {
     padding-left: 15px;
     padding-top: 15px;
+    background: RGB(255, 255, 240);
+    margin: 0;
+    min-height: 100%;
+    flex-grow: 1;
 }
 
 .readable-title {
     text-align: center;
     padding-bottom: 20px;
-    text-decoration: underline;
     text-decoration: underline;
 }
 
@@ -60,18 +56,15 @@ p {
 
 
 
-
-
-
-
-
 /*--------------------------------------Header-------*/
 
 header {
     font-family: "EB Garamond", serif;
     font-weight: 500;
-    font-size: large;
+    font-size: larger;
     margin: 0;
+    position: sticky;
+    top: 0;
 }
 
 .navbar {
@@ -104,14 +97,6 @@ header li {
     color: RGB(255, 255, 240);
 }
 
-.comment_submit_button {
-    color: RGB(255, 255, 240);
-}
-
-.btn-signup {
-    color: RGB(255, 255, 240);
-}
-
 .bg-color-navbar {
     background-color: RGB(128, 0, 32);
 }
@@ -119,26 +104,18 @@ header li {
 .nav-link {
     background-color: RGB(128, 0, 32);
     color: RGB(255, 255, 240);
-    font-size: larger;
+    font-size: large;
 }
 
 #msg {
     background-color: RGB(128, 0, 32);
     color: RGB(255, 255, 240);
     font-size: larger;
+    position: sticky;
+    top: 0px;
+
+
 }
-
-
-
-
-
-
-main {
-    background: RGB(255, 255, 240);
-    background: RGB(255, 255, 240);
-    margin: 0;
-}
-
 
 
 
@@ -147,7 +124,6 @@ footer {
     color: RGB(255, 255, 240);
     min-height: 30px;
     margin: 0;
-    position: fixed;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -176,7 +152,6 @@ footer {
     flex-grow: 1;
 }
 
-
 .contact-details {
     padding-top: 8px;
 }
@@ -187,39 +162,11 @@ footer {
 }
 
 
-main {
-    padding: 15px;
-    min-height: 100%;
-    flex-grow: 1;
-}
-
 header,
 footer {
     position: sticky;
 }
 
-header {
-    top: 0px;
-}
-
-footer {
-    bottom: 0px;
-}
-
-main {
-    padding: 15px;
-    min-height: 100%;
-    flex-grow: 1;
-}
-
-header,
-footer {
-    position: sticky;
-}
-
-header {
-    top: 0px;
-}
 
 footer {
     bottom: 0px;
@@ -256,171 +203,87 @@ footer {
     background-color: rgba(151, 1, 97, 1);
 }
 
-
 .write-entry {
+    display: flex;
+    flex-direction: column;
+}
 
-    .write-entry {
-        display: flex;
-        flex-direction: column;
-        flex-direction: column;
+.comments-section form,
+form.site-form,
+.write-entry form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.write-entry form textarea[name="content"] {
+    flex-grow: 1;
+}
+
+.write-entry form textarea[name="excerpt"] {
+    height: 60px;
+}
+
+.comments-section form input[type="submit"],
+form.site-form input[type="submit"],
+.write-entry form input[type="submit"] {
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 320px) {
+
+
+
+    .navbar-brand {
+        font-size: medium
     }
 
-    .comments-section form,
-    form.site-form,
-    .write-entry form {
+    .text-end {
+        font-size: medium;
+    }
+}
 
-        .comments-section form,
-        form.site-form,
-        .write-entry form {
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
+@media only screen and (max-width: 400px) {
 
-        .write-entry form textarea[name="content"] {
-            flex-grow: 1;
-        }
+    .logo {
 
-        .write-entry form textarea[name="excerpt"] {
-            height: 60px;
-            flex-direction: column;
-            flex-grow: 1;
-        }
+        padding-left: 2px;
 
-        .write-entry form textarea[name="content"] {
-            flex-grow: 1;
-        }
+    }
 
-        .write-entry form textarea[name="excerpt"] {
-            height: 60px;
-        }
+    .navbar-brand {
+        font-size: medium
+    }
 
-        .comments-section form input[type="submit"],
-        form.site-form input[type="submit"],
-        .write-entry form input[type="submit"] {
-            margin-top: 10px;
-
-            .comments-section form input[type="submit"],
-            form.site-form input[type="submit"],
-            .write-entry form input[type="submit"] {
-                margin-top: 10px;
-            }
-
-            @media only screen and (max-width: 320px) {
-
-                .logo {
-                    height: 30px;
-                    width: 30px;
-                    padding-left: 0px;
-
-                }
-
-                .navbar-brand {
-                    font-size: small;
-                }
-
-                .text-end {
-                    font-size: small;
-
-                    @media only screen and (max-width: 320px) {
-
-                        .logo {
-                            height: 30px;
-                            width: 30px;
-                            padding-left: 0px;
-
-                        }
-
-                        .navbar-brand {
-                            font-size: small;
-                        }
-
-                        .text-end {
-                            font-size: small;
-                        }
-                    }
+    .text-end {
+        font-size: medium;
+    }
 
 
-
-                    @media only screen and (max-width: 400px) {
-                        @media only screen and (max-width: 400px) {
-
-                            .logo {
-                                height: 45px;
-                                width: 45px;
-                                padding-left: 2px;
-
-                                .logo {
-                                    height: 45px;
-                                    width: 45px;
-                                    padding-left: 2px;
-
-                                }
-
-                                .navbar-brand {
-                                    font-size: smaller;
-
-                                    .navbar-brand {
-                                        font-size: smaller;
-                                    }
-
-                                    .text-end {
-                                        font-size: small;
-
-                                        .text-end {
-                                            font-size: small;
-                                        }
-
-                                        .navbar-brand {
-                                            font-size: smaller;
-                                            padding-bottom: 50px;
-
-                                            .navbar-brand {
-                                                font-size: smaller;
-                                                padding-bottom: 50px;
-                                            }
-                                        }
+}
 
 
 
 
-                                    }
+@media only screen and (max-width: 768px) {
+
+    .comments-section form input,
+    form.site-form input,
+    .write-entry form input,
+    .write-entry form textarea {
+        padding: 10px;
+    }
+}
 
 
 
+@media only screen and (min-width: 1024px) {
 
+    .readable-content {
+        column-count: 2;
+        column-gap: 40px;
+        font-weight: 500;
+        font-size: 120%;
 
-                                    @media only screen and (max-width: 768px) {
-
-                                        .comments-section form input,
-                                        form.site-form input,
-                                        .write-entry form input,
-                                        .write-entry form textarea {
-                                            padding: 10px;
-
-                                            @media only screen and (max-width: 768px) {
-
-                                                .comments-section form input,
-                                                form.site-form input,
-                                                .write-entry form input,
-                                                .write-entry form textarea {
-                                                    padding: 10px;
-                                                }
-                                            }
-
-
-
-
-
-
-
-                                            @media only screen and (min-width: 1024px) {
-
-                                                .readable-content {
-                                                    column-count: 2;
-                                                    column-gap: 40px;
-                                                    font-weight: 500;
-                                                    font-size: 120%;
-
-                                                }
-                                            }
+    }
+}
