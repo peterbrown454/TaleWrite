@@ -62,7 +62,7 @@ def entry_write (request):
             instance = form.save(commit = False)
             instance.author = request.user
             instance.save()
-            messages.success(request, "Tale was published successfully")
+            messages.success(request, "Tale successfully published")
             return redirect('entries:list')
     else:
         form = forms.WriteEntry()
@@ -82,10 +82,10 @@ def delete_entry(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     if request.user == entry.author:
         entry.delete()
-        messages.success(request, "Tale deleted successfully.")
+        messages.success(request, "Tale successfully deleted")
         return redirect(reverse('entries:list'))
     else:
-        messages.error(request, "You don't have permission to delete this entry.")
+        messages.error(request, "You don't have permission to delete this entry")
     return redirect(reverse('entries:list'))
 
 
@@ -96,7 +96,7 @@ class EditEntry(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     form_class = WriteEntry
     template_name = 'entry_edit.html'
     success_url = reverse_lazy('entries:list')
-    success_message = "Tale edited successfully"
+    success_message = "Tale successfully edited"
  
 
 

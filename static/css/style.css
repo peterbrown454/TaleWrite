@@ -5,6 +5,23 @@ body {
     flex-direction: column;
 }
 
+#edit {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: RGB(255, 255, 240);
+
+}
+
+
+#like {
+    color: RGB(255, 255, 240);
+}
+
+#delete {
+    color: RGB(255, 255, 240);
+}
+
+
 .comments-section {
     background: RGB(255, 255, 240);
 }
@@ -18,7 +35,7 @@ main {
     flex-grow: 1;
 }
 
-btn {
+.btn {
     background-color: RGB(128, 0, 32);
 }
 

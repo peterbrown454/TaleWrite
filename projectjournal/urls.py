@@ -26,7 +26,6 @@ from entries import views as entry_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-   # path('about', views.about, name = 'about'),
     path('summernote/', include('django_summernote.urls')),
     path("", include("entries.urls"), name="entries-urls"),
     path('accounts/', include ('accounts.urls',)),

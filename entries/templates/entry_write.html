@@ -3,7 +3,7 @@
 {% block content %}
 <div class="write-entry">
     <!-- Your write entry form or content goes here -->
-    <h2>Start writing a new story</h2>
+    <h2>Begin a new tale</h2>
     <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
