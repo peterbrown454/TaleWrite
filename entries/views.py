@@ -10,7 +10,7 @@ from django.contrib import messages
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 def entry_list(request):
@@ -91,8 +91,7 @@ def delete_entry(request, slug):
 
 
  
-class EditEntry(SuccessMessageMixin, UpdateView):
-
+class EditEntry(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Entry
     form_class = WriteEntry
     template_name = 'entry_edit.html'
