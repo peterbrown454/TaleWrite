@@ -19,34 +19,35 @@
 {% if user == entry.author %}
 
 <!----BELOW HERE IS WHERE THE WORKING MODEL GOES HAD TO REMOVE BECAUSE EVEN COMMENTING CAUSED ERROR -->
+<div style="display: inline;">
+    <form onsubmit="return confirm('Are you sure you want to delete this tale?')"
+        action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST">
+        {%csrf_token %}
+        <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
+                style="color: #080808;"></i></button></form>
 
-<form action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST">
-    {%csrf_token %}
-    <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
-            style="color: #080808;"></i></button></form>
+    <br>
+    <!--work above this line-->
 
-<br>
-<!--work above this line-->
-
-<form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET">
-    {%csrf_token %}
-    <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square fa-sm"
-            style="color: #030303;"></i></button></form>
-
-
-
-{% endif %}
-{% endif %}
-<br>
+    <form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET">
+        {%csrf_token %}
+        <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square fa-sm"
+                style="color: #030303;"></i></button></form>
 
 
-<form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST">
-    {%csrf_token %}
-    <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-thumbs-up"></i>
-        <span>{{entry.likes}}</span></button>
-</form>
+
+    {% endif %}
+    {% endif %}
+    <br>
 
 
+    <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST">
+        {%csrf_token %}
+        <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-thumbs-up"></i>
+            <span>{{entry.likes}}</span></button>
+    </form>
+
+</div>
 
 <br>
 

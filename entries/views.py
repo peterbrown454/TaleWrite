@@ -99,6 +99,8 @@ class EditEntry(SuccessMessageMixin, UpdateView):
         success_message = "Tale edited successfully"
         def editmessagesuccess(self, request):
             messages.success(request, "Tale edited successfully")
+
+            
    
 
    

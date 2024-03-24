@@ -3,9 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 
-#def about (request):
-    #return HttpResponse ("this is the about page")
-   # return render (request, 'about.html')
+
 
 
 
