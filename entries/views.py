@@ -54,7 +54,7 @@ def entry_detail(request, slug):
     },
 )
 
-@login_required(login_url="/login")
+@login_required(login_url="/accounts/login")
 def entry_write (request):
     if request.method == 'POST':
         form = forms.WriteEntry(request.POST, request.FILES)
@@ -78,16 +78,17 @@ def like_entry(request, slug):
 
 
 
-# THIS DELETE ENTRY IS THE WORKING ONE
 def delete_entry(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     if request.user == entry.author:
         entry.delete()
-        messages.success(request, "Entry deleted successfully.")
+        messages.success(request, "Tale deleted successfully.")
         return redirect(reverse('entries:list'))
     else:
         messages.error(request, "You don't have permission to delete this entry.")
     return redirect(reverse('entries:list'))
+
+
 
  
 class EditEntry(SuccessMessageMixin, UpdateView):
@@ -95,34 +96,9 @@ class EditEntry(SuccessMessageMixin, UpdateView):
         form_class = WriteEntry
         template_name = 'entry_edit.html'
         success_url = reverse_lazy('entries:list')
-        success_message = "Tale was edited successfully"
+        success_message = "Tale edited successfully"
         def editmessagesuccess(self, request):
-            messages.success(request, "Tale was edited successfully")
+            messages.success(request, "Tale edited successfully")
    
-    
-    #------------- DELETE FUNCTION with warning ---------------------
-    
-# def entry_delete_page (request, slug):
-#      entry = get_object_or_404(Entry, slug=slug)
-#      if request.user == entry.author:
-#          return redirect(reverse('entries:entry_delete_page'))
-#          messages.warning(request, "Please confirm you want to delete this message")
-#      else:
-#          messages.error(request, "You don't have permission to delete this entry.")
 
-
-
-#---------------DELETE ENTRY FOLLOWING DELETE ENTRY INTRO------------
-
-#def delete_entry (request, slug):
-# def delete_entry(request, slug):
-#     entry = get_object_or_404(Entry, slug=slug)
-#     if request.user == entry.author:
-#         entry.delete()
-#         messages.success(request, "Entry deleted successfully.")
-#         return redirect(reverse('entries:list'))
-#     else:
-#         messages.error(request, "You don't have permission to delete this entry.")
-#     return redirect(reverse('entries:list'))
-
-#---------------------------------------------------
+   

@@ -20,13 +20,12 @@ def login_view(request):
         # Handle POST request here
         form = AuthenticationForm(data = request.POST)
         if form.is_valid():
-            #log in the user
             user = form.get_user()
             login(request, user) 
             if 'next' in 'request.POST':
                 return redirect(request.POST.get('next'))
             else:
-                return redirect ('entries:write')
+                return redirect ('entries:list')
     else: 
         form = AuthenticationForm() 
     return render(request, "login.html", {'form': form})

@@ -4,7 +4,8 @@
 
 TaleWrite is a short story website. It provides the user the ability to write and publish their short tales on the website, edit them if desired, and read the published tales of other authors. By creating their own account they can then interact with site including liking the tales of other users, and provide a genre and short excerpt to intrigue potential readers on the main page which is a listing of other published tales. Lastly the "published on" attribute allows authors and readers to keep track of tales and return to edit, delete, or read again if desired.
 
-N.B. In the following ReadME "Tale" is synonymous with "entry" in the code.
+Please be aware that TaleWrite is the name of the project, which changed from ProjectJournal in the code. And in following ReadME, "entry" is synonymous with "tale".
+
 
 ## Read page (home and landing page for first time users)
 
@@ -69,33 +70,35 @@ Mobile size resolution of write pageUnfortunately we're unable to show you mutip
 
 ## Design Choices
 
-We selected a rich and colourful style, using bright high contrast colours. We want the user to feel immersed in the experience of visiting our website. We derived our colours from https://visme.co/blog/website-color-schemes/
-“Bright Accent Colors”
-#242582
-#553D67
-#F64C72
-#99738E
-#2F2FA2
+TaleWrite adopted a distinctive, rich and warm-dark colour scheme. We want the user to feel as thought they are relaxing in an old leather chair with a brandy, and smell the musky pages as they read and write. It was inspired by an Edgar Allen Poe book of short stories.
 
-We selected the font style Poppins 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap'. It works well as a fun, slightly futuristic, slightly unusual font; but not unusual enough to overpower the rest of the page.
+<img src="static/images/edgar_tales.png" alt="Image of red/gold book of Edgar Allen Poe short stories">
+
+We selected the Garamond font style, and increasing or decreasing the font-weight as appropriate. 'https://fonts.google.com/specimen/EB+Garamond'. It works together with our colour scheme to create the impression of reading a book printed many decades ago.
 
 ## Wire Frames
 
-
-<strong>Landing page for First Time User followed by Options Pages for repeat users<br></strong>
-
+Initially I wanted to provide images that would excite and inspire the user of the site but it simply didn't work elegantly or provide the font with clarity therefore the hero images and parchment background were dropped in favour of a monotone off-white for readibility.
 
 
+<strong><br></strong>
 
-<img src="assets/images/readMeImages/wireframes/wflandingpagefinal2.png" alt="Wireframe image of Insert name and Options page">
+
+
+
+<img src="static/images/contrast.png" alt="Wireframe image of Insert name and Options page">
 
 ## Quiz page
 
-We ensured that we provided wireframes to cover all the different stages of user experience and features
+We ensured that we provided wireframes to cover all the different stages of user experience and features. We also test our colour schemes to ensure readibility using a contrast checker
 
-<img src="assets/images/readMeImages/wireframes/wfquizfinal2.png" alt="Wireframe image of In-Quiz page">
+<img src="static/images/contrast2.png" alt="Wireframe image of In-Quiz page">
 
 ## User Stories, features and bugs
+
+I used a canban board and the MSCW approach to my user stories and features. Unfortunately some I decreed to fall outside the scope of this project given time and staffing limitations. 
+
+There were others that I intended to do, however despite all efforts and the importance of the features, remain uncompleted this sprint.
 
 <table>
   <tr>
@@ -104,42 +107,41 @@ We ensured that we provided wireframes to cover all the different stages of user
     <th>Bugs / Issues - tested across viewports of all devices using Google Dev Tools</th>
   </tr>
    <tr>
-    <td>As a user, I want a flowing, integrated user experience. </td>
-    <td>No bugs or issues that make interaction with site feel awkward</td>
-    <td>1. Three second delay between selecting answer and next question <br>
-    2. On large devices the "Enter name" box obscures the brand logo and feels like a pop-up rather than an integrated element of the UX package</td>
+    <td>As a site user, I want a flowing user experience. </td>
+    <td>Ability to navigate from feature to feature without feeling surprised</td>
+    <td>The success messages on submitting an entry, edit or comment I wanted to get inside the Navbar but was unable to do so. Also for some reason the user after logging in is taken to the write function</td>
    
     
   </tr>
   <tr>
-    <td>As a user, I want the questions and answers to be clear and unambiguous.</td>
-    <td>Questions clearly phrased. Text clearly delineated against background.</td>
-    <td>Occasional spelling errors e.g. "Introduced" spelt 'introudced'.</td>
+    <td>As a site user I can sign up register an account so I can log in and interact with the site</td>
+    <td>Register and sign up functions</td>
+    <td>None detected</td>
   
   </tr>
    <tr>
     <td>As a site owner, I want the logo clearly visible to increase brand recognition.</td>
     <td>Logo clearly visible on landing/options page.</td>
-    <td>On first visit then "Enter Name" box covers brand logo on some devices</td>
+    <td>None detected</td>
   <tr>
-    <td>As a user, I want it to be obvious how to proceed with the game.</td>
-    <td>Questions, and answer list clear, with feedback when answers clicked.</td>
+    <td>As a user, I want to be able to leave comments and have other users comment on my entries</td>
+    <td>Comments section in which users can leave comments below entries, pending moderation from the superuser</td>
     <td>None detected</td>
   </tr>
   <tr>
-    <td>As a user, I want to be able to restart the game once I’ve finished.</td>
-    <td>Play again button at bottom of page when quiz complete</td>
+    <td>As site owner I want to be able to moderate comments to ensure a pleasent toxicity-free community of authors and readers</td>
+    <td>Superuser needs to authorise all comments before they are published</td>
     <td>None deteced</td>
     
   </tr>
   <tr>
-    <td>As a user, I want to be able to reset the game when I’ve made an error.</td>
-    <td>Reset / restart quiz button</td>
-    <td>None detected</td>
+    <td>As a site user I want to be able to easily access all published stories</td>
+    <td>Stories easy to upload and clearly visible on website.</td>
+    <td>Although uploading is easy and entries are clearly visible, the ability to filter/sort wasn't completed (see user story below). </td>
     
   </tr>
   <tr>
-    <td>As a user, I want the site to be easily navigable.</td>
+    <td>As a site user I want to be able to filter/sort all published stories so I can access specific ones</td>
     <td>Different features of site are clearly identifiable</td>
     <td>None detected</td>
     

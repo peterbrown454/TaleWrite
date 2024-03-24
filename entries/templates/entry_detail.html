@@ -12,17 +12,21 @@
 </div>
 
 {% if user.is_authenticated and comment.author == user %}
-<button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
+
 {% endif %}
 
 {% if user.is_authenticated %}
 {% if user == entry.author %}
 
+<!----BELOW HERE IS WHERE THE WORKING MODEL GOES HAD TO REMOVE BECAUSE EVEN COMMENTING CAUSED ERROR -->
 
 <form action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
             style="color: #080808;"></i></button></form>
+
+<br>
+<!--work above this line-->
 
 <form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET">
     {%csrf_token %}
@@ -30,11 +34,11 @@
             style="color: #030303;"></i></button></form>
 
 
+
 {% endif %}
 {% endif %}
 <br>
-<br>
-<br>
+
 
 <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST">
     {%csrf_token %}
