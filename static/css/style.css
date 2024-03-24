@@ -68,7 +68,6 @@ p {
 
 
 
-
 /*--------------------------------------Header-------*/
 
 header {
@@ -128,9 +127,7 @@ header li {
     position: sticky;
     top: 0px;
 
-
 }
-
 
 
 footer {
@@ -169,12 +166,10 @@ footer {
     padding-top: 8px;
 }
 
-
 header,
 footer {
     position: sticky;
 }
-
 
 footer {
     bottom: 0px;
@@ -251,7 +246,6 @@ form.site-form input[type="submit"],
 @media only screen and (max-width: 320px) {
 
 
-
     .navbar-brand {
         font-size: medium
     }
@@ -277,9 +271,7 @@ form.site-form input[type="submit"],
         font-size: medium;
     }
 
-
 }
-
 
 
 
@@ -292,7 +284,6 @@ form.site-form input[type="submit"],
         padding: 10px;
     }
 }
-
 
 
 @media only screen and (min-width: 1024px) {
