@@ -45,7 +45,6 @@ btn {
 
 .garamond {
     font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     /*from 400-800*/
     font-style: normal;
@@ -143,7 +142,6 @@ footer {
     bottom: 0;
     width: 100%;
     font-family: "EB Garamond", serif;
-    font-optical-sizing: auto;
     font-weight: 600;
     /*from 400-800*/
     font-style: normal;
@@ -214,7 +212,7 @@ footer {
 }
 
 .fa-solid:hover {
-    color: RGB(8, 45, 226) !important;
+    color: #2899c8 !important;
     transform: scale(1.15);
 
 }
