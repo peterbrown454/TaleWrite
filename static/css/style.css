@@ -3,6 +3,7 @@ body {
     background-color: RGB(252, 245, 229);
     display: flex;
     flex-direction: column;
+
 }
 
 #edit {
@@ -58,6 +59,7 @@ main {
 .readable-content {
     font-weight: 500;
     font-size: 120%;
+    padding: 5px;
 }
 
 .garamond {
