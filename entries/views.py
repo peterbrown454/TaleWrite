@@ -13,12 +13,16 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.messages.views import SuccessMessageMixin
 # Create your views here.
 
-
 def entry_list(request):
-    entries = Entry.objects.all().order_by('created_on')
+    entries = Entry.objects.all().order_by('-created_on')
     return render(request, 'entry_list.html', {'entries': entries})
 
+#from https://www.youtube.com/watch?v=-s7e_Fy6NRU  its class-based alternative to functions
 
+# class EntryListView(ListView):
+#     model = Entry
+#     template_name = "entry_list_template.html"
+#     context_object_name = "entries"
 
 
 @login_required(login_url="/accounts/login")
@@ -50,7 +54,6 @@ def entry_detail(request, slug):
     },
 )
 
-
 @login_required(login_url="/login")
 def entry_write (request):
     if request.method == 'POST':
@@ -66,7 +69,6 @@ def entry_write (request):
     return render(request, "entry_write.html", {'form': form})
 
 
-
 def like_entry(request, slug):
      entry = get_object_or_404(Entry, slug=slug)
      entry.likes += 1
@@ -76,8 +78,7 @@ def like_entry(request, slug):
 
 
 
-
-
+# THIS DELETE ENTRY IS THE WORKING ONE
 def delete_entry(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     if request.user == entry.author:
@@ -88,27 +89,7 @@ def delete_entry(request, slug):
         messages.error(request, "You don't have permission to delete this entry.")
     return redirect(reverse('entries:list'))
 
-
-
-#Test = Title saves but content doesnt save when edited. only title. Redirects to entrylist, but no success msg.
-#class EditEntry(UpdateView, SuccessMessageMixin):
-        # model = Entry
-        # form_class = WriteEntry
-        # template_name = 'entry_edit.html'
-        # success_url = reverse_lazy('entries:list')
-        # success_message = "%(name)s was updated successfully"
-
  
-#Test = saves title and fails the redirect. no success message.
-# class EditEntry(SuccessMessageMixin, UpdateView):
-#         model = Entry
-#         form_class = WriteEntry
-#         template_name = 'entry_edit.html'
-#         success_url = reverse_lazy('entries:list')
-#         success_message = "%(name)s was updated successfully"     
-
-#Test = success [edit:title. Redirect home page. Success message.  
-#       fail: update content 
 class EditEntry(SuccessMessageMixin, UpdateView):
         model = Entry
         form_class = WriteEntry
@@ -116,10 +97,32 @@ class EditEntry(SuccessMessageMixin, UpdateView):
         success_url = reverse_lazy('entries:list')
         success_message = "Tale was edited successfully"
         def editmessagesuccess(self, request):
-            messages.success(request, "Tale was edted successfully")
+            messages.success(request, "Tale was edited successfully")
    
     
+    #------------- DELETE FUNCTION with warning ---------------------
     
-    
+# def entry_delete_page (request, slug):
+#      entry = get_object_or_404(Entry, slug=slug)
+#      if request.user == entry.author:
+#          return redirect(reverse('entries:entry_delete_page'))
+#          messages.warning(request, "Please confirm you want to delete this message")
+#      else:
+#          messages.error(request, "You don't have permission to delete this entry.")
 
 
+
+#---------------DELETE ENTRY FOLLOWING DELETE ENTRY INTRO------------
+
+#def delete_entry (request, slug):
+# def delete_entry(request, slug):
+#     entry = get_object_or_404(Entry, slug=slug)
+#     if request.user == entry.author:
+#         entry.delete()
+#         messages.success(request, "Entry deleted successfully.")
+#         return redirect(reverse('entries:list'))
+#     else:
+#         messages.error(request, "You don't have permission to delete this entry.")
+#     return redirect(reverse('entries:list'))
+
+#---------------------------------------------------
