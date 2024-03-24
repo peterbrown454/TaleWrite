@@ -4,7 +4,6 @@
 
 {% block content %}
 <div class="entry_detail">
-    <!-- <img src="{{entry.thumb}}"/> -->
     <div class="Entry">
         <h2 class=readable-title>{{entry.title}}</h2>
         <p class="readable-content">{{entry.content| safe}}</p>
@@ -19,8 +18,7 @@
 {% if user.is_authenticated %}
 {% if user == entry.author %}
 
-<!--<a href="url 'entries:EntryEdit'"><button type="submit" class="btn btn-primary btn-sm"><i
-            class="fa-solid fa-trash fa-sm" style="color: #080808;"></i></button></a>-->
+
 <form action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST">
     {%csrf_token %}
     <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-trash fa-sm"
@@ -74,7 +72,7 @@
     <div class="comments-section col-md-8 card mb-4  mt-3 ">
         <h3>Comments:</h3>
         <div class="card-body">
-            <!-- We want a for loop inside the empty control tags
+            <!-- For loop inside the empty control tags
           to iterate through each comment in comments -->
             {% for comment in comments %}
             <div class="p-2 comments

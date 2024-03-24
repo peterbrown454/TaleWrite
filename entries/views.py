@@ -16,14 +16,8 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 def entry_list(request):
     entries = Entry.objects.all().order_by('created_on')
-    return render(request, 'entry_list_template.html', {'entries': entries})
+    return render(request, 'entry_list.html', {'entries': entries})
 
-#from https://www.youtube.com/watch?v=-s7e_Fy6NRU  its class-based alternative to functions
-
-# class EntryListView(ListView):
-#     model = Entry
-#     template_name = "entry_list_template.html"
-#     context_object_name = "entries"
 
 
 
