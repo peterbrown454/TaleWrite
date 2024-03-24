@@ -92,15 +92,15 @@ def delete_entry(request, slug):
 
  
 class EditEntry(SuccessMessageMixin, UpdateView):
-        model = Entry
-        form_class = WriteEntry
-        template_name = 'entry_edit.html'
-        success_url = reverse_lazy('entries:list')
-        success_message = "Tale edited successfully"
-        def editmessagesuccess(self, request):
-            messages.success(request, "Tale edited successfully")
 
-            
+    model = Entry
+    form_class = WriteEntry
+    template_name = 'entry_edit.html'
+    success_url = reverse_lazy('entries:list')
+    success_message = "Tale edited successfully"
+ 
+
+
    
 
    
