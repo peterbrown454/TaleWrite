@@ -148,6 +148,10 @@ header {
     border: none;
 }
 
+#loginbutton {
+    color: RGB(255, 255, 240) !important;
+    background-color: RGB(128, 0, 32) !important
+}
 
 
 #submitbutton {
