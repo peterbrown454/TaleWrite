@@ -324,7 +324,7 @@ There were others that I intended to do, however despite all efforts and the imp
 
 For HTML validation https://validator.w3.org/
 
-<img src="">
+<img src="static/images/htmlvalid.png">
 
 For CSS validation  https://jigsaw.w3.org/css-validator/
 
@@ -335,7 +335,7 @@ For CSS validation  https://jigsaw.w3.org/css-validator/
 
 ## Deployment
 
-Site successfully deployed on https://kjwhitehead.github.io/quizzee_rascals/
+Site successfully deployed on https://journap-c86fda53e915.herokuapp.com/
 
 ## Credits 
 
@@ -343,27 +343,23 @@ Color Scheme: Penguin Books: Edgar Allen Poe short stories
 
 ### Content 
 
-Header and footer based on Header and footy from TeamBrizzles
+Header and footer based on Header and footy from ThePawtraitPurrfectionist, a hackathon I worked on earlier in my course.
 
 Responsiveness displayed on https://ui.dev/amiresponsive
 
-API Questions taken from https://opentdb.com/
-
-Code initially inspired by and re-written https://opentdb.com/
-
-Logo from Canva https://www.canva.com/
+Various answers taken from stackoverflow
 
 For validation in HTML https://validator.w3.org/
 
 For validation in CSS https://jigsaw.w3.org/css-validator/
 
-For ReadME table https://www.shecodes.io/athena/2362-creating-a-table-with-4-columns-and-4-rows-in-html
 
 Wireframes produced using Balsamiq WireFrames https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAiA44OtBhAOEiwAj4gpOexFh0z3peWS6wolbjlJt_fLq7cZGNu99YeMSIpU89wlL2p6ZluXiRoCOSUQAvD_BwE
 
-Timer used to display delay issue https://www.online-stopwatch.com/
+LMS from Code Institute
 
+Netninja from https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg
 
 ## Other General Project Advice
 
-Enjoy the Quiz!
+Thanks for reading!
