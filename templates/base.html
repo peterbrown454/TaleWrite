@@ -29,9 +29,9 @@
                     class="navbar-brand d-inline-block align-top logo" alt="TaleWrite">
             </a>
             {% if user.is_authenticated %}
-            <p class="text-end m-3">Welcome back {{ user }}</p>
+            <p class="text-end m-3 welcome">Welcome back {{ user }}</p>
             {% else %}
-            <p class="text-end m-3">Please login or signup</p>
+            <p class="text-end m-3 welcome">Please login or signup</p>
             {% endif %}
 
 
@@ -105,8 +105,8 @@
                     <div>Email: talewrite@talewrite.com</div>
                 </div>
             </div>
-            <div class="row container-flex col-sm-7">
-                <div id="footer-icons" class="text-end">
+            <div class="row container-flex flex-container col-sm-7">
+                <div id="footer-icons" class="text-end flex-container">
                     <a href="https://en-gb.facebook.com/" target="_blank" rel="noopener"
                         aria-label="Visit our Facebook page (opens in a new tab)"><i
                             class="footer-item fa-brands fa-facebook" style="font-size: 30px"></i></a>
