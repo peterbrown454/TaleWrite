@@ -11,6 +11,11 @@ a {
 
 }
 
+.smicon {
+    background-color: RGB(128, 0, 32);
+    color: black;
+}
+
 .nav-item {
     display: flex;
     justify-content: flex-end;
@@ -23,13 +28,11 @@ a {
 }
 
 .submitbuttons:hover {
-    color: blue;
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 a:hover {
-    color: blue;
-    transform: scale(1.02);
+    transform: scale(1.10);
 }
 
 #edit {
@@ -37,18 +40,12 @@ a:hover {
 
     padding-left: 20px;
     padding-right: 20px;
-    color: RGB(255, 255, 240);
+
 
 }
 
 
-#like {
-    color: RGB(255, 255, 240);
-}
 
-#delete {
-    color: RGB(255, 255, 240);
-}
 
 
 .comments-section {
