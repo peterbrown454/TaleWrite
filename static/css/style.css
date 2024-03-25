@@ -16,6 +16,12 @@ a {
     justify-content: flex-end;
 }
 
+.submitbuttons {
+    color: black !important;
+    background-color: RGB(128, 0, 32) !important;
+
+}
+
 a:hover {
     color: blue;
     transform: scale(1.02);
@@ -142,12 +148,11 @@ header {
     border: none;
 }
 
-header li {
-    color: #f5721b;
-}
 
-.comment_submit_button {
-    color: RGB(255, 255, 240);
+
+#submitbutton {
+    color: RGB(255, 255, 240) !important;
+    background-color: RGB(128, 0, 32) !important
 }
 
 .btn-signup {
