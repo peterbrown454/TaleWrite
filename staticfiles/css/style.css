@@ -6,25 +6,29 @@ body {
 
 }
 
+
 a {
     color: black;
-
 }
 
-.a:hover {
-    transform: scale(1.1);
-    color: blue;
+a:hover {
+    transform: scale(1.1) !important;
+    font-weight: 800;
+    color: #0000cd;
+
 }
 
 .smicon {
-
+    border-color: RGB(128, 0, 32) !important;
     color: black;
 }
 
 .smicon:hover {
-    transform: scale(1.1);
-    color: purple !important;
+    transform: scale(1.1) !important;
+
 }
+
+
 
 
 .nav-item {
@@ -33,9 +37,7 @@ a {
 }
 
 
-.submitbuttons:hover a:hover {
-    transform: scale(1.10);
-}
+
 
 #edit {
 
@@ -66,6 +68,12 @@ main {
 
 .btn {
     background-color: RGB(128, 0, 32);
+    border-color: RGB(128, 0, 32);
+}
+
+.btn:hover {
+    background-color: RGB(128, 0, 32);
+    border-color: RGB(128, 0, 32);
 }
 
 .excerpt {
