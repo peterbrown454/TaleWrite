@@ -11,10 +11,21 @@ a {
 
 }
 
+.a:hover {
+    transform: scale(1.1);
+    color: blue;
+}
+
 .smicon {
 
     color: black;
 }
+
+.smicon:hover {
+    transform: scale(1.1);
+    color: purple !important;
+}
+
 
 .nav-item {
     display: flex;
@@ -22,11 +33,7 @@ a {
 }
 
 
-.submitbuttons:hover {
-    transform: scale(1.1);
-}
-
-a:hover {
+.submitbuttons:hover a:hover {
     transform: scale(1.10);
 }
 
