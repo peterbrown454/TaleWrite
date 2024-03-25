@@ -59,7 +59,9 @@ main {
 .readable-content {
     font-weight: 500;
     font-size: 120%;
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 10px;
+
 }
 
 .garamond {
@@ -262,6 +264,10 @@ form.site-form input[type="submit"],
     margin-top: 10px;
 }
 
+#write-form {
+    padding-right: 15px;
+}
+
 @media only screen and (max-width: 320px) {
 
 
@@ -301,6 +307,7 @@ form.site-form input[type="submit"],
     .write-entry form input,
     .write-entry form textarea {
         padding: 10px;
+
     }
 }
 
@@ -310,8 +317,5 @@ form.site-form input[type="submit"],
     .readable-content {
         column-count: 2;
         column-gap: 40px;
-        font-weight: 500;
-        font-size: 120%;
-
     }
 }

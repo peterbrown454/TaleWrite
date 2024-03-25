@@ -4,7 +4,8 @@
 <div class="write-entry">
     <!-- Your write entry form or content goes here -->
     <h2>Begin a new tale</h2>
-    <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data">
+    <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data"
+        id="write-form">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Submit">
