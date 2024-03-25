@@ -329,7 +329,7 @@ For HTML validation https://validator.w3.org/
 
 For CSS validation  https://jigsaw.w3.org/css-validator/
 
-<img src="assets/images/readMeImages/css-validation.png" alt="css validation screenshot">
+<img src="static/images/cssvalid.png" alt="css validation screenshot">
   
 
 
@@ -340,7 +340,7 @@ Site successfully deployed on https://kjwhitehead.github.io/quizzee_rascals/
 
 ## Credits 
 
-Color Scheme: “Bright Accent Colors” https://visme.co/blog/website-color-schemes/
+Color Scheme: Penguin Books: Edgar Allen Poe short stories
 
 ### Content 
 
