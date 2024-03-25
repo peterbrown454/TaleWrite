@@ -344,7 +344,7 @@ Color Scheme: Penguin Books: Edgar Allen Poe short stories
 
 ### Content 
 
-Timer used to display delay issue https://www.online-stopwatch.com/
+Header and footer based on Header and footy from TeamBrizzles
 
 Responsiveness displayed on https://ui.dev/amiresponsive
 
