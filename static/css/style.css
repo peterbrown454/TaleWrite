@@ -12,7 +12,7 @@ a {
 }
 
 .smicon {
-    background-color: RGB(128, 0, 32);
+
     color: black;
 }
 
@@ -21,11 +21,6 @@ a {
     justify-content: flex-end;
 }
 
-.submitbuttons {
-    color: black !important;
-    background-color: RGB(128, 0, 32) !important;
-
-}
 
 .submitbuttons:hover {
     transform: scale(1.1);
