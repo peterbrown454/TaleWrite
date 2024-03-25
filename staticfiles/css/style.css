@@ -6,42 +6,50 @@ body {
 
 }
 
+
 a {
     color: black;
+}
+
+a:hover {
+    transform: scale(1.1) !important;
+    font-weight: 800;
+    color: #0000cd;
 
 }
+
+.smicon {
+    border-color: RGB(128, 0, 32) !important;
+    color: black;
+}
+
+.smicon:hover {
+    transform: scale(1.1) !important;
+
+}
+
+
+
 
 .nav-item {
     display: flex;
     justify-content: flex-end;
 }
 
-.submitbuttons {
-    color: black !important;
-    background-color: RGB(128, 0, 32) !important;
 
-}
 
-a:hover {
-    color: blue;
-    transform: scale(1.02);
-}
 
 #edit {
+
+
     padding-left: 20px;
     padding-right: 20px;
-    color: RGB(255, 255, 240);
+
 
 }
 
 
-#like {
-    color: RGB(255, 255, 240);
-}
 
-#delete {
-    color: RGB(255, 255, 240);
-}
 
 
 .comments-section {
@@ -60,6 +68,12 @@ main {
 
 .btn {
     background-color: RGB(128, 0, 32);
+    border-color: RGB(128, 0, 32);
+}
+
+.btn:hover {
+    background-color: RGB(128, 0, 32);
+    border-color: RGB(128, 0, 32);
 }
 
 .excerpt {
@@ -67,10 +81,6 @@ main {
     font-size: 110%;
 }
 
-.card-body {
-    background-color: RGB(255, 255, 240);
-
-}
 
 .readable-title {
     text-align: center;
@@ -94,7 +104,7 @@ main {
     font-size: larger;
 }
 
-/*--------------------------------------General Styles-------*/
+
 
 h1,
 h2,
@@ -110,8 +120,6 @@ p {
 
 
 
-
-/*--------------------------------------Header-------*/
 
 header {
     font-family: "EB Garamond", serif;
@@ -144,10 +152,6 @@ header {
 }
 
 
-
-.navbar-toggler {
-    border: none;
-}
 
 .loginbutton {
     color: RGB(255, 255, 240) !important;
@@ -234,17 +238,6 @@ footer {
     bottom: 0px;
 }
 
-.form {
-    font-weight: 500;
-    position: absolute;
-    border-width: 2px;
-    margin: 50px;
-    border: 5px solid black;
-    padding: 20px;
-    border-radius: 25px;
-    opacity: 100%;
-    background-color: rgba(245, 114, 27, 0.95);
-}
 
 .button {
     text-align: center;
@@ -254,22 +247,7 @@ footer {
     padding: 15px 32px;
 }
 
-.btn {
-    font-weight: 500;
-    color: #000;
-    background-color: rgba(151, 1, 97, 0.8);
-    border: none;
-}
 
-.btn:hover {
-    background-color: rgba(151, 1, 97, 1);
-}
-
-.fa-solid:hover {
-    color: #2899c8 !important;
-    transform: scale(1.15);
-
-}
 
 .entry-title {
     font-weight: 600;
@@ -303,38 +281,25 @@ form.site-form input[type="submit"],
 }
 
 #write-form {
+    padding-top: 15px;
     padding-right: 15px;
 }
 
-@media only screen and (max-width: 320px) {
-
-
-    .navbar-brand {
-        font-size: medium
-    }
-
-    .text-end {
-        font-size: medium;
-    }
+#edit_form {
+    padding-top: 15px !important;
 }
 
-@media only screen and (max-width: 400px) {
-
-    .logo {
-
-        padding-left: 2px;
-
-    }
-
-    .navbar-brand {
-        font-size: medium
-    }
-
-    .text-end {
-        font-size: medium;
-    }
-
+#edit_submit {
+    color: RGB(255, 255, 240) !important;
+    background-color: RGB(128, 0, 32) !important;
 }
+
+#submit_write_button {
+    color: RGB(255, 255, 240) !important;
+    background-color: RGB(128, 0, 32) !important;
+}
+
+
 
 @media only screen and (max-width: 539px) {
     .welcome {

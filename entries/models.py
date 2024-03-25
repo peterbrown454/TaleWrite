@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Genre(models.Model):
     type_genre = models.CharField(max_length=100)
     description = models.TextField()
+
     def __str__(self):
         return f"{self.type_genre}"
-
 
 
 class Entry(models.Model):
@@ -25,22 +26,14 @@ class Entry(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     genre = models.ForeignKey(Genre, on_delete=models.CASCADE, related_name='entries')
     
-
-
-    
     def excerpt_with_ellipsis(self):
         excerpt_with_ellipsis = self.excerpt
         if len(self.content) > len(self.excerpt):
             excerpt_with_ellipsis += "..."
         return excerpt_with_ellipsis
    
-
-   
-        
-    def __str__(self):
-        return self.title
-
-
+        def __str__(self):
+         return self.title
 
 
 class Comment (models.Model):
