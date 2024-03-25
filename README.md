@@ -271,8 +271,7 @@ There were others that I intended to do, however despite all efforts and the imp
     
   <td>Display: Flex</td>
     <td></td>
-  </tr>
-    </tr>
+
 
   
 
