@@ -326,6 +326,8 @@ For HTML validation https://validator.w3.org/
 
 <img src="static/images/htmlvalid.png">
 
+<img src="static/images/Lighthouse Testing-Desktop1.png" alt="css validation screenshot">
+
 For CSS validation  https://jigsaw.w3.org/css-validator/
 
 <img src="static/images/cssvalid.png" alt="css validation screenshot">
