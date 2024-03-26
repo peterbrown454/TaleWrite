@@ -4,12 +4,12 @@
 
 <div class="write-entry">
 
-    <h4>Edit your tale</h4>
+    <h2>Edit your tale</h2>
     <form action="{% url 'entries:EditEntry' pk=entry.pk %}" class="site-form" method="post"
-        enctype="multipart/form-data" id="edit_form">
+        enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Submit" id="edit_submit">
+        <input type="submit" value="Submit">
 
 
     </form>

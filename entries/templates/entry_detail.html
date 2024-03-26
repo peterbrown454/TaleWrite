@@ -18,18 +18,18 @@
 {% if user.is_authenticated %}
 {% if user == entry.author %}
 
-
+<!----WORKING MODELS-->
 <div class="btn-toolbar">
     <form onsubmit="return confirm('Are you sure you want to delete this tale?')"
-        action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST" id="delete" class="smicon">
+        action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST" id="delete">
         {%csrf_token %}
         <button type="submit" class="btn btn-primary btn-md submitbuttons"><i class="fa-solid fa-trash fa-md"
                 style="color: #000000;"></i></button></form>
 
     <br>
+    <!--work above this line-->
 
-
-    <form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET" id="edit" class="smicon">
+    <form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET" id="edit">
         {%csrf_token %}
         <button type="submit" class="btn btn-primary btn-md submitbuttons"><i class="fa-solid fa-pen-to-square fa-md"
                 style="color: #000000;"></i>
@@ -42,11 +42,11 @@
     <br>
 
 
-    <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST" id="like" class="smicon">
+    <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST" id="like">
         {%csrf_token %}
         <button type="submit" class="btn btn-primary btn-md submitbuttons"><i class="fa-solid fa-thumbs-up fa-md"
                 style="color: #000000;"></i>
-            <span class="smicon" id="likecount">{{entry.likes}}</span></button>
+            <span>{{entry.likes}}</span></button>
     </form>
 
 </div>
@@ -58,7 +58,7 @@
 
 
 
-
+<!-- Displaying count of comments -->
 <div class="row comments-section">
     <div class="col-12">
         <strong class="text-secondary">
@@ -70,7 +70,7 @@
     </div>
 </div>
 
-
+<!--Edit section-->
 <div class="edit">
 
 </div>
@@ -120,7 +120,7 @@
         </div>
     </div>
 </div>
+</div>
 
-
-
+</div>
 {% endblock %}
