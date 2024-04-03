@@ -18,7 +18,7 @@
 {% if user.is_authenticated %}
 {% if user == entry.author %}
 
-<!----WORKING MODELS-->
+
 <div class="btn-toolbar">
     <form onsubmit="return confirm('Are you sure you want to delete this tale?')"
         action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST" id="delete" class="smicon">
@@ -27,7 +27,7 @@
                 style="color: #000000;"></i></button></form>
 
     <br>
-    <!--work above this line-->
+
 
     <form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET" id="edit" class="smicon">
         {%csrf_token %}
@@ -58,7 +58,7 @@
 
 
 
-<!-- Displaying count of comments -->
+
 <div class="row comments-section">
     <div class="col-12">
         <strong class="text-secondary">
@@ -70,7 +70,7 @@
     </div>
 </div>
 
-<!--Edit section-->
+
 <div class="edit">
 
 </div>

@@ -2,16 +2,17 @@
 
 <h2>Introduction</h2>
 
-TaleWrite is a short story website. It provides the user the ability to write and publish their short tales on the website, edit them if desired, and read the published tales of other authors. By creating their own account they can then interact with site including liking the tales of other users, and provide a genre and short excerpt to intrigue potential readers on the main page which is a listing of other published tales. Lastly the "published on" attribute allows authors and readers to keep track of tales and return to edit, delete, or read again if desired.
+TaleWrite is a short story website. It provides the user with the ability to write and publish their short tales on the website, edit them if desired, and read the published tales of other authors. By creating their own account they can then interact with the site.
 
-Please be aware that TaleWrite is the name of the project, which changed from ProjectJournal in the code. And in following ReadME, "entry" is synonymous with "tale".
+Features include including likes, genres, and excerpts, to intrigue potential readers on the home page - which doybles as a listing of published tales. Lastly the "published on" attribute allows authors and readers to keep track of tales and return to edit, delete, or read again if desired.
 
+Please be aware that TaleWrite is the name of the project, which changed from Diary in the code. And in following ReadME, "entry" is synonymous with "tale".
 
 ## Read page (home and landing page for first time users)
 
-The landing page of the website allows users to see the TaleWrite logo for brand visibility, and list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. It informs the user if they are logged in or not with a welcome back message if logged in, and a login or sign up message if not. If the user atempts to read a tale without logging in they will be redirected to the login page.
+The landing page of the website allows users to see the TaleWrite logo for brand visibility, and a list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. It informs the user if they are logged in or not with a welcome back message if logged in, and a login or sign up message if not. If the user attempts to read a tale without logging in they will be redirected to the login page.
 
-<strong>Landing/read page</strong>
+<strong>Landing/entries list page</strong>
 
 <img src="static/images/read_not_signed_in1.png" alt="Home page with list of published tales with message requesting they log in or sign up">
 
@@ -20,9 +21,9 @@ The landing page of the website allows users to see the TaleWrite logo for brand
 ## Read page (home and landing page for returning users) 
 
 
-<strong>Read</strong>
+<strong>Entry list zoomed in</strong>
 
-Mobile size resolution of write pageUnfortunately we're unable to show you mutiple devices due to amiresponsive not able to show you authentication required webpages
+Mobile size resolution of write page. Unfortunately I'm unable to show you mutiple devices due to amiresponsive not able to show you authentication required webpages
 
 <img src="static/images/read_signed_in1.png" alt="Write page showing write form">
 
@@ -35,13 +36,13 @@ Mobile size resolution of write pageUnfortunately we're unable to show you mutip
 
 <br>
 
-<strong>Read: Tale</strong>
+<strong>Entry: top</strong>
 
 <img src="static/images/read_tale_top.png" alt="Read page showing top half of read page displaying content of a tale">
 
 <br>
 
-<strong>Read: Tale from non-author's POV</strong>
+<strong>Entry: bottom from non-author's POV</strong>
 
 <p>This page shows the bottom of a Read:Tale page showing a like button and comments section. It is possible for readers to leave a comment which awaits moderation before being published.
 
@@ -74,31 +75,59 @@ TaleWrite adopted a distinctive, rich and warm-dark colour scheme. We want the u
 
 <img src="static/images/edgar_tales.png" alt="Image of red/gold book of Edgar Allen Poe short stories">
 
-We selected the Garamond font style, and increasing or decreasing the font-weight as appropriate. 'https://fonts.google.com/specimen/EB+Garamond'. It works together with our colour scheme to create the impression of reading a book printed many decades ago.
+<br>  
+
+For fonts I selected the Garamond style, and increasing or decreasing the font-weight as appropriate. 'https://fonts.google.com/specimen/EB+Garamond'. It works together with our colour scheme to create the impression of reading a book printed many decades ago.
+
+<br>
 
 ## Wire Frames
 
 Initially I wanted to provide images that would excite and inspire the user of the site but it simply didn't work elegantly or provide the font with clarity therefore the hero images and parchment background were dropped in favour of a monotone off-white for readibility.
 
-
-<strong><br></strong>
-
+<br>
 
 
 
-<img src="static/images/contrast.png" alt="Wireframe image of Insert name and Options page">
+# Home page
 
-## Quiz page
+I thought that a nice plain landing page that implies the story of the website would be a nice user experience, but the hero image rendered the text of the entries list illegible.
 
-We ensured that we provided wireframes to cover all the different stages of user experience and features. We also test our colour schemes to ensure readibility using a contrast checker
+<img src="static/images/wirehome.png" alt="Image of man at writing desk">
 
-<img src="static/images/contrast2.png" alt="Wireframe image of In-Quiz page">
+# Account sign-up page
+
+Login Page ended up was pre packaged by Django so we ended up with a fairly similar page but without the email address field.
+
+<img src="static/images/wireaccount.png" alt="Wireframe image of Login page">
+
+# Read page
+
+Entries page. I think that we did beter in the end with some extra features to be discussed in the ReadMe. However unfortunately I ran out of time to produce a filtering function which would be essential if the website gathers more users for them to keep track of entries. However, for now it is not essential, as we coded so that new entries authomatically go to the top of the entries list.
+
+<img src="static/images/wireread.png" alt="Wireframe image of Entries page">
+
+# Write page
+
+Write entries page. I feel that in actuality this was probably better than anticipated. I was able to add other fields such as excerpt and genre which I think add texture to the user experience.
+
+The biggest regret in terms of functionality is that I ran out of time to add a draft/publish option, however users are still able to edit entries.
+
+<img src="static/images/wirewrite.png" alt="Wireframe image of Write page">
+
+## Database Schema
+
+<img src="static/images/database_schema.png" alt="Wireframe image of Write page">
 
 ## User Stories, features and bugs
 
-I used a canban board and the MSCW approach to my user stories and features. Unfortunately some I decreed to fall outside the scope of this project given time and staffing limitations. 
+I used a canban board and the MSCW approach to my user stories and features. 
+
+Some I decided fell outside the scope of this project given time and staffing limitations. 
 
 There were others that I intended to do, however despite all efforts and the importance of the features, remain uncompleted this sprint.
+
+<img src="static/images/canban1.png" alt="Image of canban board showing most features completed, however several not completed, to be discussed later.">
 
 <table>
   <tr>
@@ -108,14 +137,17 @@ There were others that I intended to do, however despite all efforts and the imp
   </tr>
    <tr>
     <td>As a site user, I want a flowing user experience. </td>
-    <td>Ability to navigate from feature to feature without feeling surprised</td>
-    <td>The success messages on submitting an entry, edit or comment I wanted to get inside the Navbar but was unable to do so. Also for some reason the user after logging in is taken to the write function</td>
+    <td>Ability to navigate from feature to feature as expected without interruption or detour</td>
+    <td>-Success messages after all successful user interaction with the site may damage the user experience after a while for the user.
+     However there is a x function to remove the message immediately. Unfortunately as well it wasn't possible to get the message to sit in the navbar which is a bug to be fixed next sprint.
+
+  -If the user is not logged in and attempts to access an "authentication-required" page I should have ensured they are redirected there after logging in. However there are instances when the user is returned to the home page after logging in instead.</td>
    
     
   </tr>
   <tr>
-    <td>As a site user I can sign up register an account so I can log in and interact with the site</td>
-    <td>Register and sign up functions</td>
+    <td>As a site user I can signup an account so I can login and interact with the site</td>
+    <td>Sign up functions</td>
     <td>None detected</td>
   
   </tr>
@@ -126,97 +158,58 @@ There were others that I intended to do, however despite all efforts and the imp
   <tr>
     <td>As a user, I want to be able to leave comments and have other users comment on my entries</td>
     <td>Comments section in which users can leave comments below entries, pending moderation from the superuser</td>
-    <td>None detected</td>
+    <td>The necessity for all comments to be moderated may hurt the user experience and decrease sense of immediacy and intimacy in the community</td>
   </tr>
   <tr>
     <td>As site owner I want to be able to moderate comments to ensure a pleasent toxicity-free community of authors and readers</td>
-    <td>Superuser needs to authorise all comments before they are published</td>
+    <td>All comments await moderation from superuser, and an automatic message informs commenter of this</td>
     <td>None deteced</td>
     
   </tr>
   <tr>
     <td>As a site user I want to be able to easily access all published stories</td>
     <td>Stories easy to upload and clearly visible on website.</td>
-    <td>Although uploading is easy and entries are clearly visible, the ability to filter/sort wasn't completed (see user story below). </td>
+    <td>Whilst uploading is easy and entries are clearly visible, the ability to filter/sort wasn't completed (see features to be implemented next sprint below). </td>
     
   </tr>
   <tr>
-    <td>As a site user I want to be able to filter/sort all published stories so I can access specific ones</td>
-    <td>Different features of site are clearly identifiable</td>
+    <td>As a site user, I want to be able to edit my own entries</td>
+    <td>A button that allows the user to edit their own entries is generated on the "entry_detail" page (read specific entry) if the author and user are the same.</td>
     <td>None detected</td>
     
   </tr>
   <tr>
-    <td>As a user, I want to be able to choose an answer from a pre-populated list.</td>
-    <td>List of answers to be selected</td>
-    <td>None detected</td>
-    
-  </tr>
-  <tr>
-    <td>As a user, I want to receive feedback on the answers.</td>
-    <td>Clear signal of correct / incorrect answer</td>
-    <td>None detected</td>
+    <td>As a site user, I want to be able to delete entries.</td>
+    <td>A button that allows the user to edit their own entries is generated on the "entry_detail" page (Read) page if the author and user are the same. There is also a javascript alert that pops up requesting confirmation "Are you sure you want to delete this tale?"</td>
+    <td>Unfortunately I was unable to code a "request confirmation" function that would be seamless within the styling of the site, which will likely disrupt the user experience and may make them uncomfortable about clicking what looks like a popup from an external  site.</td>
     
   </tr>
   <tr>
     <td>As a user, I want the site to be visually appealing.</td>
-    <td> Select complementary colour scheme. <br>
-    Different elements/features delineated.</td>
+    <td>Rich tawny burgundy invokes the vibe of old leather and relaxation, and off-white yellow suggests old, well-read book pages. The logo of an open book and quill adds to the old fashioned hues</td>
     <td>None detected</td>
     
   </tr>
   <tr>
-    <td>As a user, I want to be able to start the quiz.</td>
-    <td>Page loads and includes necessary event listeners</td>
+    <td>As a user to be able to leave a short excerpt to entice others to read my entries</td>
+    <td>Excerpts are required field for all entry submissions. An elipsis will automatically append to the end of the excerpt to increase the intrigue.</td>
     <td>None detected</td>
     
   </tr>
-   <tr>
-    <td>As a site owner, I want to use an API so that I can source questions from an outside repository.</td>
-    <td>Questions load clearly in each different category and difficulty</td>
-    <td>Sometimes quiz repeats questions, or includes them from higher difficulties.</td>
+    <tr>
+    <td>As a user I would like my data and entries to be secure from interference from other users</td>
+    <td>Passwords are required to login and users cant access individuals stories without logging in. Also only authors can see the edit and delete buttons on their own entries. Also  there is further authentication required, to prevent even users who guess the url of the page from accessing the edit or delete URLS unless they are the author of the entry.</td>
+    <td>None detected</td>
     
   </tr>
-      <td>As a user, I want to sort the questions by categories so I can test myself on specific topics.</td>
-    <td>Drop-down menu specifying topic category</td>
-    <td>None detected</td>
-    <tr>
-      <td>As a user I want to challenge myself against different degrees of difficulty depending on my level of knowledge</td>
-    <td>Drop-down menu specifying difficulty level</td>
-    <td>Sometimes quiz repeats questions, or includes them from higher difficulties.</td>
-    </tr>
-    <tr>
-    <td>As a user, I want to be greeted by name when I enter the website for personalisation and to feel welcome.</td>
-    <td>Input Name field and have name saved when user returns (cookies required)</td>
-    <td>None detected</td>
-  </tr>
-     <tr>
-    <td>As a user I want to see my score</td>
-    <td>Current score display to keep score updating</td>
-    <td>None detected</td>
-  </tr>
-    <tr>
-    <td>As a user I want to be able to share the fun I am having doing the quiz, and challenge my friends.</td>
-    <td>"Share with friends" copy link button. Post to FB / Instagram / X clickable icons.</td>
-    <td>Ran out of time to add Instagram and X icons</td>
-  </tr>
-    <tr>
-     <td>As a site owner I want to increase the visibility and thus usership of our website.</td>
-    <td>"Share with friends" copy link button. Post to FB / Instagram / X clickable icons.</td>
-    <td>Ran out of time to add Instagram and X icons</td>
-  </tr>
-    <tr>
-     <td>As a user, I want to be able to adjust the number of questions I am asked to try shorter or longer games.</td>
-    <td>Dropdown menu providing game length options</td>
-    <td>Sometimes quiz repeats questions, or includes them from higher difficulties.</td>
-  </tr>
+  
+   
   </table>
 
 <br>
 
 
-### User Stories and Features (to be implelemented next Sprint) 
-
+### User Stories and Features (to be implelemented next Sprint)
 
   <table>
   <tr>
@@ -225,13 +218,17 @@ There were others that I intended to do, however despite all efforts and the imp
     <th>Bugs / Issues</th>
   </tr>
 
-
-
   <tr>
-    <td>As a user I want to be able to store my highest score to see if I can beat it on my future visits.</td>
-    <td>Highest score from previous use visible (cookies required)</td>
+    <td>As a site user I want to be able to save drafts so that I can ensure they are of good quality before publishing them for others to read</td>
+    <td>A simple save button at the bottom of the Write page, and a profile page allowing authenticated users to access their stories</td>
     <td>N/A</td>
   </tr>
+<tr>
+    <td>As a site user I want to be able to filter/sort all published stories so I can access specific ones</td>
+    <td>Unable to be added this sprint due to time constraints. To be added ASAP next sprint, as the user base builds</td>
+    <td>N/A</td>
+    
+  </tr>>
   
 
   </table>
@@ -245,14 +242,14 @@ There were others that I intended to do, however despite all efforts and the imp
     <th>Bugs / Issues</th>
   </tr>
   <tr>
-    <td>As a user, I want to have a countdown timer to challenge myself to answer more quickly.</td>
-    <td>A countdown timer to display either how long I have left to answer the question before it assigns to wrong</td>
+    <td>As a user, I want to be able to collaborate on stories with other users</td>
+    <td>The ability to co-write entries may be very fun but seems fraught with hazards. It sounds like a merge error waiting to happen.</td>
     <td>N/A</td>
   </tr>
     
  
-  <td>As a site-owner I want to have a questions backup in case the API  stops working.</td>
-    <td>A secondary API or source of questions in case the first API breaks down</td>
+  <td>Monthly random genre/ picture prompt competition</td>
+    <td>API to provide a random picture to act as a prompt once a month and the user with the highest number of likes within the month wins a digital trophy. Failing that a randomly selected genre from a list. However whilst this may be able to be coded in the sies 2.0 or 3.0, it isnt a core functionality and therefore isn't to be prioritised.</td>
     <td>N/A</td>
   </table>
 
@@ -261,27 +258,36 @@ There were others that I intended to do, however despite all efforts and the imp
 <table>
   <tr>
     <th>Bug/Issue</th>
-    <th>Image</th>
     <th>Resolution</th>
+    <th>Image</th>
   </tr>
-  <td>"Select type" option overflows to below options box on smaller devices</td>
-    <td><img src="assets/images/readMeImages/bugs/fixed/questionsoverflow.png" alt="Image showing box obscuring the logo on larger devices"></td>
+  <td>CSS not working at all. I could see in dev tools that it wasn't being even sent let alone rendered on the page.</td>
     
-  <td>We added media queries to ensure effective responsiveness</td>
+    
+  <td>It turned out that it was an issue where the style.css in both static and static files needed to both be up to date</td>
   </tr>
       
   </tr>
-    <td>Quiz-E would display without questions and just show questions marks when user left all questions to default(i.e.Any).</td>
-   <td><img src="assets/images/readMeImages/bugs/fixed/questionsdontshow.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
-   <td>We required the user to enter Questions Length, and API call modified to accommodate this by leaving the “any” option off the API call.</td>
+    <td>The submit button would disappear beneath the footer no matter the media query</td>
+   
+   <td>CSS position: sticky solved the problem and kept the footer and header at the top of the page without obscuring other items</td>
   </tr>
-      
+    </tr>
+    <td>Due to having gone off the LMS tutorial to use NetNinja I had produced my edit function using a class rather than method which meant I couldn't pick the LMS method of authenticating</td>
+  <td>The answer was on stack overflow that there are built in django methods available and actually its quite simple</td>
+    <td><img src="static/images/authenticationclass.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
   </tr>
-    <td>Sometimes after answering several questions the questions would stop changing</td>
-   <td><img src="assets/images/readMeImages/bugs/delay.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
+  <td>Uneven spacing of the nav and footer items at certain resolutions items made users feel very off balance and inefficient use of page space</td>
+
     
-  <td>The problem lay was that when too many requests were made from the API in too small a space of time. Therefore to fix this we implemented a required delay of three seconds between committing answers</td>
+  <td>Display: Flex</td>
+    <td></td>
   </tr>
+    </tr>
+
+  
+
+
   </table>
 
 ## Unfixed Bugs / Issues
@@ -292,38 +298,36 @@ There were others that I intended to do, however despite all efforts and the imp
     <th>Image</th>
     <th>Resolution</th>
   </tr>
-  <td>On large devices the "Enter name" box obscures the brand logo and feels like a pop-up rather than an integrated element of the UX package</td>
-    <td><img src="assets/images/readMeImages/amiresponsive/loginscreenpng.png" alt="Image showing box obscuring the logo on larger devices"></td>
-    
-  <td>Unfortunately we ran out of time to fix this. We would in future sprints change from an in-browser alert box to a html modal box, that would be styled and centred on the screen etc as part of a user management system.</td>
+  <td>Redirect following "authentication required" sometimes takes the user home instead of to the previously requested page. This is a matter of redirection that I thought I had corrected, and then ran out of time to fix</td>
+  <td>NA
+  </td>
+   <td>NA
+  </td>
   </tr>
       
   </tr>
-    <td>Sometimes quiz repeats questions, or includes them from higher difficulties. As an example of both, this question came up twice in a quiz set to easy.</td>
-    <td><img src="assets/images/readMeImages/bugs/repeatdifficultforbugpage.png" alt="Image showing difficult question"></td>
+    <td>When user presses refresh having submitted a comment on an entry then it resubmits the entry</td>
+    <td><img src="static/images/comment-resubmit-on-refresh.png" alt="Popup showing 'this will resubmit your form' message"></td>
     
-  <td>Unfortunately none available as source of questions is the API. The only fix would have been to change the API from a paid provider but this would be costly and we would have had to change too much code by the time we realised</td>
+  <td>NA</td>
   </tr>
     
   </tr>
-  <td>Three second delay between answer and next question</td>
-    <td><img src="assets/images/readMeImages/bugs/delay.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
-    <td>The delay was a fix to a bug of the site crashing when too many requests were made from the API in too small a space of time(see "Fixed Bugs" above). The only fix would have been to change the API from a paid provider but this would be costly and we would have had to change too much code by the time we realised</td>
+  <td>Part bug / part fix. Basic javascript pop up to confirm user wishes to delete their entry. Style is out of keeping with the rest of the site and maybe even a security concern for a user.</td>
+    <td><img src="static/images/areyousure.png" alt="Basic javascript pop 'are you sure you want to delete this tale?'"></td>
+    <td></td>
       <tr>
-      <td>Only a share to FB button, no instagram or X buttons</td>
+      <td>Select genre list unable to be accessed to be styled. This wasn't a problem deployed on PC using dev tools, but on physical iphone looked entirely out of keeping with styling of the site
       <br>
-    <td><img src="assets/images/readMeImages/bugs/socialmedia.png" alt="Social media button of Facebook, but not any other social media"></td>
-    <td><br><br<br>Ran out of time to add this sprint, but definitely would be added Instagram and X buttons on a future sprint<br><br></td>
+    <td><img src="static/images/genre.png" alt="Image of blue genre button"></td>
+    <br>
   </tr>
   <tr>
-      <td>Spelling errors on website </td>
-    <td><img src="assets/images/readMeImages/bugs/spelling.png" alt="Question with a spelling error on it"></td>
-    <td>Unfortunately none available as source of questions is the API. The only fix would have been to change the API from a paid provider.</td>
-    
-    
-  <table>
+    <td>Users can like an entry an indefinite number of times up to 28. At this point the like button vanishing when mouse hovereed over it and the clickbox obviously disappeared too as nothing happened when hovered and clicked over the area</td>
+    <td><img src="static/images/likebug2.png" alt="Image of blue genre button"></td>
+    <br></td>
+    <td></td>
   
-  </tr>
 
   </table>
 
@@ -332,34 +336,30 @@ There were others that I intended to do, however despite all efforts and the imp
 
 For HTML validation https://validator.w3.org/
 
-<img src="assets/images/readMeImages/html-validation.png" alt="html validation screenshot">
-
 For CSS validation  https://jigsaw.w3.org/css-validator/
+
+Contrast checking <img src="staticfiles/images/contrast.png">
+
+<img src="staticfiles/images/contrast2.png">
 
 <img src="assets/images/readMeImages/css-validation.png" alt="css validation screenshot">
   
-
-
+Contrast Readibility validation https://webaim.org/resources/contrastchecker/
 
 ## Deployment
 
-Site successfully deployed on https://kjwhitehead.github.io/quizzee_rascals/
+Site successfully deployed on 
 
 ## Credits 
 
-Color Scheme: “Bright Accent Colors” https://visme.co/blog/website-color-schemes/
+Header and footer based on a website I co-coded on another hackathon https://tomcow88.github.io/teamBrizzle/
 
-### Content 
+Contrast visibility checker https://webaim.org/resources/contrastchecker/
 
-Timer used to display delay issue https://www.online-stopwatch.com/
 
 Responsiveness displayed on https://ui.dev/amiresponsive
 
-API Questions taken from https://opentdb.com/
-
-Code initially inspired by and re-written https://opentdb.com/
-
-Logo from Canva https://www.canva.com/
+Logo created by Bing Co-Pilot https://www.bing.com/images/create?FORM=GENILP
 
 For validation in HTML https://validator.w3.org/
 
@@ -369,9 +369,8 @@ For ReadME table https://www.shecodes.io/athena/2362-creating-a-table-with-4-col
 
 Wireframes produced using Balsamiq WireFrames https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAiA44OtBhAOEiwAj4gpOexFh0z3peWS6wolbjlJt_fLq7cZGNu99YeMSIpU89wlL2p6ZluXiRoCOSUQAvD_BwE
 
-Timer used to display delay issue https://www.online-stopwatch.com/
 
 
 ## Other General Project Advice
 
-Enjoy the Quiz!
+Thanks for reading

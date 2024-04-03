@@ -29,8 +29,8 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu110.gitpod.io', 'gitpod.io', 'herokuapp.com',]
+DEBUG = True
+ALLOWED_HOSTS = ['journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu110.gitpod.io', 'gitpod.io', 'herokuapp.com', '8000-peterbrown454-diary-ewoyturoyqk.ws-eu110.gitpod.io']
 
 
 # Application definition
