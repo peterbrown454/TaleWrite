@@ -14,7 +14,7 @@ a {
 a:hover {
     transform: scale(1.1) !important;
     font-weight: 800;
-    color: #0000cd;
+
 
 }
 
@@ -23,13 +23,9 @@ a:hover {
     color: black;
 }
 
-/*.smicon:hover {
-    transform: scale(1.1) !important;
-
-}*/
-
-
-
+.submit {
+    width: 150px;
+}
 
 .nav-item {
     display: flex;
@@ -73,9 +69,10 @@ main {
 }
 
 .btn:hover {
-    background-color: rgb(255, 102, 0);
-    border-color: rgb(255, 102, 0);
+    background-color: rgb(255, 102, 0) !important;
+    border-color: rgb(255, 102, 0) !important;
     transition: background-color 0.3s ease;
+    color: rgb(255, 102, 0) !important;
 }
 
 
@@ -169,12 +166,21 @@ header {
 
 #submitbutton {
     color: RGB(255, 255, 240) !important;
-    background-color: RGB(128, 0, 32) !important
+    background-color: RGB(128, 0, 32) !important;
 }
 
 .btn-signup {
     color: RGB(255, 255, 240);
 }
+
+.btn-signup:hover {
+
+    background-color: rgb(255, 102, 0) !important;
+    border-color: rgb(255, 102, 0) !important;
+    transition: background-color 0.3s ease !important;
+}
+
+
 
 .bg-color-navbar {
     background-color: RGB(128, 0, 32);
@@ -217,6 +223,10 @@ footer {
 .footer-item {
     padding: 16px;
     color: black;
+}
+
+.footer-item:hover {
+    transform: scale(1.1) !important;
 }
 
 .container-flex {

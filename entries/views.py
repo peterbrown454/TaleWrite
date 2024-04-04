@@ -11,18 +11,18 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
-# Create your views here.
+
 
 def entry_list(request):
     entries = Entry.objects.all().order_by('-created_on')
     return render(request, 'entry_list.html', {'entries': entries})
 
-#from https://www.youtube.com/watch?v=-s7e_Fy6NRU  its class-based alternative to functions
 
-# class EntryListView(ListView):
-#     model = Entry
-#     template_name = "entry_list_template.html"
-#     context_object_name = "entries"
+
+class EntryListView(ListView):
+    model = Entry
+    template_name = "entry_list_template.html"
+    context_object_name = "entries"
 
 
 @login_required(login_url="/accounts/login")

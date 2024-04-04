@@ -13,7 +13,7 @@ from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-# Create your views here.
+
 def signup_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -28,7 +28,7 @@ def signup_view(request):
 
 def login_view(request):
     if request.method == 'POST':
-        # Handle POST request here
+       
         form = AuthenticationForm(data = request.POST)
         if form.is_valid():
             user = form.get_user()

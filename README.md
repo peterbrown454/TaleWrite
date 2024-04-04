@@ -356,6 +356,7 @@ Header and footer based on a website I co-coded on another hackathon https://tom
 
 Contrast visibility checker https://webaim.org/resources/contrastchecker/
 
+Creating classed-based functions https://www.youtube.com/watch?v=-s7e_Fy6NRU 
 
 Responsiveness displayed on https://ui.dev/amiresponsive
 
