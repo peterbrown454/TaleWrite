@@ -33,11 +33,11 @@
                 <img src="{% static 'images/logo.png' %}" width="30" height="30"
                     class="navbar-brand d-inline-block align-top logo" alt="TaleWrite">
             </a>
-            <!-- {% if user.is_authenticated %}
+            {% if user.is_authenticated %}
             <p class="text-end m-3 welcome">Welcome back {{ user }}</p>
             {% else %}
             <p class="text-end m-3 welcome">Please login or signup</p>
-            {% endif %} -->
+            {% endif %}
 
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -54,7 +54,7 @@
                     </li>
 
 
-                    <!-- {% if user.is_authenticated %}
+                    {% if user.is_authenticated %}
                     <li class="nav-item ">
                         <form action="{% url 'accounts:logout' %}" class="logout-link " method="post">
                             {% csrf_token %}
@@ -68,7 +68,7 @@
                     <li class="nav-item ">
                         <a href="{% url 'accounts:signup' %}" class="nav-link garamond ">Signup</a>
                     </li>
-                    {% endif %} -->
+                    {% endif %}
                 </ul>
             </div>
         </div>
