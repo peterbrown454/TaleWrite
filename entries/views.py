@@ -19,10 +19,10 @@ def entry_list(request):
 
 
 
-class EntryListView(ListView):
-    model = Entry
-    template_name = "entry_list_template.html"
-    context_object_name = "entries"
+# class EntryListView(ListView):
+#     model = Entry
+#     template_name = "entry_list_template.html"
+#     context_object_name = "entries"
 
 
 @login_required(login_url="/accounts/login")

@@ -20,7 +20,7 @@ def signup_view(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, "You are now signed up") 
+            messages.success(request, f"You are now signed up, {user.username}") 
             return redirect('entries:list')
     else:
         form = UserCreationForm()
@@ -33,7 +33,8 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            messages.success(request, "You are now logged in") 
+            messages.success (request, f"Welcome back, {user.username}")
+            # messages.success(request, "You are now logged in") 
             if 'next' in 'request.POST':
                 return redirect(request.POST.get('next'))
             else:

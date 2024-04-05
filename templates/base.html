@@ -33,9 +33,9 @@
                 <img src="{% static 'images/logo.png' %}" width="30" height="30"
                     class="navbar-brand d-inline-block align-top logo" alt="TaleWrite">
             </a>
-            {% if user.is_authenticated %}
-            <p class="text-end m-3 welcome">Welcome back {{ user }}</p>
-            {% else %}
+
+            {% if not user.is_authenticated %}
+
             <p class="text-end m-3 welcome">Please login or signup</p>
             {% endif %}
 

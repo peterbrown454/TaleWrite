@@ -8,13 +8,18 @@ Features include including likes, genres, and excerpts, to intrigue potential re
 
 Please be aware that TaleWrite is the name of the project, which changed from Diary in the code. And in following ReadME, "entry" is synonymous with "tale".
 
-## Read page (home and landing page for first time users)
+
+## Home/Entries list page 
+
+<img src="static/images/home_page.png" alt="Home page with list of published tales with message requesting they log in or sign up">
+
+## Home/Entries list page (for first time users)
 
 The landing page of the website allows users to see the TaleWrite logo for brand visibility, and a list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. It informs the user if they are logged in or not with a welcome back message if logged in, and a login or sign up message if not. If the user attempts to read a tale without logging in they will be redirected to the login page.
 
 <strong>Landing/entries list page</strong>
 
-<img src="static/images/read_not_signed_in1.png" alt="Home page with list of published tales with message requesting they log in or sign up">
+<img src="static/images/home_page_please_log_in.png" alt="Home page with list of published tales with message requesting they log in or sign up">
 
 
 
@@ -23,16 +28,14 @@ The landing page of the website allows users to see the TaleWrite logo for brand
 
 <strong>Entry list zoomed in</strong>
 
-Mobile size resolution of write page. Unfortunately I'm unable to show you mutiple devices due to amiresponsive not able to show you authentication required webpages
-
-<img src="static/images/read_signed_in1.png" alt="Write page showing write form">
+<img src="static/images/home_page_welcome_back.png" alt="Write page showing write form">
 
 <br>
 
 <strong>Write</strong>
  
 
-<img src="static/images/write.png" alt="Write page showing write form with title, content, excerpt, slug, genre fields and submit button">
+<img src="static/images/write_final.png" alt="Write page showing write form with title, content, excerpt, slug, genre fields and submit button">
 
 <br>
 
