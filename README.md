@@ -355,6 +355,14 @@ Site successfully deployed on
 
 ## Credits 
 
+"Netninja" django blog tutorials https://www.youtube.com/watch?v=n-FTlQ7Djqc
+
+"Code Institute", for initital django and elephant sql and heroku installation
+
+Code Institute Student services for various questions regarding how to install/operate django
+
+Stack overflow for various questions regarding how to install/operate django
+
 Header and footer based on a website I co-coded on another hackathon https://tomcow88.github.io/teamBrizzle/
 
 Contrast visibility checker https://webaim.org/resources/contrastchecker/

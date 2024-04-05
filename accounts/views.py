@@ -26,20 +26,20 @@ def signup_view(request):
         form = UserCreationForm()
     return render(request, "signup.html", {'form': form})
 
+
 def login_view(request):
     if request.method == 'POST':
-       
-        form = AuthenticationForm(data = request.POST)
+        form = AuthenticationForm(data=request.POST)
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            messages.success (request, f"Welcome back, {user.username}")
-            # messages.success(request, "You are now logged in") 
-            if 'next' in 'request.POST':
-                return redirect(request.POST.get('next'))
+            messages.success(request, f"Welcome back, {user.username}")
+            next_page = request.POST.get('next') 
+            if next_page:
+                return redirect(next_page)
             else:
-                return redirect ('entries:list')
-    else: 
+                return redirect('entries:list')
+    else:
         form = AuthenticationForm() 
     return render(request, "login.html", {'form': form})
 
