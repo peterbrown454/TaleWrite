@@ -30,6 +30,7 @@ a:hover {
 .nav-item {
     display: flex;
     justify-content: flex-end;
+    padding-right: 5px;
 }
 
 
@@ -332,11 +333,18 @@ form.site-form input[type="submit"],
 
     .welcome {
         font-size: 20px !important;
+
     }
 
     .navbar-toggler-icon {
         width: 37px;
         height: 37px;
+        padding-right: 10px !important;
+
+    }
+
+    .nav-item {
+        font-size: 20px !important;
     }
 
     .logo {
@@ -356,7 +364,7 @@ form.site-form input[type="submit"],
 
 @media only screen and (max-width: 539px) {
     .welcome {
-        /* display: none !important; */
+
         font-size: 25px;
         margin-left: 0px !important;
         padding-left: 0px !important;
