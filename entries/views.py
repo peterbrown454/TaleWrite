@@ -82,11 +82,12 @@ def entry_write (request):
 
 
 def like_entry(request, slug):
-     entry = get_object_or_404(Entry, slug=slug)
-     entry.likes += 1
-     entry.save()
-    
-     return redirect('entries:entry_detail', slug=entry.slug)
+    entry = get_object_or_404(Entry, slug=slug)
+    if request.user == entry.author:
+        return redirect('entries:entry_detail', slug=entry.slug)
+    entry.likes += 1
+    entry.save()
+    return redirect('entries:entry_detail', slug=entry.slug)
 
 
 
