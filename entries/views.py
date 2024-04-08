@@ -14,14 +14,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 def entry_list(request):
-    entries = Entry.objects.all().order_by('-created_on')
+    entries = Entry.objects.filter(status=1).order_by('-created_on')
     return render(request, 'entry_list.html', {'entries': entries})
 
 
 
 # class EntryListView(ListView):
 #     model = Entry
-#     template_name = "entry_list_template.html"
+#     template_name = "entry_list.html"
 #     context_object_name = "entries"
 
 
