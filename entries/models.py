@@ -13,7 +13,6 @@ class Entry(models.Model):
     STATUS = (
         (0, "Draft"),
         (1, "Published"),
-        (2, "Archived"),
     )
     title = models.CharField(max_length=100)
     slug = models.SlugField()

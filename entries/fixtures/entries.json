@@ -9,7 +9,7 @@
             "excerpt": "Once upon a moonlit eve",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 4
         }
     },
@@ -25,7 +25,7 @@
             "excerpt": "In the mystical realm of Veridian, a young girl named Elara discovers a fountain of shimmering water in the Enchanted Grove, awakening the Guardian and beginning a journey of magic and mystery.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 9
         }
     },
@@ -41,7 +41,7 @@
             "excerpt": "Amidst the chaos of a bustling city, a small café becomes a sanctuary of peace on a rainy day, offering solace and simple pleasures to its visitors.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 8
         }
     },
@@ -57,7 +57,7 @@
             "excerpt": "In a meadow beneath the Milky Way, Luna dances with a stranger from beyond the stars, bound together by love and the poetry of the heart.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 7
         }
     },
@@ -73,7 +73,7 @@
             "excerpt": "Behind the scenes of The Crimson Curtain theater, a tale of forbidden romance and bitter rivalry unfolds, leaving its players forever changed.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 6
         }
     },
@@ -89,7 +89,7 @@
             "excerpt": "In a quaint village, Detective Emily Westwood unravels the mystery of the ransacked bakery and discovers the darkest secrets hidden within the community.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 5
         }
     },
@@ -105,7 +105,7 @@
             "excerpt": "In the dimly lit streets of the city, Sarah, a young journalist, delves into a web of corruption and danger, accompanied by Ethan, a brooding detective, as they confront dark forces and unravel mysteries.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 4
         }
     },
@@ -121,7 +121,7 @@
             "excerpt": "In the eerie stillness of the night, a small town in the heart of the forest becomes the stage for a tale of terror as the curse of a haunted house spreads like a plague, consuming everything in its path.",
             "author": 1,
             "likes": 0,
-            "status": 0,
+            "status": 1,
             "genre": 8
         }
     },
