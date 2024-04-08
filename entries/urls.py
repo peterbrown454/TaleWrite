@@ -10,6 +10,7 @@ urlpatterns = [
     path('entries/<slug:slug>/', views.entry_detail, name='entry_detail'), 
     path('entries/entries/<slug:slug>/',views.delete_entry, name='delete_entry'),
     path('entries/<pk>/update', views.EditEntry.as_view(), name = "EditEntry"),
+    path('entry_draft_list', views.entry_list_draft, name = "entry_draft_list"),
 
 
 

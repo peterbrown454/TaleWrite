@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="entries"></div>
+{% if entries %}
+{% for entry in entries %}
+<div class=" entry entry-list">
+
+    <span style="display: flex;">
+        <a href="{% url 'entries:entry_detail' slug=entry.slug %}">
+            <h2 class="entry-title">{{ entry.title }}</h2>
+        </a>
+
+
+        <br>
+        <br>
+
+    </span>
+
+    <p class="entry-list excerpt">{{ entry.excerpt_with_ellipsis}}</p>
+    <p class="entry-list">By {{entry.author}}. Published {{entry.created_on}}</p>
+    <p class="entry-list"><em>{{entry.genre}}</em></p>
+
+    <hr>
+
+
+</div>
+
+{% endfor %}
+{% endif %}
+
+
+{% endblock %}

@@ -18,10 +18,18 @@ def entry_list(request):
     return render(request, 'entry_list.html', {'entries': entries})
 
 
+@login_required(login_url="/accounts/login")
+def entry_list_draft(request):
+    user = request.user
+    entries = Entry.objects.filter(author=user).order_by('-created_on')
+    return render(request, 'entry_list_draft.html', {'entries': entries})
+
+
+
 
 # class EntryListView(ListView):
 #     model = Entry
-#     template_name = "entry_list.html"
+#     template_name = "entry_list_template.html"
 #     context_object_name = "entries"
 
 
@@ -59,6 +67,10 @@ def entry_write (request):
     if request.method == 'POST':
         form = forms.WriteEntry(request.POST, request.FILES)
         if form.is_valid():
+            title = form.data['title']
+            if Entry.objects.filter(title=title).exists():
+                messages.error(request, "A tale with the same title already exists. Please choose a different title.")
+            return render(request, "entry_write.html", {'form': form})
             instance = form.save(commit = False)
             instance.author = request.user
             instance.save()
