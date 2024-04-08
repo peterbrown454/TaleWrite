@@ -4,14 +4,23 @@
 <br>
 <h1>Login</h1>
 <br>
+
 <form class="site-form" action="{% url 'accounts:login' %}" method="post">
     {% csrf_token %}
     {{form}}
     {% if request.GET.next %}
     <input type="hidden" name="next" value="{{ request.GET.next}}">
     {% endif %}
-    <input type="submit" value="Login" class="loginbutton submit">
+    <div class="btn-toolbar2">
+        <input type="submit" value="Login" class="loginbutton submit">
 </form>
+
+
+<br>
+<form action="{% url 'accounts:signup' %}">
+    <input type="submit" value="Signup" class="loginbutton submit">
+</form>
+</div>
 
 
 {% endblock %}

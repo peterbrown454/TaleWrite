@@ -33,7 +33,10 @@ a:hover {
     padding-right: 5px;
 }
 
-
+.btn-toolbar2 {
+    display: flex;
+    padding-right: 5px;
+}
 
 
 #edit {
@@ -157,6 +160,7 @@ header {
 .loginbutton {
     color: RGB(255, 255, 240) !important;
     background-color: RGB(128, 0, 32) !important;
+    margin-right: 12px;
 }
 
 #submit_write_button {
@@ -320,13 +324,20 @@ form.site-form input[type="submit"],
         width: 30px !important;
         height: 30px !important;
     }
+}
 
-    .logo {
-        width: 52px !important;
-        height: 52px !important;
-        padding-left: 4px;
-        margin-left: 4px;
+@media only screen and (max-width: 380px) {
+
+    .loginbutton {
+        width: 115px;
     }
+
+    .btn-toolbar2 {
+        display: flex;
+        padding-right: 5px;
+        justify-content: space-between;
+    }
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -343,8 +354,8 @@ form.site-form input[type="submit"],
 
     }
 
-    .nav-item {
-        font-size: 20px !important;
+    .nav-link {
+        font-size: 20px;
     }
 
     .logo {
