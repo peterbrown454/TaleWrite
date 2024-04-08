@@ -37,9 +37,31 @@ a:hover {
     padding-right: 5px;
 }
 
+#comment_heading {
+
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-weight: 450;
+    font-size: large;
+
+}
+
 .btn-toolbar2 {
     display: flex;
     padding-right: 5px;
+}
+
+.card {
+    --bs-card-border-width: none;
+    --bs-card-spacer-y: none;
+
+
+}
+
+.form-label {
+    display: none;
 }
 
 
@@ -424,4 +446,5 @@ form.site-form input[type="submit"],
         column-count: 2;
         column-gap: 40px;
     }
+
 }

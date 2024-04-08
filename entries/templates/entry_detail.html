@@ -77,7 +77,7 @@
 
 <div class="row">
     <div class="comments-section col-md-8 card mb-4  mt-3 ">
-        <h3>Comments:</h3>
+        <h3>Comments</h3>
         <div class="card-body">
 
             {% for comment in comments %}
@@ -107,8 +107,8 @@
     <div class="comments-section col-md-4 card mb-4 mt-3">
         <div class="card-body">
             {% if user.is_authenticated %}
-            <h3>Leave a comment:</h3>
-            <p>Posting as: {{ user.username }}</p>
+            <h3 id="comment_heading">Leave a comment</h3>
+
             <form id="commentForm" method="post" style="margin-top: 1.3em;">
                 {{ comment_form | crispy }}
                 {% csrf_token %}

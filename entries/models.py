@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxLengthValidator
 
 class Genre(models.Model):
     type_genre = models.CharField(max_length=100)
@@ -45,7 +46,7 @@ class Entry(models.Model):
 class Comment (models.Model):
     entry = models.ForeignKey(Entry, on_delete=models.CASCADE, related_name ="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name = "commenter")
-    content = models.TextField()
+    content = models.TextField(validators=[MaxLengthValidator(500)])
     created_on = models.DateTimeField(auto_now_add = True)
     active = models.BooleanField(default=True)
     approved = models.BooleanField(default=False)  

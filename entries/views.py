@@ -110,7 +110,8 @@ class EditEntry(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'entry_edit.html'
     success_url = reverse_lazy('entries:list')
     success_message = "Tale successfully edited"
- 
+
+
 
 
    
