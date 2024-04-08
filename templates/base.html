@@ -21,6 +21,16 @@
         .submit:hover {
             transform: scale(1.1) !important;
         }
+
+        .welcome a {
+            color: RGB(255, 255, 240) !important;
+            text-decoration: none;
+        }
+
+        .welcome a:hover {
+            color: black !important;
+            text-decoration: none;
+        }
     </style>
 </head>
 
@@ -36,7 +46,8 @@
 
             {% if not user.is_authenticated %}
 
-            <p class="text-end m-3 welcome">Please login or signup</p>
+            <p class="text-end m-3 welcome nav-link">Please <a href="{% url 'accounts:login' %}"> login</a> or <a
+                    href="{% url 'accounts:signup' %}signup">signup</a></p>
             {% endif %}
 
 

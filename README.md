@@ -363,6 +363,8 @@ Code Institute Student services for various questions regarding how to install/o
 
 Stack overflow for various questions regarding how to install/operate django
 
+ChatGPT for help with syntax errors, particularly regarding redirecting after logging in https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
+
 Header and footer based on a website I co-coded on another hackathon https://tomcow88.github.io/teamBrizzle/
 
 Contrast visibility checker https://webaim.org/resources/contrastchecker/
