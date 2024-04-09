@@ -1,5 +1,4 @@
-from django.shortcuts import get_object_or_404, redirect
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import get_object_or_404, redirect, render, reverse
 from .models import Entry, Comment
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
@@ -11,6 +10,7 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils import timezone
 
 
 def entry_list(request):
@@ -110,6 +110,11 @@ class EditEntry(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     template_name = 'entry_edit.html'
     success_url = reverse_lazy('entries:list')
     success_message = "Tale successfully edited"
+
+    def form_valid(self, form):  
+        self.model.created_on = timezone.now()
+        return super().form_valid(form)
+    
 
 
 
