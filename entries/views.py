@@ -11,6 +11,12 @@ from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils import timezone
+from entries.models import Genre
+
+
+class GenreListView(ListView):
+    model = Genre
+    template_name = "genre_list.html"
 
 
 def entry_list(request):
