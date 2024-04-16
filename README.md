@@ -365,9 +365,10 @@ Stack overflow for various questions regarding how to install/operate django
 
 Publish and edit timestamp https://www.youtube.com/watch?v=FpbJBzpoISY&t=32s
 
+
 ChatGPT for help with syntax errors, particularly regarding redirecting after logging in https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
 
-Header and footer based on a website I co-coded on another hackathon https://tomcow88.github.io/teamBrizzle/
+Header and footer based on a website I co-coded on a group hackathon https://tomcow88.github.io/teamBrizzle/
 
 Contrast visibility checker https://webaim.org/resources/contrastchecker/
 
@@ -387,7 +388,9 @@ For ReadME table https://www.shecodes.io/athena/2362-creating-a-table-with-4-col
 
 Wireframes produced using Balsamiq WireFrames https://balsamiq.com/wireframes/?gad_source=1&gclid=CjwKCAiA44OtBhAOEiwAj4gpOexFh0z3peWS6wolbjlJt_fLq7cZGNu99YeMSIpU89wlL2p6ZluXiRoCOSUQAvD_BwE
 
+Favicon image sourced from https://thenounproject.com/icon/quill-1182187/
 
+Favicon.io produced code for favicon https://favicon.io/favicon-converter/
 
 ## Other General Project Advice
 
