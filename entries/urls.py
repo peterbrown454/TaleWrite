@@ -11,7 +11,8 @@ urlpatterns = [
     path('entries/entries/<slug:slug>/',views.delete_entry, name='delete_entry'),
     path('entries/<pk>/update', views.EditEntry.as_view(), name = "EditEntry"),
     path('entry_draft_list', views.entry_list_draft, name = "entry_draft_list"),
-    path('genre_list', views.GenreListView.as_view(), name = "genre_list_view"),
+    path('entry_list_genre', views.entry_list_genre, name = "entry_list_genre"),
+    
 
 
 

@@ -14,6 +14,13 @@ from django.utils import timezone
 from entries.models import Genre
 
 
+
+def entry_list_genre(request):
+    # Assuming you want to filter entries by a specific genre (e.g., 'horror')
+    genre_type = '4'  # Replace 'horror' with the actual genre you want to filter by
+    entries = Entry.objects.filter(genre=genre_type)  # Query entries filtered by genre
+    return render(request, 'entry_list_genre.html', {'entries': entries})
+
 class GenreListView(ListView):
     model = Genre
     template_name = "genre_list.html"
