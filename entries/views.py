@@ -15,20 +15,41 @@ from entries.models import Genre
 
 
 
-def entry_list_genre(request):
-    # Assuming you want to filter entries by a specific genre (e.g., 'horror')
-    genre_type = '4'  # Replace 'horror' with the actual genre you want to filter by
-    entries = Entry.objects.filter(genre=genre_type)  # Query entries filtered by genre
-    return render(request, 'entry_list_genre.html', {'entries': entries})
 
-class GenreListView(ListView):
-    model = Genre
-    template_name = "genre_list.html"
+class two (ListView):
+    model = Entry
+    template_name = "two.html"
+    queryset=Entry.objects.all()
+    context_object_name = "entries"           
+
+class search_bar(ListView):
+    model = Entry
+    template_name = 'entry_list_search.html'
+    context_object_name = "entries"
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return Entry.objects.filter(title).order_by('created_on')
 
 
-def entry_list(request):
+# def entry_list_genre(request):
+    
+#     genre_type = '4'  
+#     entries = Entry.objects.filter(genre=genre_type)  
+#     return render(request, 'entry_list_genre.html', {'entries': entries})
+
+# class GenreListView(ListView):
+#     model = Genre
+#     template_name = "genre_list.html"
+
+def entry_list_search(request):
     entries = Entry.objects.filter(status=1).order_by('-created_on')
-    return render(request, 'entry_list.html', {'entries': entries})
+    return render(request, 'entry_list_search.html', {'entries': entries})
+
+
+# def entry_list(request):
+#     entries = Entry.objects.filter(status=1).order_by('-created_on')
+#     return render(request, 'entry_list.html', {'entries': entries})
 
 
 @login_required(login_url="/accounts/login")
@@ -40,10 +61,23 @@ def entry_list_draft(request):
 
 
 
-# class EntryListView(ListView):
-#     model = Entry
-#     template_name = "entry_list_template.html"
-#     context_object_name = "entries"
+class EntryListView(ListView):
+    model = Entry
+    status = 1
+    template_name = "entry_list.html"
+    context_object_name = "entries"
+
+class search_bar(EntryListView):
+    model = Entry
+    status = 1
+    template_name = "entry_list.html"
+    context_object_name = "entries"
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return Entry.objects.filter(title=query, genre=query, author=query).order_by('-created_on')
+
+
 
 
 @login_required(login_url="/accounts/login")
@@ -75,23 +109,48 @@ def entry_detail(request, slug):
     },
 )
 
+# WORKING MODEL
+# @login_required(login_url="/accounts/login")
+# def entry_write(request):
+#     if request.method == 'POST':
+#         form = forms.WriteEntry(request.POST, request.FILES)
+#         if form.is_valid():
+#             title = form.cleaned_data['title']
+#             if Entry.objects.filter(title=title).exists():
+#                 messages.error(request, "A tale with the same title already exists. Please choose a different title.")
+#             else:
+#                 instance = form.save(commit=False)
+#                 instance.author = request.user
+#                 instance.save()
+#                 messages.success(request, "Tale successfully published")
+#                 return redirect('entries:list')
+#     else:
+#         form = forms.WriteEntry()
+#     return render(request, "entry_write.html", {'form': form})
+
+
+
 @login_required(login_url="/accounts/login")
-def entry_write (request):
+def entry_write(request):
     if request.method == 'POST':
         form = forms.WriteEntry(request.POST, request.FILES)
         if form.is_valid():
-            title = form.data['title']
+            title = form.cleaned_data['title']
             if Entry.objects.filter(title=title).exists():
                 messages.error(request, "A tale with the same title already exists. Please choose a different title.")
-            return render(request, "entry_write.html", {'form': form})
-            instance = form.save(commit = False)
-            instance.author = request.user
-            instance.save()
-            messages.success(request, "Tale successfully published")
-            return redirect('entries:list')
+            else:
+                instance = form.save(commit=False)
+                instance.author = request.user
+                instance.save()
+                if instance.status == 0:
+                    messages.success(request, "Draft successfully saved to 'My Page'")
+                elif instance.status == 1:
+                    messages.success(request, "Tale successfully published")
+                return redirect('entries:list')
     else:
         form = forms.WriteEntry()
     return render(request, "entry_write.html", {'form': form})
+
 
 
 def like_entry(request, slug):
