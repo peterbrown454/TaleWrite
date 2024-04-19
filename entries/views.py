@@ -12,9 +12,52 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.utils import timezone
 from entries.models import Genre
+from django.db.models import Q
+
+def search_bar_w3(request):
+    query = request.GET.get('q')  # Search query
+    entries = Entry.objects.filter(status=1)  # Filter by status=1 by default
+
+    if query:
+        entries = entries.filter(
+            Q(title__icontains=query) | Q(author__username__icontains=query)
+        )
+
+    context = {
+        'entries': entries,
+    }
+    return render(request, 'entry_list_search.html', context)
 
 
+def testing(request):
+  mydata = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Tobias')).values()
+  template = loader.get_template('template.html')
+  context = {
+    'mymembers': mydata,
+  }
+  return HttpResponse(template.render(context, request))
 
+
+# desphixs below
+
+def search_view(request):
+    query = request.GET.get('query') 
+    if query:  
+        entries = Entry.objects.filter(title__icontains=query).order_by("-created_on")
+    else:
+        entries = Entry.objects.none()  
+    
+    return render(request, 'search_results.html', {'entries': entries, 'query': query})
+
+
+def search_results(request):
+    query = request.GET.get('query')
+    if query:
+        entries = Entry.objects.filter(title__icontains=query).order_by("-created_on")
+    else:
+        entries = Entry.objects.none()
+    
+    return render(request, 'search_results.html', {'entries': entries, 'query': query})
 
 class two (ListView):
     model = Entry
@@ -22,15 +65,23 @@ class two (ListView):
     queryset=Entry.objects.all()
     context_object_name = "entries"           
 
+class search_barTRUE(ListView):
+    model = Entry
+    template_name = 'entry_list_search.html'
+    context_object_name = "entries"
+
+    def get_queryset(self):
+        query = self.request.GET.get('query')
+        return Entry.objects.filter(genre=1).order_by('created_on')
+
 class search_bar(ListView):
     model = Entry
     template_name = 'entry_list_search.html'
     context_object_name = "entries"
 
     def get_queryset(self):
-        query = self.request.GET.get('q')
-        return Entry.objects.filter(title).order_by('created_on')
-
+        query = self.request.GET.get('query')
+        return Entry.objects.filter(genre=1).order_by('created_on')
 
 # def entry_list_genre(request):
     
@@ -67,15 +118,15 @@ class EntryListView(ListView):
     template_name = "entry_list.html"
     context_object_name = "entries"
 
-class search_bar(EntryListView):
-    model = Entry
-    status = 1
-    template_name = "entry_list.html"
-    context_object_name = "entries"
+# class search_bar(EntryListView):
+#     model = Entry
+#     status = 1
+#     template_name = "entry_list.html"
+#     context_object_name = "entries"
 
-    def get_queryset(self):
-        query = self.request.GET.get('q')
-        return Entry.objects.filter(title=query, genre=query, author=query).order_by('-created_on')
+#     def get_queryset(self):
+#         query = self.request.GET.get('q')
+#         return Entry.objects.filter(title=query, genre=query, author=query).order_by('-created_on')
 
 
 

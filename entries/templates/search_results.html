@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+
+<body>
+    <h1>Search Results</h1>
+
+    <p>Showing results for: <strong>{{ query }}</strong></p>
+
+    {% if entries %}
+    <ul>
+        {% for entry in entries %}
+        <li>
+            <h2>{{ entry.title }}</h2>
+            <p>{{ entry.content }}</p>
+            <p>Created on: {{ entry.created_on }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No results found.</p>
+    {% endif %}
+</body>
+
+</html>

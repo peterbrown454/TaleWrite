@@ -1,5 +1,6 @@
 from django.urls import path, include
 from . import views
+from .views import search_bar
 
 app_name = 'entries'
 
@@ -14,8 +15,9 @@ urlpatterns = [
     path('entry_list_draft', views.entry_list_draft, name = "entry_list_draft"),
     # path('entry_list_genre', views.entry_list_genre, name = "entry_list_genre"),
     path('entry_list_search', views.entry_list_search, name = "entry_list_search"),
-    path('search_bar', views.search_bar.as_view(), name = "search_bar"),
+    path('search_bar', views.search_bar.as_view(), name = 'search_bar'),
     path('two', views.two.as_view(), name = "two"),
+    path('search_bar_w3', views.search_bar_w3, name = 'search_bar_w3'),
     
 
 
