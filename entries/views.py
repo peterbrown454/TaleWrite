@@ -15,12 +15,12 @@ from entries.models import Genre
 from django.db.models import Q
 
 def search_bar_w3(request):
-    query = request.GET.get('q')  # Search query
-    entries = Entry.objects.filter(status=1)  # Filter by status=1 by default
+    query = request.GET.get('q') 
+    entries = Entry.objects.filter(status=1)  
 
     if query:
         entries = entries.filter(
-            Q(title__icontains=query) | Q(author__username__icontains=query)
+            Q(title__icontains=query) | Q(author__username__icontains=query) | Q(genre__type_genre__icontains=query) 
         )
 
     context = {
