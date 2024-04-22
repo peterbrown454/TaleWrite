@@ -26,7 +26,7 @@ def search_bar_w3(request):
     context = {
         'entries': entries,
     }
-    return render(request, 'entry_list_search.html', context)
+    return render(request, 'entry_list.html', context)
 
 
 def testing(request):

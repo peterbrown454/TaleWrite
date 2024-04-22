@@ -200,6 +200,29 @@ header {
     background-color: RGB(128, 0, 32) !important;
 }
 
+#searchbar {
+    height: 34px;
+    width: 180px;
+    border-width: 2px;
+    /* border-style: outset; */
+    /* border-color: buttonborder; */
+    border-image: initial;
+    background-color: white !important;
+}
+
+#searchbutton {
+    color: RGB(255, 255, 240) !important;
+    background-color: RGB(128, 0, 32) !important;
+    width: 80px;
+    font-family: 'EB Garamond';
+    font-weight: 500;
+    font-size: larger;
+}
+
+#searchbutton:hover {
+    transform: scale(1.1) !important;
+}
+
 .btn-signup {
     color: RGB(255, 255, 240);
 }
@@ -301,6 +324,10 @@ footer {
 .write-entry {
     display: flex;
     flex-direction: column;
+}
+
+input type {
+    font-family: 'EB Garamond';
 }
 
 .comments-section form,
