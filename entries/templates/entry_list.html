@@ -4,7 +4,7 @@
 
 <form action="{% url 'entries:search_bar_w3' %}" method="get">
     {%csrf_token %}
-    <input type=" text" name="q" placeholder="Search library" id="searchbar">
+    <input type=" text" name="q" placeholder="Title, author, or genre" id="searchbar">
     <button type="submit" id="searchbutton">Search</button>
 </form>
 <br>
