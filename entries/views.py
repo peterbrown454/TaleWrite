@@ -117,6 +117,7 @@ class EntryListView(ListView):
     status = 1
     template_name = "entry_list.html"
     context_object_name = "entries"
+    ordering = ['-created_on']
 
 # class search_bar(EntryListView):
 #     model = Entry

@@ -217,7 +217,19 @@ header {
     font-family: 'EB Garamond';
     font-weight: 500;
     font-size: larger;
+    margin-left: 5px !important;
 }
+
+#id_slug {
+    display: none !important;
+}
+
+label[for=id_slug] {
+    display: none;
+}
+
+
+
 
 #searchbutton:hover {
     transform: scale(1.1) !important;
@@ -266,7 +278,6 @@ footer {
     width: 100%;
     font-family: "EB Garamond", serif;
     font-weight: 600;
-    /*from 400-800*/
     font-style: normal;
 }
 
@@ -458,7 +469,14 @@ form.site-form input[type="submit"],
         display: flex;
         justify-content: center !important;
     }
+
+    .contact-details {
+        display: flex;
+        justify-content: center !important;
+    }
 }
+
+
 
 @media only screen and (max-width: 768px) {
 
