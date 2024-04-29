@@ -18,6 +18,11 @@ a:hover {
 
 }
 
+#id_genre {
+    background-color: white;
+    color: black;
+}
+
 .smicon {
     border-color: RGB(128, 0, 32) !important;
     color: black;
@@ -47,6 +52,7 @@ a:hover {
     font-size: large;
 
 }
+
 
 .btn-toolbar2 {
     display: flex;
