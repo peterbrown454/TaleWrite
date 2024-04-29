@@ -367,7 +367,6 @@ Adding email to signup page and removing helptext https://stackoverflow.com/ques
 
 Publish and edit timestamp https://www.youtube.com/watch?v=FpbJBzpoISY&t=32s
 
-
 ChatGPT for help with syntax errors, particularly regarding redirecting after logging in https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
 
 Header and footer based on a website I co-coded on a group hackathon https://tomcow88.github.io/teamBrizzle/
