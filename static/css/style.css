@@ -48,6 +48,32 @@ a:hover {
     border: 1px solid;
 }
 
+#id_username {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+}
+
+#id_email {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+}
+
+#id_password {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+}
+
+#id_password2 {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+}
+
+
+
 .smicon {
     border-color: RGB(128, 0, 32) !important;
     color: black;
