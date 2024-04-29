@@ -18,6 +18,7 @@ urlpatterns = [
     path('search_bar', views.search_bar.as_view(), name = 'search_bar'),
     path('two', views.two.as_view(), name = "two"),
     path('search_bar_w3', views.search_bar_w3, name = 'search_bar_w3'),
+    path('search_bar_w3_mypage', views.search_bar_w3_mypage, name = 'search_bar_w3_mypage'),
     
 
 

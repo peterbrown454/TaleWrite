@@ -2,6 +2,13 @@
 
 {% block content %}
 
+<form action="{% url 'entries:search_bar_w3_mypage' %}" method="get">
+    {%csrf_token %}
+    <input type="text" name="q" placeholder="Title, or genre" id="searchbar">
+    <button type="submit" id="searchbutton">Search</button>
+</form>
+
+<br>
 
 <div class="entries"></div>
 {% if entries %}

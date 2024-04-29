@@ -14,6 +14,25 @@ from django.utils import timezone
 from entries.models import Genre
 from django.db.models import Q
 
+
+@login_required(login_url="/accounts/login")
+def search_bar_w3_mypage(request):
+    user = request.user
+    query = request.GET.get('q') 
+    entries = Entry.objects.filter(author=user)  
+
+    if query:
+        entries = entries.filter(
+            Q(title__icontains=query) | Q(author__username__icontains=query) | Q(genre__type_genre__icontains=query) 
+        )
+
+    context = {
+        'entries': entries,
+    }
+    return render(request, 'entry_list_draft.html', context)
+
+
+@login_required(login_url="/accounts/login")
 def search_bar_w3(request):
     query = request.GET.get('q') 
     entries = Entry.objects.filter(status=1)  
