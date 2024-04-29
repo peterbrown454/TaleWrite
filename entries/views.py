@@ -98,9 +98,9 @@ def entry_list_search(request):
     return render(request, 'entry_list_search.html', {'entries': entries})
 
 
-# def entry_list(request):
-#     entries = Entry.objects.filter(status=1).order_by('-created_on')
-#     return render(request, 'entry_list.html', {'entries': entries})
+def entry_list(request):
+    entries = Entry.objects.filter(status=1).order_by('-created_on')
+    return render(request, 'entry_list.html', {'entries': entries})
 
 
 @login_required(login_url="/accounts/login")
@@ -112,12 +112,12 @@ def entry_list_draft(request):
 
 
 
-class EntryListView(ListView):
-    model = Entry
-    status = 1
-    template_name = "entry_list.html"
-    context_object_name = "entries"
-    ordering = ['-created_on']
+# class EntryListView(ListView):
+#     model = Entry
+#     status = 1
+#     template_name = "entry_list.html"
+#     context_object_name = "entries"
+#     ordering = ['-created_on']
 
 # class search_bar(EntryListView):
 #     model = Entry
