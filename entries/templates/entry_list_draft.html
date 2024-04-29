@@ -27,7 +27,11 @@
     </span>
 
     <p class="entry-list excerpt">{{ entry.excerpt_with_ellipsis}}</p>
-    <p class="entry-list">{{entry.status}}</p>
+    {% if entry.status == 0 %}
+    <p class="entry-list">Draft</p>
+    {% elif entry.status == 1 %}
+    <p class="entry-list">Published</p>
+    {% endif %}
     <p class="entry-list"><em>{{entry.genre}}</em></p>
 
     <hr>
