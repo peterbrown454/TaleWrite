@@ -363,6 +363,8 @@ Code Institute Student services for various questions regarding how to install/o
 
 Stack overflow for various questions regarding how to install/operate django
 
+Adding email to signup page and removing helptext https://stackoverflow.com/questions/13202845/removing-help-text-from-django-usercreateform
+
 Publish and edit timestamp https://www.youtube.com/watch?v=FpbJBzpoISY&t=32s
 
 

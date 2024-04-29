@@ -12,19 +12,36 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
+from .forms import CreationForm
+
 
 
 def signup_view(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CreationForm(request.POST)  
         if form.is_valid():
             user = form.save()
             login(request, user)
             messages.success(request, f"You are now signed up, {user.username}") 
             return redirect('entries:list')
     else:
-        form = UserCreationForm()
+        form = CreationForm() 
     return render(request, "signup.html", {'form': form})
+
+# working model below!!
+# user = User.objects.create_user("john", "lennon@thebeatles.com", "johnpassword")
+
+# # def signup_view(request):
+# #     if request.method == 'POST':
+# #         form = UserCreationForm(request.POST)
+# #         if form.is_valid():
+# #             user = form.save()
+# #             login(request, user)
+# #             messages.success(request, f"You are now signed up, {user.username}") 
+# #             return redirect('entries:list')
+# #     else:
+# #         form = UserCreationForm()
+# #     return render(request, "signup.html", {'form': form})
 
 
 def login_view(request):
