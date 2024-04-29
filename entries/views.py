@@ -23,7 +23,7 @@ def search_bar_w3_mypage(request):
 
     if query:
         entries = entries.filter(
-            Q(title__icontains=query) | Q(author__username__icontains=query) | Q(genre__type_genre__icontains=query) 
+            Q(title__icontains=query) | Q(genre__type_genre__icontains=query) 
         )
 
     context = {
