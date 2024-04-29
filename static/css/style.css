@@ -37,6 +37,7 @@ a:hover {
 
 .submit {
     width: 150px;
+    border: 1px solid;
 }
 
 .welcome {
