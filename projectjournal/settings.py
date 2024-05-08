@@ -13,8 +13,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =  os.environ.get('SECRET_KEY')
 
 
-DEBUG = False
-ALLOWED_HOSTS = ['talewrite-b9287c77cba0.herokuapp.com', 'journap-15c9108ba52d.herokuapp.com', 'journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu110.gitpod.io', 'gitpod.io', 'herokuapp.com', '8000-peterbrown454-diary-ewoyturoyqk.ws-eu110.gitpod.io']
+DEBUG = True
+ALLOWED_HOSTS = ['8000-peterbrown454-diary-ewoyturoyqk.ws-eu111.gitpod.io', 'talewrite-b9287c77cba0.herokuapp.com', 'journap-15c9108ba52d.herokuapp.com', 'journap-c86fda53e915.herokuapp.com', '8000-peterbrown454-diary-b6qovr99y0h.ws-eu110.gitpod.io', 'gitpod.io', 'herokuapp.com', '8000-peterbrown454-diary-ewoyturoyqk.ws-eu110.gitpod.io']
 
 
 INSTALLED_APPS = [
