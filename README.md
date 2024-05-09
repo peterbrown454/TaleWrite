@@ -422,9 +422,7 @@ For CSS validation  https://jigsaw.w3.org/css-validator/
 Contrast Readibility validation https://webaim.org/resources/contrastchecker/
 
 Lighthouse from google dev tools performance and accessibility 
-<br>
 
-<img src="staticfiles/images/lighthouse.png" alt="screenshot showing lighthouse evaluation scoring highly from home page ">
 
 <br>
 
