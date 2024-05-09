@@ -2,72 +2,125 @@
 
 <h2>Introduction</h2>
 
-TaleWrite is a short story website. It provides the user with the ability to write and publish their short tales on the website, edit them if desired, and read the published tales of other authors. By creating their own account they can then interact with the site.
+TaleWrite is a short story website. It provides the user with the ability to write and publish their short tales on the website, edit and delete, and read the published tales of other authors. 
 
-Features include including likes, genres, and excerpts, to intrigue potential readers on the home page - which doybles as a listing of published tales. Lastly the "published on" attribute allows authors and readers to keep track of tales and return to edit, delete, or read again if desired.
+By creating their own account they can interact with the site.
 
-Please be aware that TaleWrite is the name of the project, which changed from Diary in the code. And in following ReadME, "entry" is synonymous with "tale".
+Features include including a search bar, likes, genres, and excerpts to intrigue potential readers on the home page - which doubles as a listing of published tales. 
 
+There is also the option to visit "my page" which allows users to see and edit their own drafts and published tales.
 
-## Home/Entries list page 
-
-<img src="static/images/home_page.png" alt="Home page with list of published tales with message requesting they log in or sign up">
-
-## Home/Entries list page (for first time users)
-
-The landing page of the website allows users to see the TaleWrite logo for brand visibility, and a list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. It informs the user if they are logged in or not with a welcome back message if logged in, and a login or sign up message if not. If the user attempts to read a tale without logging in they will be redirected to the login page.
-
-<strong>Landing/entries list page</strong>
-
-<img src="static/images/home_page_please_log_in.png" alt="Home page with list of published tales with message requesting they log in or sign up">
+Please be aware that in following ReadME, "entry" is synonymous with "tale".
 
 
+## Home/Read/Entries list page (for first time users) 
+
+<img src="static/images/homeplslogin.png" alt="Home page with list of published tales with message requesting they log in or sign up">
+
+The landing page of the website allows users to see the TaleWrite logo for brand visibility, and a list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. 
+
+The search bar allows users to search for specific tales, author, or entries of a particular genre.
+
+If the user attempts to read a tale without logging in they will be redirected to the login page.
+
+The header and footer are consistant across all pages and incluide social media links, and email and phone on large devices.
 
 ## Read page (home and landing page for returning users) 
 
-
-<strong>Entry list zoomed in</strong>
-
-<img src="static/images/home_page_welcome_back.png" alt="Write page showing write form">
+<img src="staticfiles/images/homeloggedin.png" alt="Home page with list of published tales with message but without the message requesting they log in or sign up and with Logout as an option.">
 
 <br>
 
-<strong>Write</strong>
+Home page with list of published tales with message but without the message requesting they log in or sign up and with Logout as an option.
+
+<br>
+
+## Sign up
+
+<img src="staticfiles/images/signup.png" alt="Sign up page showing username, password, password confirmation, and email input fields">
+
+<br>
+
+Sign up page showing username, password, password confirmation, and email input fields
+
+<br>
+
+## Log in
+
+<img src="staticfiles/images/login.png" alt="Login page showing username and password input fields">
+
+<br>
+
+Login page showing username and password input fields
+
+<br>
+
+## My page
+
+<img src="staticfiles/images/mypage.png" alt="Write page showing write form">
+
+<br>
+
+My page presents users with all their own entries, which includes entries with the status of "draft". This allows users to continue working on their tales without public scrutiny, until they are ready to publish them to the entries list home page.
+
+<br>
+
+## Write
  
 
-<img src="static/images/write_final.png" alt="Write page showing write form with title, content, excerpt, slug, genre fields and submit button">
+<img src="static/images/write.png" alt="Write page showing write form with title, content, excerpt, genre fields and submit button">
 
 <br>
 
-<strong>Entry: top</strong>
-
-<img src="static/images/read_tale_top.png" alt="Read page showing top half of read page displaying content of a tale">
+Write page showing form with title, content, excerpt, and genre fields, with submit button
 
 <br>
 
-<strong>Entry: bottom from non-author's POV</strong>
+## Published tale, readers POV
 
-<p>This page shows the bottom of a Read:Tale page showing a like button and comments section. It is possible for readers to leave a comment which awaits moderation before being published.
-
-<img src="staticfiles/images/read_bottom_non_author.png" alt="a Read:Tale page showing a like button and comments section with one approved comment and one awaiting moderation">
-
-<strong>Read:Tale from author's POV</strong>
-
-<p>This page shows the bottom of a Read: Tale page showing the options available to the author of the tale. This includes a delete button, edit button, and like button. These are only visible to the user who is also the author of the tale. It is also possible to leave a comment, usually it would be in response to another users comment.
-
-<img src="static/images/read_tale_author.png" alt="Read page showing bottom half of read page displaying Like button, delete button, and edit button">
-
-<strong>Delete</strong>
-
-<p>This shows the delete function having been used which then displays a "entry deleted successfully" message, and redirect to the homepage.
-
-<img src="static/images/entry_delete_successful.png" alt="Banner message saying 'entry deleted successfully'">
+<img src="static/images/entrycomment.png" alt="Tale content with comments section and banner showing comment awaiting approval and like button">
 
 <br>
 
-<p>This shows the edit function having been used which then displays a "entry deleted successfully" message, and redirect to the homepage.
+Tale content with comments section, like button, and banner messages showing recently submitted comment is awaiting approval
 
-<img src="static/images/entry_delete_successful.png" alt="Banner message saying 'entry deleted successfully'">
+<br>
+
+## Read tale: Author's POV
+
+
+
+<img src="staticfiles/images/taleauthor.png" alt="a Read:Tale page showing an edit and delete button and comments section.">
+
+<br>
+This page shows a published tale from the author's point of view. It allows the author access to a delete and an edit button.
+
+<br>
+
+## Edit tale
+
+
+<img src="static/images/edit.png" alt="Image showing all the same fields as the write page but with them prepopulated with the entry's information that was previously submitted">
+
+<br>
+
+## Delete "are you sure?"
+
+<img src="static/images/delete.png" alt="Image showing popout asking 'are you sure you want to delete this tale?'">
+
+<br>
+
+This shows the delete button having been clicked confirming with the user "are you sure you want to delete this tale?"
+
+<br>
+
+## Delete confirmed
+
+<img src="static/images/deleteredirect.png" alt="Banner message saying 'entry deleted successfully' and you have been redirected to the home page">
+
+<br>
+
+This shows the delete function having been used which then displays an "entry deleted successfully" message, and that you have been redirected to the homepage.
 
 <br>
 
@@ -84,7 +137,7 @@ For fonts I selected the Garamond style, and increasing or decreasing the font-w
 
 <br>
 
-## Wire Frames
+# Wire Frames
 
 Initially I wanted to provide images that would excite and inspire the user of the site but it simply didn't work elegantly or provide the font with clarity therefore the hero images and parchment background were dropped in favour of a monotone off-white for readibility.
 
@@ -92,37 +145,49 @@ Initially I wanted to provide images that would excite and inspire the user of t
 
 
 
-# Home page
+## Home page
 
-I thought that a nice plain landing page that implies the story of the website would be a nice user experience, but the hero image rendered the text of the entries list illegible.
+I thought that a landing page that implies the story of the website would be a nice user experience, but the hero image rendered the text of the entries list illegible.
 
 <img src="static/images/wirehome.png" alt="Image of man at writing desk">
 
-# Account sign-up page
+<br>
+
+## Account sign-up page
 
 Login Page ended up was pre packaged by Django so we ended up with a fairly similar page but without the email address field.
 
 <img src="static/images/wireaccount.png" alt="Wireframe image of Login page">
 
-# Read page
+## Read page
 
-Entries page. I think that we did beter in the end with some extra features to be discussed in the ReadMe. However unfortunately I ran out of time to produce a filtering function which would be essential if the website gathers more users for them to keep track of entries. However, for now it is not essential, as we coded so that new entries authomatically go to the top of the entries list.
+I think that we did better in the end with some extra features than initially envisaged. 
 
 <img src="static/images/wireread.png" alt="Wireframe image of Entries page">
 
-# Write page
+<br>
+
+## Write page
 
 Write entries page. I feel that in actuality this was probably better than anticipated. I was able to add other fields such as excerpt and genre which I think add texture to the user experience.
 
-The biggest regret in terms of functionality is that I ran out of time to add a draft/publish option, however users are still able to edit entries.
-
 <img src="static/images/wirewrite.png" alt="Wireframe image of Write page">
+
+<br>
 
 ## Database Schema
 
 <img src="static/images/database_schema.png" alt="Wireframe image of Write page">
 
+<br> 
+
+Before performing any model migrations to my database, I devised an entity relationship diagram to visualise the connections between the models. There was a lot of edits to the models made throughout the process which shows why it's good to have a clear idea in advance.
+
+<br>
+
 ## User Stories, features and bugs
+
+<img src="static/images/canban1.png" alt="Image of canban board showing most features completed, however several not completed, to be discussed later.">
 
 I used a canban board and the MSCW approach to my user stories and features. 
 
@@ -130,7 +195,9 @@ Some I decided fell outside the scope of this project given time and staffing li
 
 There were others that I intended to do, however despite all efforts and the importance of the features, remain uncompleted this sprint.
 
-<img src="static/images/canban1.png" alt="Image of canban board showing most features completed, however several not completed, to be discussed later.">
+
+
+<br><br>
 
 <table>
   <tr>
@@ -142,9 +209,9 @@ There were others that I intended to do, however despite all efforts and the imp
     <td>As a site user, I want a flowing user experience. </td>
     <td>Ability to navigate from feature to feature as expected without interruption or detour</td>
     <td>-Success messages after all successful user interaction with the site may damage the user experience after a while for the user.
-     However there is a x function to remove the message immediately. Unfortunately as well it wasn't possible to get the message to sit in the navbar which is a bug to be fixed next sprint.
+     However there is a x function to remove the message immediately. Unfortunately as well it wasn't possible to get the message to overlay the navbar which is a bug to be fixed next sprint.
 
-  -If the user is not logged in and attempts to access an "authentication-required" page I should have ensured they are redirected there after logging in. However there are instances when the user is returned to the home page after logging in instead.</td>
+</td>
    
     
   </tr>
@@ -166,13 +233,13 @@ There were others that I intended to do, however despite all efforts and the imp
   <tr>
     <td>As site owner I want to be able to moderate comments to ensure a pleasent toxicity-free community of authors and readers</td>
     <td>All comments await moderation from superuser, and an automatic message informs commenter of this</td>
-    <td>None deteced</td>
+    <td>None detected</td>
     
   </tr>
   <tr>
     <td>As a site user I want to be able to easily access all published stories</td>
-    <td>Stories easy to upload and clearly visible on website.</td>
-    <td>Whilst uploading is easy and entries are clearly visible, the ability to filter/sort wasn't completed (see features to be implemented next sprint below). </td>
+    <td>Stories easy to search for based on genre author or title</td>
+    <td>None detected</td>
     
   </tr>
   <tr>
@@ -205,6 +272,13 @@ There were others that I intended to do, however despite all efforts and the imp
     <td>None detected</td>
     
   </tr>
+
+  <tr>
+    <td>As a user I would to be able to see and easily access all my tales in one place</td>
+    <td>"My page" allows users to access all their entries quickly and easily</td>
+    <td>None detected</td>
+    
+  </tr>
   
    
   </table>
@@ -212,7 +286,7 @@ There were others that I intended to do, however despite all efforts and the imp
 <br>
 
 
-### User Stories and Features (to be implelemented next Sprint)
+## User Stories and Features (to be implelemented next Sprint)
 
   <table>
   <tr>
@@ -222,21 +296,25 @@ There were others that I intended to do, however despite all efforts and the imp
   </tr>
 
   <tr>
-    <td>As a site user I want to be able to save drafts so that I can ensure they are of good quality before publishing them for others to read</td>
-    <td>A simple save button at the bottom of the Write page, and a profile page allowing authenticated users to access their stories</td>
-    <td>N/A</td>
+    <td>*Epic* As a user, I want to a profile page in which I can have all my entries available to be seen in one place and users can follow me / me follow other users</td>
+    <td>Profile page needed and "follow author" feature</td>
+    <td>Unfortuntaly ran out of time this sprint</td>
+      <tr>
+    <td>As a site user I want to be able to reset my password easily</td>
+    <td>The email entry function is there so there needs to be an email sent with a link that allows the user to reset their password</td>
+    <td>Unfortunately ran out of time this sprint</td>
+
   </tr>
-<tr>
-    <td>As a site user I want to be able to filter/sort all published stories so I can access specific ones</td>
-    <td>Unable to be added this sprint due to time constraints. To be added ASAP next sprint, as the user base builds</td>
-    <td>N/A</td>
+
+  </tr>
+
     
   </tr>>
   
 
   </table>
 
-### Won't haves
+## Won't haves
 
   <table>
   <tr>
@@ -299,63 +377,70 @@ There were others that I intended to do, however despite all efforts and the imp
   <tr>
     <th>Bug/Issue</th>
     <th>Image</th>
-    <th>Resolution</th>
-  </tr>
-  <td>Redirect following "authentication required" sometimes takes the user home instead of to the previously requested page. This is a matter of redirection that I thought I had corrected, and then ran out of time to fix</td>
-  <td>NA
-  </td>
-   <td>NA
-  </td>
-  </tr>
+    
+
       
   </tr>
     <td>When user presses refresh having submitted a comment on an entry then it resubmits the entry</td>
     <td><img src="static/images/comment-resubmit-on-refresh.png" alt="Popup showing 'this will resubmit your form' message"></td>
     
-  <td>NA</td>
+  <td></td>
   </tr>
     
   </tr>
   <td>Part bug / part fix. Basic javascript pop up to confirm user wishes to delete their entry. Style is out of keeping with the rest of the site and maybe even a security concern for a user.</td>
     <td><img src="static/images/areyousure.png" alt="Basic javascript pop 'are you sure you want to delete this tale?'"></td>
     <td></td>
-      <tr>
-      <td>Select genre list unable to be accessed to be styled. This wasn't a problem deployed on PC using dev tools, but on physical iphone looked entirely out of keeping with styling of the site
-      <br>
-    <td><img src="static/images/genre.png" alt="Image of blue genre button"></td>
-    <br>
-  </tr>
+
   <tr>
-    <td>Users can like an entry an indefinite number of times up to 28. At this point the like button vanishing when mouse hovereed over it and the clickbox obviously disappeared too as nothing happened when hovered and clicked over the area</td>
+    <td>The same user can like an entry an indefinite number of times.</td>
     <td><img src="static/images/likebug2.png" alt="Image of blue genre button"></td>
     <br></td>
-    <td></td>
-  
 
   </table>
 
 
-### Validator Testing 
+## Validator Testing 
 
 For HTML validation https://validator.w3.org/
 
 For CSS validation  https://jigsaw.w3.org/css-validator/
 
-Contrast checking <img src="staticfiles/images/contrast.png">
+## Contrast checking 
+
+<br>
+<img src="staticfiles/images/contrast.png">
+
+<br>
 
 <img src="staticfiles/images/contrast2.png">
 
-<img src="assets/images/readMeImages/css-validation.png" alt="css validation screenshot">
+<br>
+
+<img src="staticfiles/images/cssvalid.png" alt="css validation screenshot">
   
 Contrast Readibility validation https://webaim.org/resources/contrastchecker/
 
+Lighthouse from google dev tools performance and accessibility 
+<br>
+
+<img src="staticfiles/images/lighthouse.png" alt="screenshot showing lighthouse evaluation scoring highly from home page ">
+
+<br>
+
+<img src="staticfiles/images/lighthousewrite.png" alt="screenshot showing lighthouse evaluation scoring highly from 'read tale' page">
+
+<br>
+
 ## Deployment
 
-Site successfully deployed on 
+Site successfully deployed on https://talewrite-b9287c77cba0.herokuapp.com/
 
 ## Credits 
 
 "Netninja" django blog tutorials https://www.youtube.com/watch?v=n-FTlQ7Djqc
+
+Django Crispy Forms (https://django-crispy-forms.readthedocs.io/en/latest/install.html) 
 
 "Code Institute", for initital django and elephant sql and heroku installation
 
@@ -367,7 +452,7 @@ Adding email to signup page and removing helptext https://stackoverflow.com/ques
 
 Publish and edit timestamp https://www.youtube.com/watch?v=FpbJBzpoISY&t=32s
 
-ChatGPT for help with syntax errors, particularly regarding redirecting after logging in https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
+ChatGPT for the tales I uploaded to showcase the sites functionality, and providing guidance if I encountered issues I did not grasp. https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
 
 Header and footer based on a website I co-coded on a group hackathon https://tomcow88.github.io/teamBrizzle/
 
@@ -393,6 +478,8 @@ Favicon image sourced from https://thenounproject.com/icon/quill-1182187/
 
 Favicon.io produced code for favicon https://favicon.io/favicon-converter/
 
+My mentor Chris who was a really helpful and calming influence!
+
 ## Other General Project Advice
 
-Thanks for reading
+Thanks for reading!
