@@ -419,6 +419,8 @@ For CSS validation  https://jigsaw.w3.org/css-validator/
 
 <img src="staticfiles/images/cssvalid.png" alt="css validation screenshot">
   
+<br>
+
 Contrast Readibility validation https://webaim.org/resources/contrastchecker/
 
 Lighthouse from google dev tools performance and accessibility 
@@ -477,6 +479,8 @@ Favicon image sourced from https://thenounproject.com/icon/quill-1182187/
 Favicon.io produced code for favicon https://favicon.io/favicon-converter/
 
 My mentor Chris who was a really helpful and calming influence!
+
+Class mates who were really supportive. Especially Amanda, Martina, and Ellis.
 
 ## Other General Project Advice
 
