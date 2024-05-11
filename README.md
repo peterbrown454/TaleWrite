@@ -480,7 +480,7 @@ Favicon.io produced code for favicon https://favicon.io/favicon-converter/
 
 My mentor Chris who was a really helpful and calming influence!
 
-Class mates who were really supportive. Especially Amanda, Martina, and Ellis.
+My class mates who were all really supportive.
 
 ## Other General Project Advice
 

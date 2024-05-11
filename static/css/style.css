@@ -261,8 +261,6 @@ header {
     height: 34px;
     width: 180px;
     border-width: 2px;
-    /* border-style: outset; */
-    /* border-color: buttonborder; */
     border-image: initial;
     background-color: white !important;
 }
@@ -275,6 +273,7 @@ header {
     font-weight: 500;
     font-size: larger;
     margin-left: 5px !important;
+    border-width: 2px;
 }
 
 #id_slug {
