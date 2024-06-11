@@ -29,7 +29,7 @@ def search_bar_w3_mypage(request):
     context = {
         'entries': entries,
     }
-    return render(request, 'entry_list_draft.html', context)
+    return render(request, 'my_page.html', context)
 
 
 @login_required(login_url="/accounts/login")
@@ -48,19 +48,6 @@ def search_bar_w3(request):
     return render(request, 'entry_list.html', context)
 
 
-      
-
-class search_bar(ListView):
-    model = Entry
-    template_name = 'entry_list_search.html'
-    context_object_name = "entries"
-
-    def get_queryset(self):
-        query = self.request.GET.get('query')
-        return Entry.objects.filter(genre=1).order_by('created_on')
-
-
-
 def entry_list_search(request):
     entries = Entry.objects.filter(status=1).order_by('-created_on')
     return render(request, 'entry_list_search.html', {'entries': entries})
@@ -72,10 +59,10 @@ def entry_list(request):
 
 
 @login_required(login_url="/accounts/login")
-def entry_list_draft(request):
+def my_page(request):
     user = request.user
     entries = Entry.objects.filter(author=user).order_by('-created_on')
-    return render(request, 'entry_list_draft.html', {'entries': entries})
+    return render(request, 'my_page.html', {'entries': entries})
 
 
 
