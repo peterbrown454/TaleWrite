@@ -230,6 +230,7 @@ header {
 
 }
 
+
 .logo {
     height: 62px;
     width: 72px;
@@ -241,6 +242,7 @@ header {
 .navbar-toggler-icon {
     width: 49px;
     height: 49px;
+    filter: invert(1) sepia(1) saturate(200%) brightness(100%) hue-rotate(-23deg)
 }
 
 
