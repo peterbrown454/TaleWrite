@@ -78,11 +78,7 @@ def search_results(request):
     
     return render(request, 'search_results.html', {'entries': entries, 'query': query})
 
-class two (ListView):
-    model = Entry
-    template_name = "two.html"
-    queryset=Entry.objects.all()
-    context_object_name = "entries"           
+      
 
 class search_barTRUE(ListView):
     model = Entry

@@ -13,18 +13,15 @@
 <div class="entries"></div>
 {% if entries %}
 {% for entry in entries %}
-<div class=" entry entry-list">
+<div class="entry entry-list">
 
     <span style="display: flex;">
-        <a href="{% url 'entries:entry_detail' slug=entry.slug %}">
-            <h2 class="entry-title">{{ entry.title }}</h2>
+        <a class="entry-title" href="{% url 'entries:entry_detail' slug=entry.slug %}">
+            {{ entry.title }}
         </a>
 
-
-        <br>
-        <br>
-
     </span>
+
 
     <p class="entry-list excerpt">{{ entry.excerpt_with_ellipsis}}</p>
     {% if entry.status == 0 %}
