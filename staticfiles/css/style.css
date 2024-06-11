@@ -18,6 +18,11 @@ a:hover {
 
 }
 
+a.entry-title:hover {
+    transform: scale(1.05) !important;
+    font-weight: 600;
+}
+
 #id_title {
     background-color: white;
     color: black;
@@ -386,6 +391,10 @@ footer {
 
 .entry-title {
     font-weight: 600;
+    font-size: xx-large;
+    font-family: 'EB Garamond', serif;
+    margin: 0;
+    margin-bottom: 10px;
 }
 
 .write-entry {
