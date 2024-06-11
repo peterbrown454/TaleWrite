@@ -48,46 +48,7 @@ def search_bar_w3(request):
     return render(request, 'entry_list.html', context)
 
 
-def testing(request):
-  mydata = Member.objects.filter(Q(firstname='Emil') | Q(firstname='Tobias')).values()
-  template = loader.get_template('template.html')
-  context = {
-    'mymembers': mydata,
-  }
-  return HttpResponse(template.render(context, request))
-
-
-# desphixs below
-
-def search_view(request):
-    query = request.GET.get('query') 
-    if query:  
-        entries = Entry.objects.filter(title__icontains=query).order_by("-created_on")
-    else:
-        entries = Entry.objects.none()  
-    
-    return render(request, 'search_results.html', {'entries': entries, 'query': query})
-
-
-def search_results(request):
-    query = request.GET.get('query')
-    if query:
-        entries = Entry.objects.filter(title__icontains=query).order_by("-created_on")
-    else:
-        entries = Entry.objects.none()
-    
-    return render(request, 'search_results.html', {'entries': entries, 'query': query})
-
       
-
-class search_barTRUE(ListView):
-    model = Entry
-    template_name = 'entry_list_search.html'
-    context_object_name = "entries"
-
-    def get_queryset(self):
-        query = self.request.GET.get('query')
-        return Entry.objects.filter(genre=1).order_by('created_on')
 
 class search_bar(ListView):
     model = Entry
@@ -98,15 +59,7 @@ class search_bar(ListView):
         query = self.request.GET.get('query')
         return Entry.objects.filter(genre=1).order_by('created_on')
 
-# def entry_list_genre(request):
-    
-#     genre_type = '4'  
-#     entries = Entry.objects.filter(genre=genre_type)  
-#     return render(request, 'entry_list_genre.html', {'entries': entries})
 
-# class GenreListView(ListView):
-#     model = Genre
-#     template_name = "genre_list.html"
 
 def entry_list_search(request):
     entries = Entry.objects.filter(status=1).order_by('-created_on')
@@ -123,27 +76,6 @@ def entry_list_draft(request):
     user = request.user
     entries = Entry.objects.filter(author=user).order_by('-created_on')
     return render(request, 'entry_list_draft.html', {'entries': entries})
-
-
-
-
-# class EntryListView(ListView):
-#     model = Entry
-#     status = 1
-#     template_name = "entry_list.html"
-#     context_object_name = "entries"
-#     ordering = ['-created_on']
-
-# class search_bar(EntryListView):
-#     model = Entry
-#     status = 1
-#     template_name = "entry_list.html"
-#     context_object_name = "entries"
-
-#     def get_queryset(self):
-#         query = self.request.GET.get('q')
-#         return Entry.objects.filter(title=query, genre=query, author=query).order_by('-created_on')
-
 
 
 
@@ -175,25 +107,6 @@ def entry_detail(request, slug):
         "comment_form": comment_form,
     },
 )
-
-# WORKING MODEL
-# @login_required(login_url="/accounts/login")
-# def entry_write(request):
-#     if request.method == 'POST':
-#         form = forms.WriteEntry(request.POST, request.FILES)
-#         if form.is_valid():
-#             title = form.cleaned_data['title']
-#             if Entry.objects.filter(title=title).exists():
-#                 messages.error(request, "A tale with the same title already exists. Please choose a different title.")
-#             else:
-#                 instance = form.save(commit=False)
-#                 instance.author = request.user
-#                 instance.save()
-#                 messages.success(request, "Tale successfully published")
-#                 return redirect('entries:list')
-#     else:
-#         form = forms.WriteEntry()
-#     return render(request, "entry_write.html", {'form': form})
 
 
 
