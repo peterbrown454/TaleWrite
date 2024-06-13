@@ -134,15 +134,15 @@ a.entry-title:hover {
 
 
 #edit {
-
-
     padding-left: 20px;
     padding-right: 20px;
-
+    color: RGB(255, 255, 240);
 
 }
 
-
+#delete {
+    color: RGB(255, 255, 240);
+}
 
 
 
@@ -625,4 +625,12 @@ label [for="content"] {
 
 label[for="id_content"] {
     display: none !important;
+}
+
+.fa-solid {
+    color: RGB(255, 255, 240);
+}
+
+.submitbuttons {
+    color: white;
 }

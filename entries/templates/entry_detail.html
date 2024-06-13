@@ -25,7 +25,7 @@
         action="{% url 'entries:delete_entry' slug=entry.slug %}" method="POST" id="delete" class="smicon">
         {%csrf_token %}
         <button type="submit" class="btn btn-primary btn-md submitbuttons"><i class="fa-solid fa-trash fa-md"
-                style="color: #000000;"></i></button></form>
+                style="color: rgb(255, 255, 240)" ;></i></button></form>
 
     <br>
 
@@ -33,7 +33,7 @@
     <form action="{% url 'entries:EditEntry' pk=entry.pk %}" method="GET" id="edit" class="smicon">
         {%csrf_token %}
         <button type="submit" class="btn btn-primary btn-md submitbuttons"><i class="fa-solid fa-pen-to-square fa-md"
-                style="color: #000000;"></i>
+                style="color: rgb(255, 255, 240)""></i>
         </button></form>
 
 
@@ -43,11 +43,11 @@
     <br>
 
     {% if request.user != entry.author %}
-    <form action="{% url 'entries:like_entry' slug=entry.slug %}" method="POST" id="like" class="smicon">
-        {%csrf_token %}
-        <button type="submit" class="btn btn-primary btn-md submitbuttons"><i class="fa-solid fa-thumbs-up fa-md"
-                style="color: #000000;"></i>
-            <span class="smicon" id="likecount">{{entry.likes}}</span></button>
+    <form action=" {% url 'entries:like_entry' slug=entry.slug %}" method="POST" id="like" class="smicon">
+                {%csrf_token %}
+                <button type="submit" class="btn btn-primary btn-md submitbuttons"><i
+                        class="fa-solid fa-thumbs-up fa-md" style="color: #000000;"></i>
+                    <span class="smicon" id="likecount">{{entry.likes}}</span></button>
     </form>
     {% endif %}
 </div>
