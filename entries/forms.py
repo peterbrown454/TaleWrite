@@ -6,7 +6,7 @@ from .models import Comment
 class WriteEntry (forms.ModelForm):
     class Meta:
         model = models.Entry
-        fields = ['title', 'genre', 'content', 'excerpt','slug', 'status']
+        fields = ['slug', 'title', 'genre', 'content', 'excerpt', 'status']
 
 class WriteComment (forms.ModelForm):
     class Meta:
