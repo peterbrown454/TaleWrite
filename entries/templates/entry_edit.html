@@ -3,12 +3,12 @@
 {% block content %}
 
 <div class="write-entry">
-
-    <h4>Edit your tale</h4>
+    <br>
+    <h4>You are editing <em>{{entry.title}}</em></h4>
     <form action="{% url 'entries:EditEntry' pk=entry.pk %}" class="site-form" method="post"
         enctype="multipart/form-data" id="edit_form">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type="submit" value="Submit" id="edit_submit" class="submit">
 
 

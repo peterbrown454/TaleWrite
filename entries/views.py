@@ -18,12 +18,12 @@ from django.db.models import Q
 @login_required(login_url="/accounts/login")
 def search_bar_w3_mypage(request):
     user = request.user
-    query = request.GET.get('q') 
-    entries = Entry.objects.filter(author=user)  
+    query = request.GET.get('q')
+    entries = Entry.objects.filter(author=user)
 
     if query:
         entries = entries.filter(
-            Q(title__icontains=query) | Q(genre__type_genre__icontains=query) 
+            Q(title__icontains=query) | Q(genre__type_genre__icontains=query)
         )
 
     context = {
@@ -34,12 +34,14 @@ def search_bar_w3_mypage(request):
 
 @login_required(login_url="/accounts/login")
 def search_bar_w3(request):
-    query = request.GET.get('q') 
-    entries = Entry.objects.filter(status=1)  
+    query = request.GET.get('q')
+    entries = Entry.objects.filter(status=1)
 
     if query:
         entries = entries.filter(
-            Q(title__icontains=query) | Q(author__username__icontains=query) | Q(genre__type_genre__icontains=query) 
+            Q(title__icontains=query) |
+            Q(author__username__icontains=query) |
+            Q(genre__type_genre__icontains=query)
         )
 
     context = {
@@ -65,12 +67,18 @@ def my_page(request):
     return render(request, 'my_page.html', {'entries': entries})
 
 
+@login_required(login_url="/accounts/login")
+def entry_detail(request, slug):
+    entry = get_object_or_404(Entry, slug=slug)
+    comments = entry.comments.all().order_by("-created_on")
+    comment_count = entry.comments.filter(approved=True).count()
+
 
 @login_required(login_url="/accounts/login")
 def entry_detail(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     comments = entry.comments.all().order_by("-created_on")
-    comment_count = entry.comments.filter(approved=True).count() 
+    comment_count = entry.comments.filter(approved=True).count()
 
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -80,21 +88,18 @@ def entry_detail(request, slug):
             comment.entry = entry
             comment.save()
             messages.add_message(
-        request, messages.SUCCESS,
-        'Comment submitted and awaiting approval'
-    )
+                request, messages.SUCCESS,
+                'Comment submitted and awaiting approval'
+            )
+    else:
+        comment_form = CommentForm()
 
-    comment_form = CommentForm()
-
-    return render(request, 'entry_detail.html', 
-{
-    "entry": entry,
+    return render(request, 'entry_detail.html', {
+        "entry": entry,
         "comments": comments,
         "comment_count": comment_count,
         "comment_form": comment_form,
-    },
-)
-
+    })
 
 
 @login_required(login_url="/accounts/login")
@@ -104,7 +109,9 @@ def entry_write(request):
         if form.is_valid():
             title = form.cleaned_data['title']
             if Entry.objects.filter(title=title).exists():
-                messages.error(request, "A tale with the same title already exists. Please choose a different title.")
+                messages.error(request,
+                    "A tale with the same title already exists. Please choose a different title."
+                                )
             else:
                 instance = form.save(commit=False)
                 instance.author = request.user
