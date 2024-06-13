@@ -3,7 +3,6 @@
 {% block content %}
 <div class="write-entry">
 
-
     <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data"
         id="write-form">
         {% csrf_token %}
@@ -13,6 +12,5 @@
 
     </form>
 </div>
-
 <script src="/static/js/slugify.js"></script>
 {% endblock %}
