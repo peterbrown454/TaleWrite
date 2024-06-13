@@ -39,6 +39,7 @@ a.entry-title:hover {
     background-color: white;
     color: black;
     border: 1px solid;
+    height: 60px;
 }
 
 #id_genre {
@@ -51,6 +52,9 @@ a.entry-title:hover {
     background-color: white;
     color: black;
     border: 1px solid;
+    min-width: 100px;
+    max-width: 160px;
+    width: 20%;
 }
 
 #id_username {
@@ -147,7 +151,6 @@ a.entry-title:hover {
 main {
     padding-left: 20px;
     padding-right: 15px;
-    padding-top: 15px;
     background: RGB(255, 255, 240);
     margin: 0;
     min-height: 100%;
@@ -256,6 +259,8 @@ header {
 #submit_write_button {
     color: RGB(255, 255, 240) !important;
     background-color: RGB(128, 0, 32) !important;
+
+
 }
 
 
@@ -270,6 +275,7 @@ header {
     border-width: 2px;
     border-image: initial;
     background-color: white !important;
+    margin-top: 15px;
 }
 
 #searchbutton {
@@ -421,7 +427,8 @@ form.site-form,
 }
 
 .write-entry form textarea[name="excerpt"] {
-    height: 60px;
+    height: 30px;
+    width: 100%;
 }
 
 .comments-section form input[type="submit"],
@@ -567,7 +574,42 @@ form.site-form input[type="submit"],
 
 }
 
-#id_title,
+#id_title {
+    width: 300px;
+    max-height: 30px;
+}
+
 #id_content {
-    width: 80%;
+    width: 100%;
+    height: 400px;
+    vertical-align: top;
+    column-count: 2;
+    column-gap: 40px;
+}
+
+
+label[for="id_content"],
+[for="id_genre"],
+[for="id_title"],
+[for="id_excerpt"],
+[for="id_status"] {
+    display: block;
+}
+
+label[for="id_slug"] {
+    padding: none;
+    margin: none;
+    border: none;
+    height: 0px;
+}
+
+#id_excerpt {
+    vertical-align: top;
+    margin-bottom: 0px !important;
+
+    padding-bottom: 0px !important;
+}
+
+.write_form_button {
+    display: inline-block;
 }
