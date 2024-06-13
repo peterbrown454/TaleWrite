@@ -111,8 +111,8 @@ a.entry-title:hover {
 
 
 .btn-toolbar2 {
-    display: flex;
-    padding-right: 5px;
+    display: inline-block;
+
 }
 
 .card {

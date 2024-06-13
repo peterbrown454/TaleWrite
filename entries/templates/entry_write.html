@@ -7,7 +7,7 @@
     <form action="{% url 'entries:write' %}" class="site-form" method="post" enctype="multipart/form-data"
         id="write-form">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type="submit" value="Submit" id="submit_write_button" class="submit">
 
 
