@@ -24,15 +24,25 @@ a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 .intro-container>p {
     max-width: 800px;
     padding: 20px;
+    padding-top: 15%;
     font-size: 24px;
     line-height: 1.6;
     color: #333;
 
+}
+
+#herologo {
+    background-size: cover;
+    background-position: 50% 50%;
+    flex-grow: 1;
+    padding: 20px 10% 0 10%;
+    width: 100%;
 }
 
 a.entry-title:hover {
@@ -570,7 +580,20 @@ form.site-form input[type="submit"],
     }
 }
 
+@media only screen and (max-width: 700px) {
+    .intro-container {
+        flex-direction: column;
 
+    }
+
+    .intro-container>p {
+        padding-top: 5%;
+    }
+
+    #logolanding {
+        margin-top: 20px;
+    }
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -585,13 +608,36 @@ form.site-form input[type="submit"],
 }
 
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 835px) {
 
     .readable-content {
         column-count: 2;
         column-gap: 40px;
     }
 
+    #logolanding {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 100px;
+
+    }
+
+}
+
+@media only screen and (min-width: 980px) {
+
+    #logolanding {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 250px;
+
+    }
 }
 
 #id_title {
@@ -607,6 +653,18 @@ form.site-form input[type="submit"],
     column-gap: 40px;
 }
 
+@media only screen and (min-width: 1200px) {
+
+    #logolanding {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-top: 250px;
+
+    }
+}
 
 
 
