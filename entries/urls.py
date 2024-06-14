@@ -9,7 +9,7 @@ urlpatterns = [
         'entries/like/<slug:slug>/', views.like_entry, name='like_entry'
         ),
     path(
-        '', views.entry_list, name="list"
+        'entries_list', views.entry_list, name="list"
         ),
     path(
         'write', views.entry_write, name="write"
@@ -36,6 +36,6 @@ urlpatterns = [
         'search_bar_w3_mypage', views.search_bar_w3_mypage, name='search_bar_w3_mypage'
         ),
     path(
-        'landing_page', views.landing_page, name='landing_page'
+        '', views.landing_page, name='landing_page'
         ),      
 ]

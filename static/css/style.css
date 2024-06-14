@@ -635,7 +635,7 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 250px;
+        margin-top: 200px;
 
     }
 }
@@ -661,7 +661,7 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 250px;
+        margin-top: 200px;
 
     }
 }
@@ -683,21 +683,16 @@ label[for="id_slug"] {
     display: inline-block;
 }
 
-label [for="content"] {
-    display: none;
-}
+
 
 #commentForm label[for="id_content"] {
-    display: none;
+    display: none !important;
 }
 
 #text {
     display: none;
 }
 
-label[for="id_content"] {
-    display: none !important;
-}
 
 span.helptext {
     display: none;
