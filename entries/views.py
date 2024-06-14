@@ -15,6 +15,12 @@ from entries.models import Genre
 from django.db.models import Q
 
 
+
+def landing_page(request):
+    return render(request, 'landing_page.html')
+
+
+
 @login_required(login_url="/accounts/login")
 def search_bar_w3_mypage(request):
     user = request.user

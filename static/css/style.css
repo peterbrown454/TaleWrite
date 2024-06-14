@@ -14,7 +14,24 @@ a {
 a:hover {
     transform: scale(1.1) !important;
     font-weight: 800;
+}
 
+.intro-container {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-container>p {
+    max-width: 800px;
+    padding: 20px;
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
 
 }
 

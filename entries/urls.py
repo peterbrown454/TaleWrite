@@ -35,10 +35,7 @@ urlpatterns = [
     path(
         'search_bar_w3_mypage', views.search_bar_w3_mypage, name='search_bar_w3_mypage'
         ),
-    
-
-
-
-
-    
+    path(
+        'landing_page', views.landing_page, name='landing_page'
+        ),      
 ]
