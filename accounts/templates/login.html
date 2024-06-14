@@ -5,21 +5,22 @@
 <h1>Login</h1>
 <br>
 
-<form class="site-form" action="{% url 'accounts:login' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    {% if request.GET.next %}
-    <input type="hidden" name="next" value="{{ request.GET.next}}">
-    {% endif %}
-    <div class="btn-toolbar2">
+<div class="btn-toolbar2">
+    <form class="site-form" action="{% url 'accounts:login' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if request.GET.next %}
+        <input type="hidden" name="next" value="{{ request.GET.next}}">
+        {% endif %}
+
         <input type="submit" value="Login" class="loginbutton submit">
-</form>
+    </form>
 
 
-<br>
-<form action="{% url 'accounts:signup' %}">
-    <input type="submit" value="Signup" class="loginbutton submit">
-</form>
+    <br>
+    <form action="{% url 'accounts:signup' %}">
+        <input type="submit" value="Signup" class="loginbutton submit">
+    </form>
 </div>
 
 

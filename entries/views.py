@@ -109,22 +109,25 @@ def entry_write(request):
         if form.is_valid():
             title = form.cleaned_data['title']
             if Entry.objects.filter(title=title).exists():
-                messages.error(request,
-                    "A tale with the same title already exists. Please choose a different title."
-                                )
+                messages.error(
+                    request,
+                    "A tale with the same title already exists. "
+                    "Please choose a different title."
+                )
             else:
                 instance = form.save(commit=False)
                 instance.author = request.user
                 instance.save()
                 if instance.status == 0:
-                    messages.success(request, "Draft successfully saved to 'My Page'")
+                    messages.success(
+                        request, "Draft successfully saved to 'My Page'"
+                        )
                 elif instance.status == 1:
                     messages.success(request, "Tale successfully published")
                 return redirect('entries:list')
     else:
         form = forms.WriteEntry()
     return render(request, "entry_write.html", {'form': form})
-
 
 
 def like_entry(request, slug):
@@ -136,7 +139,6 @@ def like_entry(request, slug):
     return redirect('entries:entry_detail', slug=entry.slug)
 
 
-
 def delete_entry(request, slug):
     entry = get_object_or_404(Entry, slug=slug)
     if request.user == entry.author:
@@ -144,12 +146,12 @@ def delete_entry(request, slug):
         messages.success(request, "Tale successfully deleted")
         return redirect(reverse('entries:list'))
     else:
-        messages.error(request, "You don't have permission to delete this entry")
+        messages.error(
+            request, "You don't have permission to delete this entry"
+            )
     return redirect(reverse('entries:list'))
 
 
-
- 
 class EditEntry(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Entry
     form_class = WriteEntry
@@ -157,14 +159,6 @@ class EditEntry(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('entries:list')
     success_message = "Tale successfully edited"
 
-    def form_valid(self, form):  
+    def form_valid(self, form):
         self.model.created_on = timezone.now()
         return super().form_valid(form)
-    
-
-
-
-
-   
-
-   

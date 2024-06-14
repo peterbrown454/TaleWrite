@@ -23,14 +23,12 @@ from django.conf import settings
 from entries import views as entry_views
 
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
     path("", include("entries.urls"), name="entries-urls"),
-    path('accounts/', include ('accounts.urls',)),
+    path('accounts/', include('accounts.urls',)),
 
- 
 ]
 
 urlpatterns += staticfiles_urlpatterns()

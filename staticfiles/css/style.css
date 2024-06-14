@@ -594,9 +594,6 @@ form.site-form input[type="submit"],
 
 
 label[for="id_slug"] {
-    padding: none;
-    margin: none;
-    border: none;
     height: 0px;
 }
 
@@ -627,10 +624,6 @@ label[for="id_content"] {
     display: none !important;
 }
 
-.fa-solid {
-    color: RGB(255, 255, 240);
-}
-
-.submitbuttons {
-    color: white;
+span.helptext {
+    display: none;
 }

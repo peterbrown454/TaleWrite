@@ -15,33 +15,19 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import CreationForm
 
 
-
 def signup_view(request):
     if request.method == 'POST':
-        form = CreationForm(request.POST)  
+        form = CreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
-            messages.success(request, f"You are now signed up, {user.username}") 
+            messages.success(
+                request, f"You are now signed up, {user.username}"
+                )
             return redirect('entries:list')
     else:
-        form = CreationForm() 
+        form = CreationForm()
     return render(request, "signup.html", {'form': form})
-
-# working model below!!
-# user = User.objects.create_user("john", "lennon@thebeatles.com", "johnpassword")
-
-# # def signup_view(request):
-# #     if request.method == 'POST':
-# #         form = UserCreationForm(request.POST)
-# #         if form.is_valid():
-# #             user = form.save()
-# #             login(request, user)
-# #             messages.success(request, f"You are now signed up, {user.username}") 
-# #             return redirect('entries:list')
-# #     else:
-# #         form = UserCreationForm()
-# #     return render(request, "signup.html", {'form': form})
 
 
 def login_view(request):
@@ -51,14 +37,15 @@ def login_view(request):
             user = form.get_user()
             login(request, user)
             messages.success(request, f"Welcome back, {user.username}")
-            next_page = request.POST.get('next') 
+            next_page = request.POST.get('next')
             if next_page:
                 return redirect(next_page)
             else:
                 return redirect('entries:list')
     else:
-        form = AuthenticationForm() 
+        form = AuthenticationForm()
     return render(request, "login.html", {'form': form})
+
 
 def logout_view(request):
     if request.method == "POST":
@@ -66,5 +53,4 @@ def logout_view(request):
         messages.success(request, "You are now logged out")
         return redirect("entries:list")
         
-
-        
+    

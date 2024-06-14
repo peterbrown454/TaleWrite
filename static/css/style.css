@@ -594,9 +594,6 @@ form.site-form input[type="submit"],
 
 
 label[for="id_slug"] {
-    padding: none;
-    margin: none;
-    border: none;
     height: 0px;
 }
 
@@ -625,4 +622,8 @@ label [for="content"] {
 
 label[for="id_content"] {
     display: none !important;
+}
+
+span.helptext {
+    display: none;
 }
