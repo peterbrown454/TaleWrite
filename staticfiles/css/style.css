@@ -114,7 +114,7 @@ a.entry-title:hover {
 
 .smicon {
     border-color: RGB(128, 0, 32) !important;
-    color: black;
+    color: RGB(255, 255, 240);
 }
 
 .submit {
@@ -696,4 +696,8 @@ label[for="id_slug"] {
 
 span.helptext {
     display: none;
+}
+
+form>#likecount.smicon {
+    color: RGB(255, 255, 240);
 }

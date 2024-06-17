@@ -12,32 +12,19 @@ There is also the option to visit "my page" which allows users to see and edit t
 
 Please be aware that in following ReadME, "entry" is synonymous with "tale".
 
+## Landing page
 
-## Home/Read/Entries list page (for first time users) 
-
-<img src="static/images/homeplslogin.png" alt="Home page with list of published tales with message requesting they log in or sign up">
-
-The landing page of the website allows users to see the TaleWrite logo for brand visibility, and a list of published tales, including a short excerpt, genre, author, and the time and date the tale was published on. 
-
-The search bar allows users to search for specific tales, author, or entries of a particular genre.
-
-If the user attempts to read a tale without logging in they will be redirected to the login page.
-
-The header and footer are consistant across all pages and incluide social media links, and email and phone on large devices.
-
-## Read page (home and landing page for returning users) 
-
-<img src="staticfiles/images/homeloggedin.png" alt="Home page with list of published tales with message but without the message requesting they log in or sign up and with Logout as an option.">
+<img src="static/images/landingpage.png" alt="Short introductory text and large brand logo">
 
 <br>
 
-Home page with list of published tales with message but without the message requesting they log in or sign up and with Logout as an option.
+A short introduction to the site explaining its concept and displaying the brand logo.
 
 <br>
 
 ## Sign up
 
-<img src="staticfiles/images/signup.png" alt="Sign up page showing username, password, password confirmation, and email input fields">
+<img src="staticfiles/images/signupone.png" alt="Sign up page showing username, password, password confirmation, and email input fields">
 
 <br>
 
@@ -55,20 +42,43 @@ Login page showing username and password input fields
 
 <br>
 
+## Entries list / Read page (logged out)
+
+<img src="static/images/read.png" alt="List of published tales with message requesting they log in or sign up. Also displays a search bar">
+
+The entries_list / "read" page displays a list of published tales, and a short excerpt, genre, author, and the time and date the tale was published on. 
+
+The search bar allows users to search for specific tales, author, or entries of a particular genre.
+
+If the user attempts to read a tale without logging in they will be redirected to the login page.
+
+The header and footer are consistant across all pages and include social media links, except for the addition of company email and phone number on medium and larger devices.
+
+<br>
+
+## Entries list / Read page (logged in) 
+
+<img src="staticfiles/images/entrylistloggedin.png" alt="List of published tales with message but without the message requesting they log in or sign up and with Logout as an option.">
+
+<br>
+List of published tales with message but without the message requesting they log in or sign up and with Logout as an option.
+
+<br>
+
 ## My page
 
 <img src="staticfiles/images/mypage.png" alt="Write page showing write form">
 
 <br>
 
-My page presents users with all their own entries, which includes entries with the status of "draft". This allows users to continue working on their tales without public scrutiny, until they are ready to publish them to the entries list home page.
+My page presents users with all their own entries, which includes entries with the status of "draft". This allows users to continue working on their tales without public scrutiny, until they are ready to publish them to the entries list home page. They can also search their own entries for specific titles or by genre.
 
 <br>
 
 ## Write
  
 
-<img src="static/images/write.png" alt="Write page showing write form with title, content, excerpt, genre fields and submit button">
+<img src="staticfiles/images/write1.png" alt="Write page showing write form with title, content, excerpt, genre fields and submit button">
 
 <br>
 
@@ -76,37 +86,43 @@ Write page showing form with title, content, excerpt, and genre fields, with sub
 
 <br>
 
-## Published tale, readers POV
+## Published tale, Author's POV. Delete, edit, and comments displayed.
 
-<img src="static/images/entrycomment.png" alt="Tale content with comments section and banner showing comment awaiting approval and like button">
-
-<br>
-
-Tale content with comments section, like button, and banner messages showing recently submitted comment is awaiting approval
+<img src="static/images/commentawaiting.png" alt="Tale content with comments section and banner showing comment awaiting approval and like button">
 
 <br>
 
-## Read tale: Author's POV
-
-
-
-<img src="staticfiles/images/taleauthor.png" alt="a Read:Tale page showing an edit and delete button and comments section.">
+Tale content with comments section, edit, and delete button. Banner messages showing recently submitted comment is awaiting approval. 
 
 <br>
-This page shows a published tale from the author's point of view. It allows the author access to a delete and an edit button.
+
+## Read tale: Reader's POV
+
+
+
+<img src="staticfiles/images/like.png" alt="The same Tale page as above showing that delete and edit button are hidden but like button present. Also cannot see comment that has yet to be approved.">
+
+<br>
+This page shows a published tale from a reader's (who is not the author) point of view. It allows the author access to a "like button" but not edit and delete. You also can't see the comment that has yet to be approved.
 
 <br>
 
 ## Edit tale
 
 
-<img src="static/images/edit.png" alt="Image showing all the same fields as the write page but with them prepopulated with the entry's information that was previously submitted">
+<img src="static/images/edit1.png" alt="Image showing all the same fields as the write page but with them prepopulated with the entry's information that was previously submitted">
 
 <br>
 
+## Tale successfully edited
+
+<img src="staticfiles/images/editsuccess.png" alt="Banner message saying 'entry deleted successfully' and you have been redirected to the home page">
+
+This shows the delete function having been used which then displays an "entry edited successfully" message, and that you have been redirected to the homepage.
+
 ## Delete "are you sure?"
 
-<img src="static/images/delete.png" alt="Image showing popout asking 'are you sure you want to delete this tale?'">
+<img src="staticfiles/images/delete1.png" alt="Image showing popout asking 'are you sure you want to delete this tale?'">
 
 <br>
 
@@ -116,7 +132,7 @@ This shows the delete button having been clicked confirming with the user "are y
 
 ## Delete confirmed
 
-<img src="static/images/deleteredirect.png" alt="Banner message saying 'entry deleted successfully' and you have been redirected to the home page">
+<img src="staticfiles/images/deleteconfirmed1.png" alt="Banner message saying 'entry deleted successfully' and you have been redirected to the home page">
 
 <br>
 
@@ -457,7 +473,7 @@ Adding email to signup page and removing helptext https://stackoverflow.com/ques
 
 Publish and edit timestamp https://www.youtube.com/watch?v=FpbJBzpoISY&t=32s
 
-ChatGPT for the tales I uploaded to showcase the sites functionality, and providing guidance if I encountered issues I did not grasp. https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
+ChatGPT for the tales I uploaded to showcase the sites functionality, landing page introductory text, and providing guidance if I encountered issues I did not grasp. https://chat.openai.com/c/7e591bc4-1e83-46d8-b823-029eaf780f66
 
 Header and footer based on a website I co-coded on a group hackathon https://tomcow88.github.io/teamBrizzle/
 
