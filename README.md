@@ -410,7 +410,7 @@ There were others that I intended to do, however despite all efforts and the imp
 
   <tr>
     <td>The same user can like an entry an indefinite number of times.</td>
-    <td><img src="static/images/likebug2.png" alt="Image of blue genre button"></td>
+    <td><img src="static/images/likebug.png" alt="Image of like button with 27 likes"></td>
     <br></td>
 
   </table>
