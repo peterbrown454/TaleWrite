@@ -372,7 +372,7 @@ There were others that I intended to do, however despite all efforts and the imp
     </tr>
     <td>Due to having gone off the LMS tutorial to use NetNinja I had produced my edit function using a class rather than method which meant I couldn't pick the LMS method of authenticating</td>
   <td>The answer was on stack overflow that there are built in django methods available and actually its quite simple</td>
-    <td><img src="static/images/authenticationclass.png" alt="Quiz page showing selected option and timer displaying 2 seconds elapsed"></td>
+    <td><img src="static/images/authenticationclass.png" alt="Image showing stack overflow answer"></td>
   </tr>
   <td>Uneven spacing of the nav and footer items at certain resolutions items made users feel very off balance and inefficient use of page space</td>
 
@@ -404,8 +404,8 @@ There were others that I intended to do, however despite all efforts and the imp
   </tr>
     
   </tr>
-  <td>Part bug / part fix. Basic javascript pop up to confirm user wishes to delete their entry. Style is out of keeping with the rest of the site and maybe even a security concern for a user.</td>
-    <td><img src="static/images/areyousure.png" alt="Basic javascript pop 'are you sure you want to delete this tale?'"></td>
+  <td>Part bug / part fix. Custom html pop up to confirm user wishes to delete their entry. Style is out of keeping with the rest of the site and maybe even a security concern for a user.</td>
+    <td><img src="static/images/areyousure.png" alt="popup showing'are you sure you want to delete this tale?'"></td>
     <td></td>
 
   <tr>
