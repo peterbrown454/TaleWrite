@@ -374,13 +374,7 @@ There were others that I intended to do, however despite all efforts and the imp
   <td>The answer was on stack overflow that there are built in django methods available and actually its quite simple</td>
     <td><img src="static/images/authenticationclass.png" alt="Image showing stack overflow solution"></td>
   </tr>
-  <td>Uneven spacing of the nav and footer items at certain resolutions items made users feel very off balance and inefficient use of page space</td>
 
-    
-  <td>Display: Flex</td>
-    <td></td>
-  </tr>
-    </tr>
 
   
 
