@@ -610,11 +610,7 @@ form.site-form input[type="submit"],
 
 }
 
-/* @media only screen and (max-width: 754px) {
-    #logolanding {
-        padding-top: 20px;
-    }
-} */
+
 
 @media only screen and (min-width: 700px) {
 
@@ -644,7 +640,7 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 120px;
 
     }
 }
@@ -670,7 +666,7 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 140px;
+        margin-top: 180px;
 
     }
 }
