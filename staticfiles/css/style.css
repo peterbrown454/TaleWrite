@@ -605,10 +605,18 @@ form.site-form input[type="submit"],
 
 
     }
+
+
+
 }
 
+/* @media only screen and (max-width: 754px) {
+    #logolanding {
+        padding-top: 20px;
+    }
+} */
 
-@media only screen and (min-width: 835px) {
+@media only screen and (min-width: 700px) {
 
     .readable-content {
         column-count: 2;
@@ -621,7 +629,8 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 100px;
+        margin-top: 50px;
+        padding-top: 20px;
 
     }
 
@@ -635,7 +644,7 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 200px;
+        margin-top: 100px;
 
     }
 }
@@ -661,7 +670,7 @@ form.site-form input[type="submit"],
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 200px;
+        margin-top: 140px;
 
     }
 }
