@@ -372,7 +372,7 @@ There were others that I intended to do, however despite all efforts and the imp
     </tr>
     <td>Due to having gone off the LMS tutorial to use NetNinja I had produced my edit function using a class rather than method which meant I couldn't pick the LMS method of authenticating</td>
   <td>The answer was on stack overflow that there are built in django methods available and actually its quite simple</td>
-    <td><img src="static/images/authenticationclass.png" alt="Image showing stack overflow answer"></td>
+    <td><img src="static/images/authenticationclass.png" alt="Image showing stack overflow solution"></td>
   </tr>
   <td>Uneven spacing of the nav and footer items at certain resolutions items made users feel very off balance and inefficient use of page space</td>
 
@@ -412,15 +412,51 @@ There were others that I intended to do, however despite all efforts and the imp
     <td>The same user can like an entry an indefinite number of times.</td>
     <td><img src="static/images/likebug.png" alt="Image of like button with 27 likes"></td>
     <br></td>
+    <tr>
+    <td>No apparent impact on functionality, however a single error in source code of website when a user views another author's tale. Unfortunately unable to be fixed this sprint due to time constraints.</td>
+    <td><img src="static/images/error.png" alt="Error msg"></td>
+    
+  <td></td>
+  </tr>
 
   </table>
 
 
 ## Validator Testing 
 
-For HTML validation https://validator.w3.org/
+### HTML validation 
+<br>
+<img src="staticfiles/images/landing_page_fine.png" alt="html validation screenshot">
 
-For CSS validation  https://jigsaw.w3.org/css-validator/
+<br>
+
+All pages HTML validated with https://validator.w3.org/. As per bug testing report above, a single error is present when a user views another author's tale. However otherwise all pages are validated and error free.
+
+<br>
+
+### CSS validation
+<br>
+<img src="staticfiles/images/cssvalid.png" alt="css validation screenshot">
+  
+  <br>
+  
+All CSS validated and error free using  https://jigsaw.w3.org/css-validator/
+
+<br>
+
+### Javascript validation
+
+<img src="staticfiles/images/jsv.png" alt="css validation screenshot">  
+
+All Javascript successfully tested and validated using JS Hint https://jshint.com/
+
+### Python validation
+
+
+All Python successfully tested and validated using Pep8c1 from Code Institute https://pep8ci.herokuapp.com/
+
+<img src="staticfiles/images/pythonlintentriesmodels.png" alt="css validation screenshot"> 
+
 
 ## Contrast checking 
 
@@ -433,9 +469,7 @@ For CSS validation  https://jigsaw.w3.org/css-validator/
 
 <br>
 
-<img src="staticfiles/images/cssvalid.png" alt="css validation screenshot">
-  
-<br>
+
 
 
 ## Lighthouse from google dev tools performance and accessibility 
